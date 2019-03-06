@@ -9,6 +9,6 @@ RUN git clone https://salsa.debian.org/vorlon/shim.git
 WORKDIR /shim
 RUN gbp buildpackage -us -uc
 WORKDIR /
-RUN hexdump -Cv /shim-review/shimx64.efi > orig
-RUN hexdump -Cv /shim/shimx64.efi > build
+RUN hexdump -Cv /shim/shim*.efi > build
+RUN hexdump -Cv /shim-review/$(basename /shim/shim*.efi) > orig
 RUN diff -u orig build
