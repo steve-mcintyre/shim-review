@@ -72,12 +72,16 @@ We recommend reproducing the binary by way of using the supplied Dockerfile:
 
 The binary is built on Debian unstable as of 2019-02-11.
 
-Versions used can be found in the build log.
+Versions used can be found in the build logs.
+
+Note that docker must be run on all of i386, amd64 and arm64 for complete verification.
 
 -------------------------------------------------------------------------------
 Which files in this repo are the logs for your build?   This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 -------------------------------------------------------------------------------
 shim_15+1533136590.3beb971-2_amd64.log
+shim_15+1533136590.3beb971-2_arm64.log
+shim_15+1533136590.3beb971-2_i386.log
 
 -------------------------------------------------------------------------------
 Add any additional information you think we may need to validate this shim
