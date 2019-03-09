@@ -42,10 +42,10 @@ Who is the primary contact for security updates, etc.
 -------------------------------------------------------------------------------
 Who is the secondary contact for security updates, etc.
 -------------------------------------------------------------------------------
-- Name: Steve Langasek
-- Position: shim maintainer
-- Email address: vorlon@debian.org
-- PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the linux community: The file keys/vorlon.pub in this git repo
+- Name: Steve McIntyre
+- Position: Debian EFI team lead maintainer
+- Email address: 93sam@debian.org
+- PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the linux community: The file keys/93sam.pub in this git repo
 
 -------------------------------------------------------------------------------
 What upstream shim tag is this starting from:
@@ -56,7 +56,7 @@ https://github.com/rhboot/shim/commit/3beb971b10659cf78144ddc5eeea83501384440c
 -------------------------------------------------------------------------------
 URL for a repo that contains the exact code which was built to get this binary:
 -------------------------------------------------------------------------------
-https://salsa.debian.org/vorlon/shim/tree/debian/15+1533136590.3beb971-2
+https://salsa.debian.org/efi-team/shim/tree/debian/15+1533136590.3beb971-2
 
 -------------------------------------------------------------------------------
 What patches are being applied and why:
@@ -70,7 +70,7 @@ We recommend reproducing the binary by way of using the supplied Dockerfile:
 
 `docker build .`
 
-The binary is built on Debian unstable as of 2019-02-11.
+The binary is built on Debian unstable as of 2019-03-09.
 
 Versions used can be found in the build logs.
 
