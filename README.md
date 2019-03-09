@@ -56,12 +56,17 @@ https://github.com/rhboot/shim/commit/3beb971b10659cf78144ddc5eeea83501384440c
 -------------------------------------------------------------------------------
 URL for a repo that contains the exact code which was built to get this binary:
 -------------------------------------------------------------------------------
-https://salsa.debian.org/efi-team/shim/tree/debian/15+1533136590.3beb971-2
+https://salsa.debian.org/efi-team/shim/tree/debian/15+1533136590.3beb971-3
 
 -------------------------------------------------------------------------------
 What patches are being applied and why:
 -------------------------------------------------------------------------------
-No extra patches.
+Two trivial build system changes:
+
+* https://salsa.debian.org/efi-team/shim/blob/master/debian/patches/fixup_git.patch
+  - don't run git in clean; we're not really in a git tree
+* https://salsa.debian.org/efi-team/shim/blob/master/debian/patches/uname.patch
+  - Add uname.patch to avoid architecture variability
 
 -------------------------------------------------------------------------------
 What OS and toolchain must we use to reproduce this build?  Include where to find it, etc.  We're going to try to reproduce your build as close as possible to verify that it's really a build of the source tree you tell us it is, so these need to be fairly thorough. At the very least include the specific versions of gcc, binutils, and gnu-efi which were used, and where to find those binaries.
@@ -79,6 +84,9 @@ Note that docker must be run on all of i386, amd64 and arm64 for complete verifi
 -------------------------------------------------------------------------------
 Which files in this repo are the logs for your build?   This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 -------------------------------------------------------------------------------
+
+TBD: just uploaded -3
+
 shim_15+1533136590.3beb971-2_amd64.log
 shim_15+1533136590.3beb971-2_arm64.log
 shim_15+1533136590.3beb971-2_i386.log
