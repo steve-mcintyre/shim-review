@@ -56,7 +56,7 @@ https://github.com/rhboot/shim/commit/3beb971b10659cf78144ddc5eeea83501384440c
 -------------------------------------------------------------------------------
 URL for a repo that contains the exact code which was built to get this binary:
 -------------------------------------------------------------------------------
-https://salsa.debian.org/efi-team/shim/tree/debian/15+1533136590.3beb971-3
+https://salsa.debian.org/efi-team/shim/tree/debian/15+1533136590.3beb971-4
 
 -------------------------------------------------------------------------------
 What patches are being applied and why:
@@ -85,13 +85,11 @@ Note that docker must be run on all of i386, amd64 and arm64 for complete verifi
 Which files in this repo are the logs for your build?   This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 -------------------------------------------------------------------------------
 
-TBD: just uploaded -3
-
-shim_15+1533136590.3beb971-2_amd64.log
-shim_15+1533136590.3beb971-2_arm64.log
-shim_15+1533136590.3beb971-2_i386.log
+shim_15+1533136590.3beb971-4_amd64.log
+shim_15+1533136590.3beb971-4_arm64.log
+shim_15+1533136590.3beb971-4_i386.log
 
 -------------------------------------------------------------------------------
 Add any additional information you think we may need to validate this shim
 -------------------------------------------------------------------------------
-[your text here]
+N/A
