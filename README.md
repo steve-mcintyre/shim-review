@@ -43,7 +43,7 @@ Who is the primary contact for security updates, etc.
 Who is the secondary contact for security updates, etc.
 -------------------------------------------------------------------------------
 - Name: Steve McIntyre
-- Position: Debian EFI team lead maintainer
+- Position: Debian EFI team lead
 - Email address: 93sam@debian.org
 - PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the linux community: The file keys/93sam.pub in this git repo
 
