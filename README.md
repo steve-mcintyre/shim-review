@@ -56,17 +56,22 @@ https://github.com/rhboot/shim/commit/3beb971b10659cf78144ddc5eeea83501384440c
 -------------------------------------------------------------------------------
 URL for a repo that contains the exact code which was built to get this binary:
 -------------------------------------------------------------------------------
-https://salsa.debian.org/efi-team/shim/tree/debian/15+1533136590.3beb971-4
+https://salsa.debian.org/efi-team/shim/tree/debian/15+1533136590.3beb971-7
 
 -------------------------------------------------------------------------------
 What patches are being applied and why:
 -------------------------------------------------------------------------------
 Two trivial build system changes:
 
-* https://salsa.debian.org/efi-team/shim/blob/master/debian/patches/fixup_git.patch
+* https://salsa.debian.org/efi-team/shim/blob/debian/15+1533136590.3beb971-7/debian/patches/fixup_git.patch
   - don't run git in clean; we're not really in a git tree
-* https://salsa.debian.org/efi-team/shim/blob/master/debian/patches/uname.patch
+* https://salsa.debian.org/efi-team/shim/blob/debian/15+1533136590.3beb971-7/debian/patches/uname.patch
   - Add uname.patch to avoid architecture variability
+* https://salsa.debian.org/efi-team/shim/blob/debian/15+1533136590.3beb971-7/debian/patches/avoid_null_vsprint.patch
+  - VLogError(): Avoid NULL pointer dereferences in (V)Sprint calls
+* https://salsa.debian.org/efi-team/shim/blob/debian/15+1533136590.3beb971-7/debian/patches/check_null_sn_ln.patch
+  - Fix OBJ_create() to tolerate a NULL sn and ln, upstream fix from OpenSSL
+
 
 -------------------------------------------------------------------------------
 What OS and toolchain must we use to reproduce this build?  Include where to find it, etc.  We're going to try to reproduce your build as close as possible to verify that it's really a build of the source tree you tell us it is, so these need to be fairly thorough. At the very least include the specific versions of gcc, binutils, and gnu-efi which were used, and where to find those binaries.
@@ -75,7 +80,7 @@ We recommend reproducing the binary by way of using the supplied Dockerfile:
 
 `docker build .`
 
-The binary is built on Debian unstable as of 2019-03-09.
+The binary is built on Debian unstable as of 2019-05-08.
 
 Versions used can be found in the build logs.
 
@@ -85,9 +90,9 @@ Note that docker must be run on all of i386, amd64 and arm64 for complete verifi
 Which files in this repo are the logs for your build?   This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 -------------------------------------------------------------------------------
 
-shim_15+1533136590.3beb971-4_amd64.log
-shim_15+1533136590.3beb971-4_arm64.log
-shim_15+1533136590.3beb971-4_i386.log
+shim_15+1533136590.3beb971-7_amd64.log
+shim_15+1533136590.3beb971-7_arm64.log
+shim_15+1533136590.3beb971-7_i386.log
 
 -------------------------------------------------------------------------------
 Add any additional information you think we may need to validate this shim
