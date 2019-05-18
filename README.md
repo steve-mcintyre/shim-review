@@ -61,7 +61,7 @@ https://salsa.debian.org/efi-team/shim/tree/debian/15+1533136590.3beb971-7
 -------------------------------------------------------------------------------
 What patches are being applied and why:
 -------------------------------------------------------------------------------
-Two trivial build system changes:
+Two trivial build system changes, one upstream security patch and one fix for a crash bug from the OpenSSL project.
 
 * https://salsa.debian.org/efi-team/shim/blob/debian/15+1533136590.3beb971-7/debian/patches/fixup_git.patch
   - don't run git in clean; we're not really in a git tree
