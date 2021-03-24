@@ -17,6 +17,12 @@ your part.
 
 Here's the template:
 
+## NOTE TO REVIEWERS:
+
+This shim review is basically identical to the the review requested
+for Debian 11 (Bullseye). We need to build for Debian 10 (Buster)
+using gcc-8, but otherwise things here are almost identical.
+
 -------------------------------------------------------------------------------
 What organization or people are asking to have this signed:
 -------------------------------------------------------------------------------
@@ -61,12 +67,12 @@ https://github.com/rhboot/shim/releases/download/15.3/shim-15.3.tar.bz2
 -------------------------------------------------------------------------------
 URL for a repo that contains the exact code which was built to get this binary:
 -------------------------------------------------------------------------------
-https://salsa.debian.org/efi-team/shim/-/tree/debian/15.3-3
+https://salsa.debian.org/efi-team/shim/-/tree/debian/15.3-1_deb10u3
 
 -------------------------------------------------------------------------------
 What patches are being applied and why:
 -------------------------------------------------------------------------------
-None :-)
+None! :-)
 
 -------------------------------------------------------------------------------
 If bootloader, shim loading is, GRUB2: is CVE-2020-14372, CVE-2020-25632,
@@ -80,7 +86,8 @@ CVE-2020-27779, CVE-2021-20225, CVE-2021-20233, CVE-2020-10713,
 CVE-2020-14308, CVE-2020-14309, CVE-2020-14310, CVE-2020-14311
 
 For the other two CVEs listed here:
-* CVE-2020-15705 does not affect our codebase due to other patches.
+* CVE-2020-15705 does not affect our codebase due to other patches (as
+  explained back in the boothole days).
 * We don't use the shim_lock module, so CVE-2021-3418 does not apply
   to us.
 
@@ -132,7 +139,7 @@ by CVE-2020-14372, CVE-2020-25632, CVE-2020-25647, CVE-2020-27749,
   * Debian Secure Boot Signer 2021 - linux
     * (fingerprint 88ce3137175e3840b74356a8c3cae4bdd4af1b557a7367f6704ed8c2bd1fbf1d)
   * Debian Secure Boot Signer 2021 - shim
-    *(fingerprint 40eced276ab0a64fc369db1900bd15536a1fb7d6cc0969a0ea7c7594bb0b85e2)
+    * (fingerprint 40eced276ab0a64fc369db1900bd15536a1fb7d6cc0969a0ea7c7594bb0b85e2)
 
   In addition to those changes, we have provided Microsoft with
   details of all the shim binaries they have ever signed for us, so
@@ -164,7 +171,7 @@ available in public with anonymous access for verification
 We include a single vendor CA certificate in pur shim, and that has
 been used to sign all of our further signer certificates listed
 above. We do not have any hashes added beyond that. See the file
-```debian-uefi-ca.der``` for that CA certificates.
+```debian-uefi-ca.der``` for that CA certificate.
 
 -------------------------------------------------------------------------------
 If you are re-using a previously used (CA) certificate, you will need
@@ -175,7 +182,7 @@ apply. Please describe your strategy.
 -------------------------------------------------------------------------------
 
 The shim binary here includes a vendor DBX list that blocks all
-of the grub binaries that we have ever signed for this architecture.
+of the grub binaries that we have ever signed for each architecture.
 
 -------------------------------------------------------------------------------
 What OS and toolchain must we use to reproduce this build?  Include where to find it, etc.  We're going to try to reproduce your build as close as possible to verify that it's really a build of the source tree you tell us it is, so these need to be fairly thorough. At the very least include the specific versions of gcc, binutils, and gnu-efi which were used, and where to find those binaries.
@@ -186,7 +193,7 @@ We recommend reproducing the binary by way of using the supplied Dockerfile:
 
 `docker build .`
 
-The binary is built on Debian "bullseye" as of 2021-03-24.
+The binary is built on Debian "buster" as of 2021-03-24.
 
 Versions used can be found in the build logs.
 
@@ -194,9 +201,9 @@ Versions used can be found in the build logs.
 Which files in this repo are the logs for your build?   This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 -------------------------------------------------------------------------------
 
-* ```shim_15.3-3_amd64.log```
-* ```shim_15.3-3_arm64.log```
-* ```shim_15.3-3_i386.log```
+* ```shim_15.3-1~deb10u3_amd64.log```
+* ```shim_15.3-1~deb10u3_arm64.log```
+* ```shim_15.3-1~deb10u3_i386.log```
 
 -------------------------------------------------------------------------------
 Add any additional information you think we may need to validate this shim
