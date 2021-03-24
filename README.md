@@ -66,7 +66,7 @@ https://salsa.debian.org/efi-team/shim/-/tree/debian/15.3-3
 -------------------------------------------------------------------------------
 What patches are being applied and why:
 -------------------------------------------------------------------------------
-None :-)
+None! :-)
 
 -------------------------------------------------------------------------------
 If bootloader, shim loading is, GRUB2: is CVE-2020-14372, CVE-2020-25632,
@@ -80,7 +80,8 @@ CVE-2020-27779, CVE-2021-20225, CVE-2021-20233, CVE-2020-10713,
 CVE-2020-14308, CVE-2020-14309, CVE-2020-14310, CVE-2020-14311
 
 For the other two CVEs listed here:
-* CVE-2020-15705 does not affect our codebase due to other patches.
+* CVE-2020-15705 does not affect our codebase due to other patches (as
+  explained back in the boothole days).
 * We don't use the shim_lock module, so CVE-2021-3418 does not apply
   to us.
 
@@ -132,7 +133,7 @@ by CVE-2020-14372, CVE-2020-25632, CVE-2020-25647, CVE-2020-27749,
   * Debian Secure Boot Signer 2021 - linux
     * (fingerprint 88ce3137175e3840b74356a8c3cae4bdd4af1b557a7367f6704ed8c2bd1fbf1d)
   * Debian Secure Boot Signer 2021 - shim
-    *(fingerprint 40eced276ab0a64fc369db1900bd15536a1fb7d6cc0969a0ea7c7594bb0b85e2)
+    * (fingerprint 40eced276ab0a64fc369db1900bd15536a1fb7d6cc0969a0ea7c7594bb0b85e2)
 
   In addition to those changes, we have provided Microsoft with
   details of all the shim binaries they have ever signed for us, so
@@ -161,10 +162,10 @@ please provide exact binaries for which hashes are created via file sharing serv
 available in public with anonymous access for verification
 -------------------------------------------------------------------------------
 
-We include a single vendor CA certificate in pur shim, and that has
+We include a single vendor CA certificate in our shim, and that has
 been used to sign all of our further signer certificates listed
 above. We do not have any hashes added beyond that. See the file
-```debian-uefi-ca.der``` for that CA certificates.
+```debian-uefi-ca.der``` for that CA certificate.
 
 -------------------------------------------------------------------------------
 If you are re-using a previously used (CA) certificate, you will need
@@ -175,7 +176,7 @@ apply. Please describe your strategy.
 -------------------------------------------------------------------------------
 
 The shim binary here includes a vendor DBX list that blocks all
-of the grub binaries that we have ever signed for this architecture.
+of the grub binaries that we have ever signed for each architecture.
 
 -------------------------------------------------------------------------------
 What OS and toolchain must we use to reproduce this build?  Include where to find it, etc.  We're going to try to reproduce your build as close as possible to verify that it's really a build of the source tree you tell us it is, so these need to be fairly thorough. At the very least include the specific versions of gcc, binutils, and gnu-efi which were used, and where to find those binaries.
