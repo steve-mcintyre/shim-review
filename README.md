@@ -62,12 +62,12 @@ This matches https://github.com/rhboot/shim/releases/tag/15.4 and contains
 the appropriate gnu-efi source.
 -------------------------------------------------------------------------------
 Yes, we are using the source from
-https://github.com/rhboot/shim/releases/download/15.3/shim-15.3.tar.bz2
+https://github.com/rhboot/shim/releases/download/15.4/shim-15.4.tar.bz2
 
 -------------------------------------------------------------------------------
 URL for a repo that contains the exact code which was built to get this binary:
 -------------------------------------------------------------------------------
-https://salsa.debian.org/efi-team/shim/-/tree/debian/15.3-1_deb10u3
+https://salsa.debian.org/efi-team/shim/-/tree/debian/15.4-1_deb10u1
 
 -------------------------------------------------------------------------------
 What patches are being applied and why:
@@ -201,9 +201,8 @@ Versions used can be found in the build logs.
 Which files in this repo are the logs for your build?   This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 -------------------------------------------------------------------------------
 
-* ```shim_15.3-1~deb10u3_amd64.log```
-* ```shim_15.3-1~deb10u3_arm64.log```
-* ```shim_15.3-1~deb10u3_i386.log```
+* ```shim_15.4-1~deb10u1_amd64.log```
+* ```shim_15.4-1~deb10u1_i386.log```
 
 -------------------------------------------------------------------------------
 Add any additional information you think we may need to validate this shim

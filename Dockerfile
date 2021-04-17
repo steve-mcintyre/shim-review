@@ -1,4 +1,4 @@
-FROM i386/debian:buster
+FROM debian:buster
 RUN echo "deb-src http://deb.debian.org/debian buster main" > /etc/apt/sources.list.d/deb-src.list
 RUN apt-get update -y
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends build-essential git-buildpackage
@@ -9,7 +9,7 @@ RUN git checkout debian-shim-debian-10
 WORKDIR /
 RUN git clone https://salsa.debian.org/efi-team/shim.git
 WORKDIR /shim
-RUN git checkout debian/15.3-1_deb10u3
+RUN git checkout debian/15.4-1_deb10u1
 RUN apt-get build-dep -y .
 RUN gbp buildpackage -us -uc --git-ignore-branch
 WORKDIR /
