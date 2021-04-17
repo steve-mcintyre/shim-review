@@ -56,17 +56,22 @@ This matches https://github.com/rhboot/shim/releases/tag/15.4 and contains
 the appropriate gnu-efi source.
 -------------------------------------------------------------------------------
 Yes, we are using the source from
-https://github.com/rhboot/shim/releases/download/15.3/shim-15.3.tar.bz2
+https://github.com/rhboot/shim/releases/download/15.4/shim-15.4.tar.bz2
 
 -------------------------------------------------------------------------------
 URL for a repo that contains the exact code which was built to get this binary:
 -------------------------------------------------------------------------------
-https://salsa.debian.org/efi-team/shim/-/tree/debian/15.3-3
+https://salsa.debian.org/efi-team/shim/-/tree/debian/15.4-1
 
 -------------------------------------------------------------------------------
 What patches are being applied and why:
 -------------------------------------------------------------------------------
-None! :-)
+
+We're applying two patches from upstream, as recommended in
+discussions in keybase:
+
+5b3ca0d2f7b5f425ba1a14db8ce98b8d95a2f89f Fix a broken file header on ia32
+4068fd42c891ea6ebdec056f461babc6e4048844 mok: allocate MOK config table as BootServicesData
 
 -------------------------------------------------------------------------------
 If bootloader, shim loading is, GRUB2: is CVE-2020-14372, CVE-2020-25632,
@@ -176,7 +181,8 @@ apply. Please describe your strategy.
 -------------------------------------------------------------------------------
 
 The shim binary here includes a vendor DBX list that blocks all
-of the grub binaries that we have ever signed for each architecture.
+of the grub binaries that we have ever signed for each architecture
+prior to SBAT being introduced.
 
 -------------------------------------------------------------------------------
 What OS and toolchain must we use to reproduce this build?  Include where to find it, etc.  We're going to try to reproduce your build as close as possible to verify that it's really a build of the source tree you tell us it is, so these need to be fairly thorough. At the very least include the specific versions of gcc, binutils, and gnu-efi which were used, and where to find those binaries.
@@ -195,9 +201,8 @@ Versions used can be found in the build logs.
 Which files in this repo are the logs for your build?   This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 -------------------------------------------------------------------------------
 
-* ```shim_15.3-3_amd64.log```
-* ```shim_15.3-3_arm64.log```
-* ```shim_15.3-3_i386.log```
+* ```shim_15.4-1_amd64.log```
+* ```shim_15.4-1_i386.log```
 
 -------------------------------------------------------------------------------
 Add any additional information you think we may need to validate this shim
