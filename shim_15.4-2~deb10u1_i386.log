@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Build log for shim (15.4-1~deb10u1) on i386</title>
+<title>Build log for shim (15.4-2~deb10u1) on i386</title>
 
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link type="text/css" rel="stylesheet" href="media/revamp.css" />
@@ -30,47 +30,48 @@ $(document).ready(function () {
 </head>
 <body>
 <h1 id="title"><a href="https://buildd.debian.org">Debian Package Auto-Building</a></h1>
-<h2 id="subtitle">Build log for shim (15.4-1~deb10u1) on i386</h2>
+<h2 id="subtitle">Build log for shim (15.4-2~deb10u1) on i386</h2>
 <div id="body">
-<a href="package.php?p=shim">shim</a> → <a href="logs.php?pkg=shim&amp;ver=15.4-1%7Edeb10u1">15.4-1~deb10u1</a> → <a href="logs.php?pkg=shim&amp;ver=15.4-1%7Edeb10u1&amp;arch=i386">i386</a> → 2021-04-17 20:36:05 (<a href="fetch.php?pkg=shim&amp;arch=i386&amp;ver=15.4-1%7Edeb10u1&amp;stamp=1618691765&amp;raw=1">text</a>)
+<a href="package.php?p=shim">shim</a> → <a href="logs.php?pkg=shim&amp;ver=15.4-2%7Edeb10u1">15.4-2~deb10u1</a> → <a href="logs.php?pkg=shim&amp;ver=15.4-2%7Edeb10u1&amp;arch=i386">i386</a> → 2021-04-22 08:20:47 (<a href="fetch.php?pkg=shim&amp;arch=i386&amp;ver=15.4-2%7Edeb10u1&amp;stamp=1619079647&amp;raw=1">text</a>)
 
 <pre>
 
 sbuild (Debian sbuild) 0.79.1 (22 April 2020) on x86-grnet-01.debian.org
 
 +==============================================================================+
-| shim 15.4-1~deb10u1 (i386)                   Sat, 17 Apr 2021 20:33:53 +0000 |
+| shim 15.4-2~deb10u1 (i386)                   Thu, 22 Apr 2021 08:18:38 +0000 |
 +==============================================================================+
 
 Package: shim
-Version: 15.4-1~deb10u1
-Source Version: 15.4-1~deb10u1
+Version: 15.4-2~deb10u1
+Source Version: 15.4-2~deb10u1
 Distribution: buster
 Machine Architecture: amd64
 Host Architecture: i386
 Build Architecture: i386
 Build Type: any
 
-I: NOTICE: Log filtering will replace 'var/run/schroot/mount/buster-i386-sbuild-3fc14519-673d-48e4-b86c-042245e8e961' with '&lt;&lt;CHROOT&gt;&gt;'
-I: NOTICE: Log filtering will replace 'build/shim-0uwrZN/resolver-PX2g7F' with '&lt;&lt;RESOLVERDIR&gt;&gt;'
+I: NOTICE: Log filtering will replace 'var/run/schroot/mount/buster-i386-sbuild-31552e29-6066-4570-8644-9ec716904e6a' with '&lt;&lt;CHROOT&gt;&gt;'
+I: NOTICE: Log filtering will replace 'build/shim-zrQ9sy/resolver-F7xB40' with '&lt;&lt;RESOLVERDIR&gt;&gt;'
 
 +------------------------------------------------------------------------------+
 | Update chroot                                                                |
 +------------------------------------------------------------------------------+
 
 Hit:1 https://deb.debian.org/debian buster InRelease
-Get:2 https://deb.debian.org/debian buster-proposed-updates InRelease [54.5 kB]
-Get:3 https://incoming.debian.org/debian-buildd buildd-buster-proposed-updates InRelease [34.0 kB]
-Get:4 https://deb.debian.org/debian buster/contrib Sources [42.5 kB]
-Get:5 https://deb.debian.org/debian buster/main Sources [7841 kB]
-Get:6 https://incoming.debian.org/debian-buildd buildd-buster-proposed-updates/main Sources [1876 B]
-Get:7 https://deb.debian.org/debian buster/non-free Sources [85.7 kB]
-Get:8 https://deb.debian.org/debian buster/contrib i386 Packages [46.0 kB]
-Get:9 https://deb.debian.org/debian buster-proposed-updates/main Sources [17.9 kB]
-Get:10 https://deb.debian.org/debian buster-proposed-updates/contrib Sources [700 B]
-Get:11 https://deb.debian.org/debian buster-proposed-updates/contrib i386 Packages [728 B]
-Get:12 https://deb.debian.org/debian buster-proposed-updates/main i386 Packages [34.2 kB]
-Fetched 8160 kB in 4s (2127 kB/s)
+Get:2 https://incoming.debian.org/debian-buildd buildd-buster-proposed-updates InRelease [34.0 kB]
+Get:3 https://deb.debian.org/debian buster-proposed-updates InRelease [54.5 kB]
+Get:4 https://deb.debian.org/debian buster/main Sources [7841 kB]
+Get:5 https://incoming.debian.org/debian-buildd buildd-buster-proposed-updates/main Sources [1408 B]
+Get:6 https://incoming.debian.org/debian-buildd buildd-buster-proposed-updates/main i386 Packages [2152 B]
+Get:7 https://deb.debian.org/debian buster/contrib Sources [42.5 kB]
+Get:8 https://deb.debian.org/debian buster/non-free Sources [85.7 kB]
+Get:9 https://deb.debian.org/debian buster/contrib i386 Packages [46.0 kB]
+Get:10 https://deb.debian.org/debian buster-proposed-updates/main Sources [20.5 kB]
+Get:11 https://deb.debian.org/debian buster-proposed-updates/contrib Sources [700 B]
+Get:12 https://deb.debian.org/debian buster-proposed-updates/contrib i386 Packages [728 B]
+Get:13 https://deb.debian.org/debian buster-proposed-updates/main i386 Packages [38.6 kB]
+Fetched 8168 kB in 3s (2457 kB/s)
 Reading package lists...
 
 +------------------------------------------------------------------------------+
@@ -92,14 +93,14 @@ https://salsa.debian.org/efi-team/shim.git
 Please use:
 git clone https://salsa.debian.org/efi-team/shim.git
 to retrieve the latest (possibly unreleased) updates to the package.
-Need to get 1292 kB of source archives.
-Get:1 https://deb.debian.org/debian buster-proposed-updates/main shim 15.4-1~deb10u1 (dsc) [2311 B]
-Get:2 https://deb.debian.org/debian buster-proposed-updates/main shim 15.4-1~deb10u1 (tar) [1260 kB]
-Get:3 https://deb.debian.org/debian buster-proposed-updates/main shim 15.4-1~deb10u1 (diff) [29.6 kB]
-Fetched 1292 kB in 1s (1950 kB/s)
+Need to get 1294 kB of source archives.
+Get:1 https://incoming.debian.org/debian-buildd buildd-buster-proposed-updates/main shim 15.4-2~deb10u1 (dsc) [2311 B]
+Get:2 https://incoming.debian.org/debian-buildd buildd-buster-proposed-updates/main shim 15.4-2~deb10u1 (tar) [1260 kB]
+Get:3 https://incoming.debian.org/debian-buildd buildd-buster-proposed-updates/main shim 15.4-2~deb10u1 (diff) [31.0 kB]
+Fetched 1294 kB in 1s (1972 kB/s)
 Download complete and in download only mode
-I: NOTICE: Log filtering will replace 'build/shim-0uwrZN/shim-15.4' with '&lt;&lt;PKGBUILDDIR&gt;&gt;'
-I: NOTICE: Log filtering will replace 'build/shim-0uwrZN' with '&lt;&lt;BUILDDIR&gt;&gt;'
+I: NOTICE: Log filtering will replace 'build/shim-zrQ9sy/shim-15.4' with '&lt;&lt;PKGBUILDDIR&gt;&gt;'
+I: NOTICE: Log filtering will replace 'build/shim-zrQ9sy' with '&lt;&lt;BUILDDIR&gt;&gt;'
 
 +------------------------------------------------------------------------------+
 | Install package build dependencies                                           |
@@ -116,8 +117,8 @@ Ign:1 copy:/&lt;&lt;RESOLVERDIR&gt;&gt;/apt_archive ./ InRelease
 Get:2 copy:/&lt;&lt;RESOLVERDIR&gt;&gt;/apt_archive ./ Release [957 B]
 Ign:3 copy:/&lt;&lt;RESOLVERDIR&gt;&gt;/apt_archive ./ Release.gpg
 Get:4 copy:/&lt;&lt;RESOLVERDIR&gt;&gt;/apt_archive ./ Sources [419 B]
-Get:5 copy:/&lt;&lt;RESOLVERDIR&gt;&gt;/apt_archive ./ Packages [501 B]
-Fetched 1877 B in 0s (116 kB/s)
+Get:5 copy:/&lt;&lt;RESOLVERDIR&gt;&gt;/apt_archive ./ Packages [502 B]
+Fetched 1878 B in 0s (105 kB/s)
 Reading package lists...
 Reading package lists...
 
@@ -156,7 +157,7 @@ The following NEW packages will be installed:
   libsqlite3-0 libtool libuchardet0 libxml2 m4 man-db opensc opensc-pkcs11
   pesign po-debconf readline-common sbsigntool sbuild-build-depends-main-dummy
   sensible-utils xxd zlib1g-dev
-0 upgraded, 53 newly installed, 0 to remove and 2 not upgraded.
+0 upgraded, 53 newly installed, 0 to remove and 5 not upgraded.
 Need to get 25.0 MB of archives.
 After this operation, 89.8 MB of additional disk space will be used.
 Get:1 copy:/&lt;&lt;RESOLVERDIR&gt;&gt;/apt_archive ./ sbuild-build-depends-main-dummy 0.invalid.0 [928 B]
@@ -213,7 +214,7 @@ Get:51 https://deb.debian.org/debian buster/main i386 pesign i386 0.112-5 [98.3 
 Get:52 https://deb.debian.org/debian buster/main i386 sbsigntool i386 0.9.2-2 [64.6 kB]
 Get:53 https://deb.debian.org/debian buster/main i386 xxd i386 2:8.1.0875-5 [139 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 25.0 MB in 2s (10.4 MB/s)
+Fetched 25.0 MB in 3s (9331 kB/s)
 Selecting previously unselected package libbsd0:i386.
 (Reading database ... 12299 files and directories currently installed.)
 Preparing to unpack .../00-libbsd0_0.9.1-2+deb10u1_i386.deb ...
@@ -463,7 +464,7 @@ Format: 3.0 (quilt)
 Source: shim
 Binary: shim-unsigned, shim-helpers-amd64-signed-template, shim-helpers-i386-signed-template, shim-helpers-arm64-signed-template
 Architecture: amd64 arm64 i386
-Version: 15.4-1~deb10u1
+Version: 15.4-2~deb10u1
 Maintainer: Debian EFI team &lt;debian-efi@lists.debian.org&gt;
 Uploaders: Steve Langasek &lt;vorlon@debian.org&gt;, Steve McIntyre &lt;93sam@debian.org&gt;
 Standards-Version: 4.3.0
@@ -477,45 +478,47 @@ Package-List:
  shim-unsigned deb admin optional arch=amd64,arm64,i386
 Checksums-Sha1:
  d70485792a300bfa66f551adf7ae766451dfe7c0 1260475 shim_15.4.orig.tar.bz2
- b1b63163c33adde5acac8dfc4115ac47069de249 29592 shim_15.4-1~deb10u1.debian.tar.xz
+ 5c87cdab709c019bbafa4d9e96c14ca9c0f28997 30984 shim_15.4-2~deb10u1.debian.tar.xz
 Checksums-Sha256:
  8344473dd10569588b8238a4656b8fab226714eea9f5363f8c410aa8a5090297 1260475 shim_15.4.orig.tar.bz2
- 89437c02cfd5d58dc35b2673663582dcb996662edb1e857c4710cc5d346dcd15 29592 shim_15.4-1~deb10u1.debian.tar.xz
+ 52a90b74959d63a80ae50ebc360d9ad81aaffdcc1f5c6590f370e4f6b74974b9 30984 shim_15.4-2~deb10u1.debian.tar.xz
 Files:
  e47302f0302e90503ecbfa31ad4ed8fa 1260475 shim_15.4.orig.tar.bz2
- 72a1ef2ad8af43bd606568cd7fecdc4e 29592 shim_15.4-1~deb10u1.debian.tar.xz
+ 55298cc709ffaeb7675a416846b04574 30984 shim_15.4-2~deb10u1.debian.tar.xz
 
 -----BEGIN PGP SIGNATURE-----
 
-iQJFBAEBCAAvFiEEzrtSMB1hfpEDkP4WWHl5VzRCaE4FAmB7D8wRHDkzc2FtQGRl
-Ymlhbi5vcmcACgkQWHl5VzRCaE7hNQ//ZDMPkWp790A22q7hs36QkAxKLS/vqhCN
-1m3Q9ujzTqIn1LQmtCAngJnoBVMxcOJ0fwpo6tBzytGgssIoXdb94+Vb0h1OwccP
-2HqUXvMKuma9/mvMkR/jzXeLOg+dE6rp7q1nFDlxzYpCnrycyXTUBBbdqlQLwGFG
-VouXs0VLm01+yjdr/6d6pONADn+D0O+0m+aSgGXSxLFK6biEbLe2tikw5t0heaOc
-DBjJYidscrNvE8E5AfsE0kiuBn6LTCDx+u9XsDKKe6+mX2Ha+hpIFi/xLYs59PCX
-hsVVBaF/hSVEjGw228TuBiWMgMFWAd2gEWE2WQSL15fdnKih3kv5bX3lhyP5AYMe
-seqaLsHn1qu9xSVHgv2MoqTkuuyV20hm4058zsynROfzmH2+3Ml7yBYyJwTPV+rh
-/UOrKMBWvLJseDfF0UCDNI4fM2aCQTE+psCpHS4+t8hsJaBwURMEeRuK7XWcti9e
-Mrt4odPvapGeNtdrPRWVYGiUYt5YFBDnlQIsWpFyU78lZiX9ZnkFp3KkC96f5asd
-FKHNuFS8oNqfqTvTQIGt9x3RJtFjWZIFDVZKlXGobijQDPEplPiEUrBCP3Cl3mK6
-R66NXg1jHyyOrDNd68CIuGMGrk+6BbfsbunkAb35kpUl3tR3sY0nI0QUqBlSzKLt
-nxdBC8X6cIw=
-=dFvl
+iQJFBAEBCAAvFiEEzrtSMB1hfpEDkP4WWHl5VzRCaE4FAmCAn8IRHDkzc2FtQGRl
+Ymlhbi5vcmcACgkQWHl5VzRCaE67hw//SxYI0PvDWXt3TUY8yKSg5Lgquy/U8aOE
+6fBgFcA6Qz4XR6/IOauJ1EEhXctcwU0QAX6mk+eMdF6EV49hR1bh66FNbgmatrIK
+pJJ7rwLwmaFTfQubrnCUd6oRV6aX/Ul+XEsLKve8NIFtuXJTZr3re5TfWgp2bFjB
+HTw5rbnjIdpsZSeSWgcL0GAX0Gj8LFJn4PO1X9owu8cYXRU/EuMusnZsmxNMZ+3d
+Z3m2a6k5W76yKxHUbzFE+yMxAe4pa3YEZh2ItNdzs3XKqdLEo6mOfZgvj/Havbcd
+IHkwfYpLMfgzBl5WlMrZePt4GXUN0PK3Uv69GKAC1rxfqbgU34RWZcgNDE/EU2VL
+wOAIPDVAXmi/KfprrKePAXoOyJ/NFhk4UujOACIz7LFojqS3QRitt1/KBgbphpKz
+bllUiteen/XA1A6dQk4kcvvZEOLiTkruitn6895ovu9XHHLyKpi44ZATK658SRbo
+KzuD4Mk8Zckv/eG/Mn1xMfDPkloUXbqh3MtBIjNs00U69aDiIDWim6VubGYGinS9
+8kbVDSzjYS30VGH3c37POLeT3vEeWN23NNA2XOeUfTKBoTipTsHHhCUq6RPsWbjN
+AFATl7hxuMiNWzixlVdi7/p8T6BrQNHl11WK1Wgozl+78tkvO2G/q7W9H07T7NTw
+kgZAmko+FmM=
+=LL8M
 -----END PGP SIGNATURE-----
 
 gpgv: unknown type of key resource 'trustedkeys.kbx'
 gpgv: keyblock resource '/sbuild-nonexistent/.gnupg/trustedkeys.kbx': General error
-gpgv: Signature made Sat Apr 17 16:41:48 2021 UTC
+gpgv: Signature made Wed Apr 21 21:57:22 2021 UTC
 gpgv:                using RSA key CEBB52301D617E910390FE16587979573442684E
 gpgv:                issuer &quot;93sam@debian.org&quot;
 gpgv: Can't check signature: No public key
-dpkg-source: warning: failed to verify signature on ./shim_15.4-1~deb10u1.dsc
+dpkg-source: warning: failed to verify signature on ./shim_15.4-2~deb10u1.dsc
 dpkg-source: info: extracting shim in /&lt;&lt;PKGBUILDDIR&gt;&gt;
 dpkg-source: info: unpacking shim_15.4.orig.tar.bz2
-dpkg-source: info: unpacking shim_15.4-1~deb10u1.debian.tar.xz
+dpkg-source: info: unpacking shim_15.4-2~deb10u1.debian.tar.xz
 dpkg-source: info: using patch list from debian/patches/series
+dpkg-source: info: applying fix-import_one_mok_state.patch
 dpkg-source: info: applying fix-broken-ia32-reloc.patch
 dpkg-source: info: applying MOK-BootServicesData.patch
+dpkg-source: info: applying Don-t-call-QueryVariableInfo-on-EFI-1.10-machines.patch
 
 Check disk space
 ----------------
@@ -537,7 +540,7 @@ SCHROOT_CHROOT_NAME=buster-i386-sbuild
 SCHROOT_COMMAND=env
 SCHROOT_GID=1009
 SCHROOT_GROUP=buildd
-SCHROOT_SESSION_ID=buster-i386-sbuild-3fc14519-673d-48e4-b86c-042245e8e961
+SCHROOT_SESSION_ID=buster-i386-sbuild-31552e29-6066-4570-8644-9ec716904e6a
 SCHROOT_UID=2952
 SCHROOT_USER=buildd
 SHELL=/bin/sh
@@ -548,7 +551,7 @@ dpkg-buildpackage
 
 Command: dpkg-buildpackage -us -uc -mi386 Build Daemon (x86-grnet-01) &lt;buildd_amd64-x86-grnet-01@buildd.debian.org&gt; -B -rfakeroot
 dpkg-buildpackage: info: source package shim
-dpkg-buildpackage: info: source version 15.4-1~deb10u1
+dpkg-buildpackage: info: source version 15.4-2~deb10u1
 dpkg-buildpackage: info: source distribution buster
  dpkg-source --before-build .
 dpkg-buildpackage: info: host architecture i386
@@ -700,7 +703,7 @@ make[1]: Entering directory '/&lt;&lt;PKGBUILDDIR&gt;&gt;'
   Adding fefdf4e9b76933daa0b333d892fa141181dd12678ec12230407fcd686a11b80e to dbx list
 rm -f data/sbat.debian.csv
 set -e; \
-sed -e &quot;s/@DEB_VERSION@/15.4-1~deb10u1/g&quot; \
+sed -e &quot;s/@DEB_VERSION@/15.4-2~deb10u1/g&quot; \
 	-e &quot;s/@UPSTREAM_VERSION@/15.4/g&quot; \
 	&lt; debian/sbat.debian.csv.in &gt; data/sbat.debian.csv
 # If we have an empty data/sbat.debian.csv, delete
@@ -1286,7 +1289,7 @@ i686-linux-gnu-objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=shimia32.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 0.000197978 s, 20.2 kB/s
+4 bytes copied, 0.000170086 s, 23.5 kB/s
 i686-linux-gnu-objcopy -D -j .text -j .sdata -j .data \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .reloc -j .eh_frame -j .sbat \
@@ -1326,7 +1329,7 @@ i686-linux-gnu-objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=mmia32.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 0.000182229 s, 22.0 kB/s
+4 bytes copied, 0.000180607 s, 22.1 kB/s
 i686-linux-gnu-objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .reloc -j .eh_frame \
@@ -1336,7 +1339,7 @@ i686-linux-gnu-objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=fbia32.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 0.000238064 s, 16.8 kB/s
+4 bytes copied, 0.000141012 s, 28.4 kB/s
 make: Leaving directory '/&lt;&lt;PKGBUILDDIR&gt;&gt;'
 make[1]: Leaving directory '/&lt;&lt;PKGBUILDDIR&gt;&gt;'
    dh_auto_test -a
@@ -1346,7 +1349,7 @@ make[2]: Entering directory '/&lt;&lt;PKGBUILDDIR&gt;&gt;'
 dd if=/dev/urandom bs=512 count=17 of=random.bin
 17+0 records in
 17+0 records out
-8704 bytes (8.7 kB, 8.5 KiB) copied, 0.000568168 s, 15.3 MB/s
+8704 bytes (8.7 kB, 8.5 KiB) copied, 0.000437273 s, 19.9 MB/s
 xxd -i random.bin test-random.h
 gcc -O2 -ggdb -std=gnu11 -isystem /&lt;&lt;PKGBUILDDIR&gt;&gt;/include/system -I/&lt;&lt;PKGBUILDDIR&gt;&gt;/gnu-efi/inc -I/&lt;&lt;PKGBUILDDIR&gt;&gt;/gnu-efi/inc/ia32 -I/&lt;&lt;PKGBUILDDIR&gt;&gt;/gnu-efi/inc/protocol -Iinclude -iquote . -fshort-wchar -flto -fno-builtin -Wall -Wextra -Wsign-compare -Wno-deprecated-declarations -Wno-pointer-sign -Wno-unused -Werror -Werror=nonnull -Werror=nonnull-compare  -DEFI_FUNCTION_WRAPPER -DGNU_EFI_USE_MS_ABI -DPAGE_SIZE=4096 -DSHIM_UNIT_TEST &quot;-DDEFAULT_DEBUG_PRINT_STATE=0&quot; -o test-csv test.c test-csv.c csv.c 
 ./test-csv
@@ -1367,7 +1370,7 @@ test_csv_2: passed
 running test_simple_sbat_csv
 test_simple_sbat_csv: passed
 running test_csv_simple_fuzz
-parsed 98 entries
+parsed 110 entries
 test_csv_simple_fuzz: passed
 running test_csv_simple_fuzz
 parsed 1 entries
@@ -1489,7 +1492,7 @@ i686-linux-gnu-objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=shimia32.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 0.000163074 s, 24.5 kB/s
+4 bytes copied, 0.0001718 s, 23.3 kB/s
 i686-linux-gnu-objcopy -D -j .text -j .sdata -j .data \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .reloc -j .eh_frame -j .sbat \
@@ -1529,7 +1532,7 @@ rm -f debian/tmp/boot/efi/EFI/BOOT/BOOT*.EFI
 sha256sum *.efi
 fbbbf4efa62e44552c16ff860425b55c2c9d514afb559a9c619ed21ca3457e90  fbia32.efi
 ab081f27c635bc464e07877d8f1708211b978235a023e56bce07fe24d37bdf94  mmia32.efi
-7d2d25b14299c140b623766098cb47fb75f6fe3f2d8c266e0dfad8ad3af6b04b  shimia32.efi
+676e4689490b556a2e000c8043522efdd45592f31f40e3191ac58de5cf182703  shimia32.efi
 make[1]: Leaving directory '/&lt;&lt;PKGBUILDDIR&gt;&gt;'
    dh_install -a
    dh_installdocs -a
@@ -1549,15 +1552,15 @@ make[1]: Leaving directory '/&lt;&lt;PKGBUILDDIR&gt;&gt;'
 dpkg-gencontrol: warning: Depends field of package shim-unsigned: substitution variable ${shlibs:Depends} used, but is not defined
    dh_md5sums -a
    dh_builddeb -a
-dpkg-deb: building package 'shim-unsigned' in '../shim-unsigned_15.4-1~deb10u1_i386.deb'.
-dpkg-deb: building package 'shim-helpers-i386-signed-template' in '../shim-helpers-i386-signed-template_15.4-1~deb10u1_i386.deb'.
+dpkg-deb: building package 'shim-unsigned' in '../shim-unsigned_15.4-2~deb10u1_i386.deb'.
+dpkg-deb: building package 'shim-helpers-i386-signed-template' in '../shim-helpers-i386-signed-template_15.4-2~deb10u1_i386.deb'.
  dpkg-genbuildinfo --build=any
- dpkg-genchanges --build=any -mi386 Build Daemon (x86-grnet-01) &lt;buildd_amd64-x86-grnet-01@buildd.debian.org&gt; &gt;../shim_15.4-1~deb10u1_i386.changes
+ dpkg-genchanges --build=any -mi386 Build Daemon (x86-grnet-01) &lt;buildd_amd64-x86-grnet-01@buildd.debian.org&gt; &gt;../shim_15.4-2~deb10u1_i386.changes
 dpkg-genchanges: info: binary-only arch-specific upload (source code and arch-indep packages not included)
  dpkg-source --after-build .
 dpkg-buildpackage: info: binary-only upload (no source included)
 --------------------------------------------------------------------------------
-Build finished at 2021-04-17T20:35:59Z
+Build finished at 2021-04-22T08:20:42Z
 
 Finished
 --------
@@ -1569,15 +1572,15 @@ I: Built successfully
 +------------------------------------------------------------------------------+
 
 
-shim_15.4-1~deb10u1_i386.changes:
+shim_15.4-2~deb10u1_i386.changes:
 ---------------------------------
 
 Format: 1.8
-Date: Wed, 31 Mar 2021 19:56:02 +0100
+Date: Wed, 21 Apr 2021 01:06:27 +0100
 Source: shim
 Binary: shim-helpers-i386-signed-template shim-unsigned
 Architecture: i386
-Version: 15.4-1~deb10u1
+Version: 15.4-2~deb10u1
 Distribution: buster
 Urgency: medium
 Maintainer: i386 Build Daemon (x86-grnet-01) &lt;buildd_amd64-x86-grnet-01@buildd.debian.org&gt;
@@ -1586,26 +1589,25 @@ Description:
  shim-helpers-i386-signed-template - boot loader to chain-load signed boot loaders (signing template)
  shim-unsigned - boot loader to chain-load signed boot loaders under Secure Boot
 Changes:
- shim (15.4-1~deb10u1) buster; urgency=medium
+ shim (15.4-2~deb10u1) buster; urgency=medium
  .
-   * New upstream release fixing more bugs: SBAT and arm64 support
-   * Print sha256 checksums of the EFI binaries when the build is done
-   * Add two patches from upstream:
-     + fix i386 binary relocations
-     + allocate MOK config table as BootServicesData
+   * Add two further patches from upstream:
+     + fix import_one_mok_state() after split
+     + Don't call QueryVariableInfo() on EFI 1.10 machines (e.g. older
+       Intel Mac machines)
 Checksums-Sha1:
- 46a4e2a92e6afc786bc24f61cbfe9bac1123467f 13092 shim-helpers-i386-signed-template_15.4-1~deb10u1_i386.deb
- 7c251850162b0e667371d21185fc90a2b5731fbc 388292 shim-unsigned_15.4-1~deb10u1_i386.deb
- f4320a9f847c83db96542a14b6b571b7608b0a1c 5353 shim_15.4-1~deb10u1_i386.buildinfo
+ 04929444b772978dc30b1ce2d1e5cd19a02e4f26 13184 shim-helpers-i386-signed-template_15.4-2~deb10u1_i386.deb
+ a5cafceb6c8a5819f95e9a6a3c80070fb16ff854 388436 shim-unsigned_15.4-2~deb10u1_i386.deb
+ ff7af2f8ca9d70382fe9958e2d6fe85320a32da9 5353 shim_15.4-2~deb10u1_i386.buildinfo
 Checksums-Sha256:
- 8b203d3008659fa5c83ad6438d9779563bf07b109e08df1c45f65df275c00e66 13092 shim-helpers-i386-signed-template_15.4-1~deb10u1_i386.deb
- 90c6b18b3840108c44af7cf28ca0295f5c4d6b983be5186ced6e3129450626a1 388292 shim-unsigned_15.4-1~deb10u1_i386.deb
- 3b7f65e02b3caf75f429e53998884d9b8aac8323cc47b4cf712200ddf23a3d4f 5353 shim_15.4-1~deb10u1_i386.buildinfo
+ ec819cd62dda1b6c03701c9aa36a6f018dee892a5ea2bf11bb7c15fba48dae12 13184 shim-helpers-i386-signed-template_15.4-2~deb10u1_i386.deb
+ f80668d5e6cad854dd295927296ea44b81ad92fbc67fe955f62b3ee3469cd5b8 388436 shim-unsigned_15.4-2~deb10u1_i386.deb
+ ecddf47e8144b9d49d44cec453be56beddb17a92306167285f985e2029f8f8b9 5353 shim_15.4-2~deb10u1_i386.buildinfo
 Files:
- b81ab700a72c7fbe7e06aa18ed7b5cfc 13092 admin optional shim-helpers-i386-signed-template_15.4-1~deb10u1_i386.deb
- f2c34686caced9f285b022a7a01d6d50 388292 admin optional shim-unsigned_15.4-1~deb10u1_i386.deb
- 50259cac36a719f4c5f4ffe43c61209c 5353 admin optional shim_15.4-1~deb10u1_i386.buildinfo
-/&lt;&lt;BUILDDIR&gt;&gt;/shim_15.4-1~deb10u1_i386.changes.new could not be renamed to /&lt;&lt;BUILDDIR&gt;&gt;/shim_15.4-1~deb10u1_i386.changes: Illegal seek
+ 9bcdaeba2b6445b61cc8726d7845376f 13184 admin optional shim-helpers-i386-signed-template_15.4-2~deb10u1_i386.deb
+ a749e1226b4d2ddcf23bf32ef7c6b4ed 388436 admin optional shim-unsigned_15.4-2~deb10u1_i386.deb
+ 046b05c185df17e20810e46550ea0220 5353 admin optional shim_15.4-2~deb10u1_i386.buildinfo
+/&lt;&lt;BUILDDIR&gt;&gt;/shim_15.4-2~deb10u1_i386.changes.new could not be renamed to /&lt;&lt;BUILDDIR&gt;&gt;/shim_15.4-2~deb10u1_i386.changes: Illegal seek
 Distribution field may be wrong!!!
 +------------------------------------------------------------------------------+
 | Buildinfo                                                                    |
@@ -1615,19 +1617,19 @@ Format: 1.0
 Source: shim
 Binary: shim-unsigned shim-helpers-amd64-signed-template shim-helpers-i386-signed-template shim-helpers-arm64-signed-template
 Architecture: i386
-Version: 15.4-1~deb10u1
+Version: 15.4-2~deb10u1
 Checksums-Md5:
- b81ab700a72c7fbe7e06aa18ed7b5cfc 13092 shim-helpers-i386-signed-template_15.4-1~deb10u1_i386.deb
- f2c34686caced9f285b022a7a01d6d50 388292 shim-unsigned_15.4-1~deb10u1_i386.deb
+ 9bcdaeba2b6445b61cc8726d7845376f 13184 shim-helpers-i386-signed-template_15.4-2~deb10u1_i386.deb
+ a749e1226b4d2ddcf23bf32ef7c6b4ed 388436 shim-unsigned_15.4-2~deb10u1_i386.deb
 Checksums-Sha1:
- 46a4e2a92e6afc786bc24f61cbfe9bac1123467f 13092 shim-helpers-i386-signed-template_15.4-1~deb10u1_i386.deb
- 7c251850162b0e667371d21185fc90a2b5731fbc 388292 shim-unsigned_15.4-1~deb10u1_i386.deb
+ 04929444b772978dc30b1ce2d1e5cd19a02e4f26 13184 shim-helpers-i386-signed-template_15.4-2~deb10u1_i386.deb
+ a5cafceb6c8a5819f95e9a6a3c80070fb16ff854 388436 shim-unsigned_15.4-2~deb10u1_i386.deb
 Checksums-Sha256:
- 8b203d3008659fa5c83ad6438d9779563bf07b109e08df1c45f65df275c00e66 13092 shim-helpers-i386-signed-template_15.4-1~deb10u1_i386.deb
- 90c6b18b3840108c44af7cf28ca0295f5c4d6b983be5186ced6e3129450626a1 388292 shim-unsigned_15.4-1~deb10u1_i386.deb
+ ec819cd62dda1b6c03701c9aa36a6f018dee892a5ea2bf11bb7c15fba48dae12 13184 shim-helpers-i386-signed-template_15.4-2~deb10u1_i386.deb
+ f80668d5e6cad854dd295927296ea44b81ad92fbc67fe955f62b3ee3469cd5b8 388436 shim-unsigned_15.4-2~deb10u1_i386.deb
 Build-Origin: Debian
 Build-Architecture: i386
-Build-Date: Sat, 17 Apr 2021 20:35:59 +0000
+Build-Date: Thu, 22 Apr 2021 08:20:42 +0000
 Build-Path: /&lt;&lt;PKGBUILDDIR&gt;&gt;
 Build-Tainted-By:
  usr-local-has-programs
@@ -1790,7 +1792,7 @@ Environment:
  DEB_BUILD_OPTIONS=&quot;parallel=4&quot;
  LANG=&quot;C.UTF-8&quot;
  LC_ALL=&quot;C.UTF-8&quot;
- SOURCE_DATE_EPOCH=&quot;1617216962&quot;
+ SOURCE_DATE_EPOCH=&quot;1618963587&quot;
 
 
 +------------------------------------------------------------------------------+
@@ -1798,16 +1800,16 @@ Environment:
 +------------------------------------------------------------------------------+
 
 
-shim-helpers-i386-signed-template_15.4-1~deb10u1_i386.deb
+shim-helpers-i386-signed-template_15.4-2~deb10u1_i386.deb
 ---------------------------------------------------------
 
  new Debian package, version 2.0.
- size 13092 bytes: control archive=860 bytes.
+ size 13184 bytes: control archive=860 bytes.
      402 bytes,    11 lines      control              
     1259 bytes,    11 lines      md5sums              
  Package: shim-helpers-i386-signed-template
  Source: shim
- Version: 15.4-1~deb10u1
+ Version: 15.4-2~deb10u1
  Architecture: i386
  Maintainer: Debian EFI team &lt;debian-efi@lists.debian.org&gt;
  Installed-Size: 50
@@ -1817,44 +1819,44 @@ shim-helpers-i386-signed-template_15.4-1~deb10u1_i386.deb
   This package contains template files for shim-helpers-i386-signed.
   This is only needed for Secure Boot signing.
 
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/code-signing/
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/code-signing/shim-helpers-i386-signed-template/
--rw-r--r-- root/root       232 2021-03-31 18:56 ./usr/share/code-signing/shim-helpers-i386-signed-template/files.json
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/code-signing/shim-helpers-i386-signed-template/source-template/
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/code-signing/shim-helpers-i386-signed-template/source-template/debian/
--rw-r--r-- root/root       224 2021-03-31 18:56 ./usr/share/code-signing/shim-helpers-i386-signed-template/source-template/debian/README.source
--rw-r--r-- root/root       366 2021-03-31 18:56 ./usr/share/code-signing/shim-helpers-i386-signed-template/source-template/debian/changelog
--rw-r--r-- root/root         3 2021-03-31 18:56 ./usr/share/code-signing/shim-helpers-i386-signed-template/source-template/debian/compat
--rw-r--r-- root/root      1125 2021-03-31 18:56 ./usr/share/code-signing/shim-helpers-i386-signed-template/source-template/debian/control
--rw-r--r-- root/root      2290 2021-03-31 18:56 ./usr/share/code-signing/shim-helpers-i386-signed-template/source-template/debian/copyright
--rwxr-xr-x root/root       450 2021-03-31 18:56 ./usr/share/code-signing/shim-helpers-i386-signed-template/source-template/debian/rules
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/code-signing/shim-helpers-i386-signed-template/source-template/debian/source/
--rw-r--r-- root/root        13 2021-03-31 18:56 ./usr/share/code-signing/shim-helpers-i386-signed-template/source-template/debian/source/format
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/doc/
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/doc/shim-helpers-i386-signed-template/
--rw-r--r-- root/root      5719 2021-03-31 18:56 ./usr/share/doc/shim-helpers-i386-signed-template/changelog.Debian.gz
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/code-signing/
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/code-signing/shim-helpers-i386-signed-template/
+-rw-r--r-- root/root       232 2021-04-21 00:06 ./usr/share/code-signing/shim-helpers-i386-signed-template/files.json
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/code-signing/shim-helpers-i386-signed-template/source-template/
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/code-signing/shim-helpers-i386-signed-template/source-template/debian/
+-rw-r--r-- root/root       224 2021-04-21 00:06 ./usr/share/code-signing/shim-helpers-i386-signed-template/source-template/debian/README.source
+-rw-r--r-- root/root       366 2021-04-21 00:06 ./usr/share/code-signing/shim-helpers-i386-signed-template/source-template/debian/changelog
+-rw-r--r-- root/root         3 2021-04-21 00:06 ./usr/share/code-signing/shim-helpers-i386-signed-template/source-template/debian/compat
+-rw-r--r-- root/root      1125 2021-04-21 00:06 ./usr/share/code-signing/shim-helpers-i386-signed-template/source-template/debian/control
+-rw-r--r-- root/root      2290 2021-04-21 00:06 ./usr/share/code-signing/shim-helpers-i386-signed-template/source-template/debian/copyright
+-rwxr-xr-x root/root       450 2021-04-21 00:06 ./usr/share/code-signing/shim-helpers-i386-signed-template/source-template/debian/rules
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/code-signing/shim-helpers-i386-signed-template/source-template/debian/source/
+-rw-r--r-- root/root        13 2021-04-21 00:06 ./usr/share/code-signing/shim-helpers-i386-signed-template/source-template/debian/source/format
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/doc/
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/doc/shim-helpers-i386-signed-template/
+-rw-r--r-- root/root      5824 2021-04-21 00:06 ./usr/share/doc/shim-helpers-i386-signed-template/changelog.Debian.gz
 -rw-r--r-- root/root     19439 2021-03-24 01:27 ./usr/share/doc/shim-helpers-i386-signed-template/copyright
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/lintian/
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/lintian/overrides/
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/lintian/
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/lintian/overrides/
 -rw-r--r-- root/root        63 2021-03-24 01:00 ./usr/share/lintian/overrides/shim-helpers-i386-signed-template
 
 
-shim-unsigned_15.4-1~deb10u1_i386.deb
+shim-unsigned_15.4-2~deb10u1_i386.deb
 -------------------------------------
 
  new Debian package, version 2.0.
- size 388292 bytes: control archive=900 bytes.
+ size 388436 bytes: control archive=900 bytes.
      733 bytes,    16 lines      control              
      390 bytes,     6 lines      md5sums              
  Package: shim-unsigned
  Source: shim
- Version: 15.4-1~deb10u1
+ Version: 15.4-2~deb10u1
  Architecture: i386
  Maintainer: Debian EFI team &lt;debian-efi@lists.debian.org&gt;
- Installed-Size: 1469
+ Installed-Size: 1470
  Conflicts: shim (&lt;&lt; 15+1533136590.3beb971-3~)
  Replaces: shim (&lt;&lt; 15+1533136590.3beb971-3~)
  Section: admin
@@ -1866,18 +1868,18 @@ shim-unsigned_15.4-1~deb10u1_i386.deb
   infrequently-changing binary to be signed by the UEFI CA, while allowing
   an OS distributor to revision their main bootloader independently of the CA.
 
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/lib/
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/lib/shim/
--rw-r--r-- root/root       110 2021-03-31 18:56 ./usr/lib/shim/BOOTIA32.CSV
--rw-r--r-- root/root     64800 2021-03-31 18:56 ./usr/lib/shim/fbia32.efi
--rw-r--r-- root/root    668116 2021-03-31 18:56 ./usr/lib/shim/mmia32.efi
--rw-r--r-- root/root    734744 2021-03-31 18:56 ./usr/lib/shim/shimia32.efi
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/doc/
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/doc/shim-unsigned/
--rw-r--r-- root/root      5719 2021-03-31 18:56 ./usr/share/doc/shim-unsigned/changelog.Debian.gz
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/lib/
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/lib/shim/
+-rw-r--r-- root/root       110 2021-04-21 00:06 ./usr/lib/shim/BOOTIA32.CSV
+-rw-r--r-- root/root     64800 2021-04-21 00:06 ./usr/lib/shim/fbia32.efi
+-rw-r--r-- root/root    668116 2021-04-21 00:06 ./usr/lib/shim/mmia32.efi
+-rw-r--r-- root/root    735256 2021-04-21 00:06 ./usr/lib/shim/shimia32.efi
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/doc/
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/doc/shim-unsigned/
+-rw-r--r-- root/root      5824 2021-04-21 00:06 ./usr/share/doc/shim-unsigned/changelog.Debian.gz
 -rw-r--r-- root/root     19439 2021-03-24 01:27 ./usr/share/doc/shim-unsigned/copyright
 
 
@@ -1899,41 +1901,41 @@ Not cleaning session: cloned chroot in use
 
 Build Architecture: i386
 Build Type: any
-Build-Space: 69236
-Build-Time: 102
+Build-Space: 69308
+Build-Time: 100
 Distribution: buster
 Host Architecture: i386
 Install-Time: 11
-Job: shim_15.4-1~deb10u1
+Job: shim_15.4-2~deb10u1
 Machine Architecture: amd64
 Package: shim
-Package-Time: 126
-Source-Version: 15.4-1~deb10u1
-Space: 69236
+Package-Time: 124
+Source-Version: 15.4-2~deb10u1
+Space: 69308
 Status: successful
-Version: 15.4-1~deb10u1
+Version: 15.4-2~deb10u1
 --------------------------------------------------------------------------------
-Finished at 2021-04-17T20:35:59Z
-Build needed 00:02:06, 69236k disk space
+Finished at 2021-04-22T08:20:42Z
+Build needed 00:02:04, 69308k disk space
 Signature with key '1F85E1B7868B7258' requested:
 long key IDs are discouraged; please use key fingerprints instead
- signfile buildinfo /home/buildd/build/shim_15.4-1~deb10u1/shim_15.4-1~deb10u1_i386.buildinfo 1F85E1B7868B7258
+ signfile buildinfo /home/buildd/build/shim_15.4-2~deb10u1/shim_15.4-2~deb10u1_i386.buildinfo 1F85E1B7868B7258
 
- fixup_changes buildinfo /home/buildd/build/shim_15.4-1~deb10u1/shim_15.4-1~deb10u1_i386.buildinfo /home/buildd/build/shim_15.4-1~deb10u1/shim_15.4-1~deb10u1_i386.changes
- signfile changes /home/buildd/build/shim_15.4-1~deb10u1/shim_15.4-1~deb10u1_i386.changes 1F85E1B7868B7258
+ fixup_changes buildinfo /home/buildd/build/shim_15.4-2~deb10u1/shim_15.4-2~deb10u1_i386.buildinfo /home/buildd/build/shim_15.4-2~deb10u1/shim_15.4-2~deb10u1_i386.changes
+ signfile changes /home/buildd/build/shim_15.4-2~deb10u1/shim_15.4-2~deb10u1_i386.changes 1F85E1B7868B7258
 
 Successfully signed buildinfo, changes files
 
 </pre>
 </div><div id="footer">
-<small>Page generated on 2021-04-17 22:18:14 UTC<br />
+<small>Page generated on 2021-04-22 17:46:59 UTC<br />
 Pages written by <a href="https://wiki.debian.org/MehdiDogguy">Mehdi Dogguy</a><br />
 Architecture specific issues should be sent to &lt;<a href="https://www.debian.org/intro/organization#ports">$arch@buildd.debian.org</a>&gt;<br />
 Service maintained by the wanna-build team &lt;<a href="https://lists.debian.org/debian-wb-team/">debian-wb-team@lists.debian.org</a>&gt;<br />
 Download code with git: <code>git clone https://salsa.debian.org/wb-team/pgstatus.git</code></small><br />
 <span class="tiny">
-<a href="http://validator.w3.org/check?uri=https%3A%2F%2Fbuildd.debian.org%2Fstatus%2Ffetch.php%3Fpkg%3Dshim%26arch%3Di386%26ver%3D15.4-1%257Edeb10u1%26stamp%3D1618691765%26raw%3D0">Valid XHTML</a>&nbsp;
-<a href="http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbuildd.debian.org%2Fstatus%2Ffetch.php%3Fpkg%3Dshim%26arch%3Di386%26ver%3D15.4-1%257Edeb10u1%26stamp%3D1618691765%26raw%3D0">Valid CSS</a>
+<a href="http://validator.w3.org/check?uri=https%3A%2F%2Fbuildd.debian.org%2Fstatus%2Ffetch.php%3Fpkg%3Dshim%26arch%3Di386%26ver%3D15.4-2%257Edeb10u1%26stamp%3D1619079647%26raw%3D0">Valid XHTML</a>&nbsp;
+<a href="http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbuildd.debian.org%2Fstatus%2Ffetch.php%3Fpkg%3Dshim%26arch%3Di386%26ver%3D15.4-2%257Edeb10u1%26stamp%3D1619079647%26raw%3D0">Valid CSS</a>
 </span>
 </div>
 </body>

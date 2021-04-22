@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Build log for shim (15.4-1~deb10u1) on amd64</title>
+<title>Build log for shim (15.4-2~deb10u1) on amd64</title>
 
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link type="text/css" rel="stylesheet" href="media/revamp.css" />
@@ -30,29 +30,29 @@ $(document).ready(function () {
 </head>
 <body>
 <h1 id="title"><a href="https://buildd.debian.org">Debian Package Auto-Building</a></h1>
-<h2 id="subtitle">Build log for shim (15.4-1~deb10u1) on amd64</h2>
+<h2 id="subtitle">Build log for shim (15.4-2~deb10u1) on amd64</h2>
 <div id="body">
-<a href="package.php?p=shim">shim</a> → <a href="logs.php?pkg=shim&amp;ver=15.4-1%7Edeb10u1">15.4-1~deb10u1</a> → <a href="logs.php?pkg=shim&amp;ver=15.4-1%7Edeb10u1&amp;arch=amd64">amd64</a> → 2021-04-17 20:37:48 (<a href="fetch.php?pkg=shim&amp;arch=amd64&amp;ver=15.4-1%7Edeb10u1&amp;stamp=1618691868&amp;raw=1">text</a>)
+<a href="package.php?p=shim">shim</a> → <a href="logs.php?pkg=shim&amp;ver=15.4-2%7Edeb10u1">15.4-2~deb10u1</a> → <a href="logs.php?pkg=shim&amp;ver=15.4-2%7Edeb10u1&amp;arch=amd64">amd64</a> → 2021-04-22 08:20:47 (<a href="fetch.php?pkg=shim&amp;arch=amd64&amp;ver=15.4-2%7Edeb10u1&amp;stamp=1619079647&amp;raw=1">text</a>)
 
 <pre>
 
-sbuild (Debian sbuild) 0.81.2 (31 January 2021) on x86-ubc-01.debian.org
+sbuild (Debian sbuild) 0.79.1 (22 April 2020) on x86-ubc-02.debian.org
 
 +==============================================================================+
-| shim 15.4-1~deb10u1 (amd64)                  Sat, 17 Apr 2021 20:35:47 +0000 |
+| shim 15.4-2~deb10u1 (amd64)                  Thu, 22 Apr 2021 08:18:50 +0000 |
 +==============================================================================+
 
 Package: shim
-Version: 15.4-1~deb10u1
-Source Version: 15.4-1~deb10u1
+Version: 15.4-2~deb10u1
+Source Version: 15.4-2~deb10u1
 Distribution: buster
 Machine Architecture: amd64
 Host Architecture: amd64
 Build Architecture: amd64
 Build Type: any
 
-I: NOTICE: Log filtering will replace 'var/run/schroot/mount/buster-amd64-sbuild-5a64cf78-abee-4a4a-bf2d-ad804e60b376' with '&lt;&lt;CHROOT&gt;&gt;'
-I: NOTICE: Log filtering will replace 'build/shim-aimbv5/resolver-LuPvfC' with '&lt;&lt;RESOLVERDIR&gt;&gt;'
+I: NOTICE: Log filtering will replace 'var/run/schroot/mount/buster-amd64-sbuild-65b7e9dd-e890-4d6e-bc6b-919815fcf1aa' with '&lt;&lt;CHROOT&gt;&gt;'
+I: NOTICE: Log filtering will replace 'build/shim-5Nfz7I/resolver-WKbdXt' with '&lt;&lt;RESOLVERDIR&gt;&gt;'
 
 +------------------------------------------------------------------------------+
 | Update chroot                                                                |
@@ -61,16 +61,17 @@ I: NOTICE: Log filtering will replace 'build/shim-aimbv5/resolver-LuPvfC' with '
 Hit:1 https://deb.debian.org/debian buster InRelease
 Get:2 https://deb.debian.org/debian buster-proposed-updates InRelease [54.5 kB]
 Get:3 https://deb.debian.org/debian buster/contrib Sources [42.5 kB]
-Get:4 https://deb.debian.org/debian buster/main Sources [7841 kB]
-Get:5 https://incoming.debian.org/debian-buildd buildd-buster-proposed-updates InRelease [34.0 kB]
-Get:6 https://deb.debian.org/debian buster/non-free Sources [85.7 kB]
+Get:4 https://deb.debian.org/debian buster/non-free Sources [85.7 kB]
+Get:5 https://deb.debian.org/debian buster/main Sources [7841 kB]
+Get:6 https://incoming.debian.org/debian-buildd buildd-buster-proposed-updates InRelease [34.0 kB]
 Get:7 https://deb.debian.org/debian buster/contrib amd64 Packages [50.1 kB]
 Get:8 https://deb.debian.org/debian buster-proposed-updates/contrib Sources [700 B]
-Get:9 https://deb.debian.org/debian buster-proposed-updates/main Sources [17.9 kB]
-Get:10 https://deb.debian.org/debian buster-proposed-updates/main amd64 Packages [34.2 kB]
-Get:11 https://deb.debian.org/debian buster-proposed-updates/contrib amd64 Packages [728 B]
-Get:12 https://incoming.debian.org/debian-buildd buildd-buster-proposed-updates/main Sources [1876 B]
-Fetched 8164 kB in 2s (4319 kB/s)
+Get:9 https://deb.debian.org/debian buster-proposed-updates/main Sources [20.5 kB]
+Get:10 https://deb.debian.org/debian buster-proposed-updates/contrib amd64 Packages [728 B]
+Get:11 https://deb.debian.org/debian buster-proposed-updates/main amd64 Packages [38.6 kB]
+Get:12 https://incoming.debian.org/debian-buildd buildd-buster-proposed-updates/main Sources [1408 B]
+Get:13 https://incoming.debian.org/debian-buildd buildd-buster-proposed-updates/main amd64 Packages [2148 B]
+Fetched 8172 kB in 2s (4396 kB/s)
 Reading package lists...
 
 +------------------------------------------------------------------------------+
@@ -92,14 +93,14 @@ https://salsa.debian.org/efi-team/shim.git
 Please use:
 git clone https://salsa.debian.org/efi-team/shim.git
 to retrieve the latest (possibly unreleased) updates to the package.
-Need to get 1292 kB of source archives.
-Get:1 https://deb.debian.org/debian buster-proposed-updates/main shim 15.4-1~deb10u1 (dsc) [2311 B]
-Get:2 https://deb.debian.org/debian buster-proposed-updates/main shim 15.4-1~deb10u1 (tar) [1260 kB]
-Get:3 https://deb.debian.org/debian buster-proposed-updates/main shim 15.4-1~deb10u1 (diff) [29.6 kB]
-Fetched 1292 kB in 1s (1576 kB/s)
+Need to get 1294 kB of source archives.
+Get:1 https://incoming.debian.org/debian-buildd buildd-buster-proposed-updates/main shim 15.4-2~deb10u1 (dsc) [2311 B]
+Get:2 https://incoming.debian.org/debian-buildd buildd-buster-proposed-updates/main shim 15.4-2~deb10u1 (tar) [1260 kB]
+Get:3 https://incoming.debian.org/debian-buildd buildd-buster-proposed-updates/main shim 15.4-2~deb10u1 (diff) [31.0 kB]
+Fetched 1294 kB in 1s (1420 kB/s)
 Download complete and in download only mode
-I: NOTICE: Log filtering will replace 'build/shim-aimbv5/shim-15.4' with '&lt;&lt;PKGBUILDDIR&gt;&gt;'
-I: NOTICE: Log filtering will replace 'build/shim-aimbv5' with '&lt;&lt;BUILDDIR&gt;&gt;'
+I: NOTICE: Log filtering will replace 'build/shim-5Nfz7I/shim-15.4' with '&lt;&lt;PKGBUILDDIR&gt;&gt;'
+I: NOTICE: Log filtering will replace 'build/shim-5Nfz7I' with '&lt;&lt;BUILDDIR&gt;&gt;'
 
 +------------------------------------------------------------------------------+
 | Install package build dependencies                                           |
@@ -116,8 +117,8 @@ Ign:1 copy:/&lt;&lt;RESOLVERDIR&gt;&gt;/apt_archive ./ InRelease
 Get:2 copy:/&lt;&lt;RESOLVERDIR&gt;&gt;/apt_archive ./ Release [957 B]
 Ign:3 copy:/&lt;&lt;RESOLVERDIR&gt;&gt;/apt_archive ./ Release.gpg
 Get:4 copy:/&lt;&lt;RESOLVERDIR&gt;&gt;/apt_archive ./ Sources [419 B]
-Get:5 copy:/&lt;&lt;RESOLVERDIR&gt;&gt;/apt_archive ./ Packages [499 B]
-Fetched 1875 B in 0s (127 kB/s)
+Get:5 copy:/&lt;&lt;RESOLVERDIR&gt;&gt;/apt_archive ./ Packages [502 B]
+Fetched 1878 B in 0s (99.6 kB/s)
 Reading package lists...
 Reading package lists...
 
@@ -156,10 +157,10 @@ The following NEW packages will be installed:
   libsqlite3-0 libtool libuchardet0 libxml2 m4 man-db opensc opensc-pkcs11
   pesign po-debconf readline-common sbsigntool sbuild-build-depends-main-dummy
   sensible-utils xxd zlib1g-dev
-0 upgraded, 53 newly installed, 0 to remove and 2 not upgraded.
+0 upgraded, 53 newly installed, 0 to remove and 5 not upgraded.
 Need to get 24.4 MB of archives.
 After this operation, 88.1 MB of additional disk space will be used.
-Get:1 copy:/&lt;&lt;RESOLVERDIR&gt;&gt;/apt_archive ./ sbuild-build-depends-main-dummy 0.invalid.0 [924 B]
+Get:1 copy:/&lt;&lt;RESOLVERDIR&gt;&gt;/apt_archive ./ sbuild-build-depends-main-dummy 0.invalid.0 [928 B]
 Get:2 https://deb.debian.org/debian buster/main amd64 libbsd0 amd64 0.9.1-2+deb10u1 [99.5 kB]
 Get:3 https://deb.debian.org/debian buster/main amd64 bsdmainutils amd64 11.1.2+b1 [191 kB]
 Get:4 https://deb.debian.org/debian buster/main amd64 libuchardet0 amd64 0.0.6-3 [64.9 kB]
@@ -213,9 +214,9 @@ Get:51 https://deb.debian.org/debian buster/main amd64 pesign amd64 0.112-5 [94.
 Get:52 https://deb.debian.org/debian buster/main amd64 sbsigntool amd64 0.9.2-2 [63.5 kB]
 Get:53 https://deb.debian.org/debian buster/main amd64 xxd amd64 2:8.1.0875-5 [140 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 24.4 MB in 1s (27.8 MB/s)
+Fetched 24.4 MB in 1s (39.6 MB/s)
 Selecting previously unselected package libbsd0:amd64.
-(Reading database ... 12274 files and directories currently installed.)
+(Reading database ... 12278 files and directories currently installed.)
 Preparing to unpack .../00-libbsd0_0.9.1-2+deb10u1_amd64.deb ...
 Unpacking libbsd0:amd64 (0.9.1-2+deb10u1) ...
 Selecting previously unselected package bsdmainutils.
@@ -444,9 +445,9 @@ Arch check ok (amd64 included in amd64 arm64 i386)
 | Build environment                                                            |
 +------------------------------------------------------------------------------+
 
-Kernel: Linux 5.10.0-6-amd64 #1 SMP Debian 5.10.28-1 (2021-04-09) amd64 (x86_64)
+Kernel: Linux 4.19.0-16-amd64 #1 SMP Debian 4.19.181-1 (2021-03-19) amd64 (x86_64)
 Toolchain package versions: binutils_2.31.1-16 dpkg-dev_1.19.7 g++-8_8.3.0-6 gcc-8_8.3.0-6 libc6-dev_2.28-10 libstdc++-8-dev_8.3.0-6 libstdc++6_8.3.0-6 linux-libc-dev_4.19.181-1
-Package versions: adduser_3.118 apt_1.8.2.2 autoconf_2.69-11 automake_1:1.16.1-4 autopoint_0.19.8.1-9 autotools-dev_20180224.1 base-files_10.3+deb10u9 base-passwd_3.5.46 bash_5.0-4 binutils_2.31.1-16 binutils-common_2.31.1-16 binutils-x86-64-linux-gnu_2.31.1-16 bsdmainutils_11.1.2+b1 bsdutils_1:2.33.1-0.1 build-essential_12.6 bzip2_1.0.6-9.2~deb10u1 ca-certificates_20200601~deb10u2 coolkey_1.1.0-13+b1 coreutils_8.30-3 cpp_4:8.3.0-1 cpp-8_8.3.0-6 dash_0.5.10.2-5 debconf_1.5.71 debhelper_12.1.1 debian-archive-keyring_2019.1+deb10u1 debianutils_4.8.6.1 dh-autoreconf_19 dh-strip-nondeterminism_1.1.2-1 diffutils_1:3.7-3 dos2unix_7.4.0-1 dpkg_1.19.7 dpkg-dev_1.19.7 dwz_0.12-3 e2fsprogs_1.44.5-1+deb10u3 fakeroot_1.23-1 fdisk_2.33.1-0.1 file_1:5.35-4+deb10u2 findutils_4.6.0+git+20190209-2 g++_4:8.3.0-1 g++-8_8.3.0-6 gcc_4:8.3.0-1 gcc-8_8.3.0-6 gcc-8-base_8.3.0-6 gettext_0.19.8.1-9 gettext-base_0.19.8.1-9 gpgv_2.2.12-1+deb10u1 grep_3.3-1 groff-base_1.22.4-3+deb10u1 gzip_1.9-3 hostname_3.21 init-system-helpers_1.56+nmu1 intltool-debian_0.35.0+20060710.5 libacl1_2.2.53-4 libapt-pkg5.0_1.8.2.2 libarchive-zip-perl_1.64-1 libasan5_8.3.0-6 libatomic1_8.3.0-6 libattr1_1:2.4.48-4 libaudit-common_1:2.8.4-3 libaudit1_1:2.8.4-3 libbinutils_2.31.1-16 libblkid1_2.33.1-0.1 libbsd0_0.9.1-2+deb10u1 libbz2-1.0_1.0.6-9.2~deb10u1 libc-bin_2.28-10 libc-dev-bin_2.28-10 libc6_2.28-10 libc6-dev_2.28-10 libcap-ng0_0.7.9-2 libcc1-0_8.3.0-6 libckyapplet1_1.1.0-13+b1 libcom-err2_1.44.5-1+deb10u3 libcroco3_0.6.12-3 libdb5.3_5.3.28+dfsg1-0.5 libdebconfclient0_0.249 libdpkg-perl_1.19.7 libefivar1_37-2+deb10u1 libelf-dev_0.176-1.1 libelf1_0.176-1.1 libext2fs2_1.44.5-1+deb10u3 libfakeroot_1.23-1 libfdisk1_2.33.1-0.1 libffi6_3.2.1-9 libfile-stripnondeterminism-perl_1.1.2-1 libgcc-8-dev_8.3.0-6 libgcc1_1:8.3.0-6 libgcrypt20_1.8.4-5 libgdbm-compat4_1.18.1-4 libgdbm6_1.18.1-4 libglib2.0-0_2.58.3-2+deb10u2 libgmp10_2:6.1.2+dfsg-4 libgnutls30_3.6.7-4+deb10u6 libgomp1_8.3.0-6 libgpg-error0_1.35-1 libhogweed4_3.4.1-1 libicu63_63.1-6+deb10u1 libidn2-0_2.0.5-1+deb10u1 libisl19_0.20-2 libitm1_8.3.0-6 liblsan0_8.3.0-6 liblz4-1_1.8.3-1 liblzma5_5.2.4-1 libmagic-mgc_1:5.35-4+deb10u2 libmagic1_1:5.35-4+deb10u2 libmount1_2.33.1-0.1 libmpc3_1.1.0-1 libmpfr6_4.0.2-1 libmpx2_8.3.0-6 libncurses6_6.1+20181013-2+deb10u2 libncursesw6_6.1+20181013-2+deb10u2 libnettle6_3.4.1-1 libnspr4_2:4.20-1 libnss3_2:3.42.1-1+deb10u3 libnss3-tools_2:3.42.1-1+deb10u3 libp11-kit0_0.23.15-2+deb10u1 libpam-modules_1.3.1-5 libpam-modules-bin_1.3.1-5 libpam-runtime_1.3.1-5 libpam0g_1.3.1-5 libpcre3_2:8.39-12 libpcsclite1_1.8.24-1 libperl5.28_5.28.1-6+deb10u1 libpipeline1_1.5.1-2 libpopt0_1.16-12 libquadmath0_8.3.0-6 libreadline7_7.0-5 libseccomp2_2.3.3-4 libselinux1_2.8-1+b1 libsemanage-common_2.8-2 libsemanage1_2.8-2 libsepol1_2.8-1 libsigsegv2_2.12-2 libsmartcols1_2.33.1-0.1 libsqlite3-0_3.27.2-3+deb10u1 libss2_1.44.5-1+deb10u3 libssl1.1_1.1.1d-0+deb10u5 libstdc++-8-dev_8.3.0-6 libstdc++6_8.3.0-6 libsystemd0_241-7~deb10u7 libtasn1-6_4.13-3 libtinfo6_6.1+20181013-2+deb10u2 libtool_2.4.6-9 libtsan0_8.3.0-6 libubsan1_8.3.0-6 libuchardet0_0.0.6-3 libudev1_241-7~deb10u7 libunistring2_0.9.10-1 libuuid1_2.33.1-0.1 libxml2_2.9.4+dfsg1-7+deb10u1 libzstd1_1.3.8+dfsg-3+deb10u2 linux-libc-dev_4.19.181-1 login_1:4.5-1.1 m4_1.4.18-2 make_4.2.1-1.2 man-db_2.8.5-2 mawk_1.3.3-17+b3 mount_2.33.1-0.1 ncurses-base_6.1+20181013-2+deb10u2 ncurses-bin_6.1+20181013-2+deb10u2 opensc_0.19.0-1 opensc-pkcs11_0.19.0-1 openssl_1.1.1d-0+deb10u5 passwd_1:4.5-1.1 patch_2.7.6-3+deb10u1 perl_5.28.1-6+deb10u1 perl-base_5.28.1-6+deb10u1 perl-modules-5.28_5.28.1-6+deb10u1 pesign_0.112-5 po-debconf_1.0.21 policyrcd-script-zg2_0.1-3 readline-common_7.0-5 sbsigntool_0.9.2-2 sbuild-build-depends-main-dummy_0.invalid.0 sed_4.7-1 sensible-utils_0.0.12 sysvinit-utils_2.93-8 tar_1.30+dfsg-6 tzdata_2021a-0+deb10u1 util-linux_2.33.1-0.1 xxd_2:8.1.0875-5 xz-utils_5.2.4-1 zlib1g_1:1.2.11.dfsg-1 zlib1g-dev_1:1.2.11.dfsg-1
+Package versions: adduser_3.118 apt_1.8.2.2 apt-transport-https_1.8.2.2 autoconf_2.69-11 automake_1:1.16.1-4 autopoint_0.19.8.1-9 autotools-dev_20180224.1 base-files_10.3+deb10u9 base-passwd_3.5.46 bash_5.0-4 binutils_2.31.1-16 binutils-common_2.31.1-16 binutils-x86-64-linux-gnu_2.31.1-16 bsdmainutils_11.1.2+b1 bsdutils_1:2.33.1-0.1 build-essential_12.6 bzip2_1.0.6-9.2~deb10u1 ca-certificates_20200601~deb10u2 coolkey_1.1.0-13+b1 coreutils_8.30-3 cpp_4:8.3.0-1 cpp-8_8.3.0-6 dash_0.5.10.2-5 debconf_1.5.71 debhelper_12.1.1 debian-archive-keyring_2019.1+deb10u1 debianutils_4.8.6.1 dh-autoreconf_19 dh-strip-nondeterminism_1.1.2-1 diffutils_1:3.7-3 dos2unix_7.4.0-1 dpkg_1.19.7 dpkg-dev_1.19.7 dwz_0.12-3 e2fsprogs_1.44.5-1+deb10u3 fakeroot_1.23-1 fdisk_2.33.1-0.1 file_1:5.35-4+deb10u2 findutils_4.6.0+git+20190209-2 g++_4:8.3.0-1 g++-8_8.3.0-6 gcc_4:8.3.0-1 gcc-8_8.3.0-6 gcc-8-base_8.3.0-6 gettext_0.19.8.1-9 gettext-base_0.19.8.1-9 gpgv_2.2.12-1+deb10u1 grep_3.3-1 groff-base_1.22.4-3+deb10u1 gzip_1.9-3 hostname_3.21 init-system-helpers_1.56+nmu1 intltool-debian_0.35.0+20060710.5 libacl1_2.2.53-4 libapt-pkg5.0_1.8.2.2 libarchive-zip-perl_1.64-1 libasan5_8.3.0-6 libatomic1_8.3.0-6 libattr1_1:2.4.48-4 libaudit-common_1:2.8.4-3 libaudit1_1:2.8.4-3 libbinutils_2.31.1-16 libblkid1_2.33.1-0.1 libbsd0_0.9.1-2+deb10u1 libbz2-1.0_1.0.6-9.2~deb10u1 libc-bin_2.28-10 libc-dev-bin_2.28-10 libc6_2.28-10 libc6-dev_2.28-10 libcap-ng0_0.7.9-2 libcc1-0_8.3.0-6 libckyapplet1_1.1.0-13+b1 libcom-err2_1.44.5-1+deb10u3 libcroco3_0.6.12-3 libdb5.3_5.3.28+dfsg1-0.5 libdebconfclient0_0.249 libdpkg-perl_1.19.7 libefivar1_37-2+deb10u1 libelf-dev_0.176-1.1 libelf1_0.176-1.1 libext2fs2_1.44.5-1+deb10u3 libfakeroot_1.23-1 libfdisk1_2.33.1-0.1 libffi6_3.2.1-9 libfile-stripnondeterminism-perl_1.1.2-1 libgcc-8-dev_8.3.0-6 libgcc1_1:8.3.0-6 libgcrypt20_1.8.4-5 libgdbm-compat4_1.18.1-4 libgdbm6_1.18.1-4 libglib2.0-0_2.58.3-2+deb10u2 libgmp10_2:6.1.2+dfsg-4 libgnutls30_3.6.7-4+deb10u6 libgomp1_8.3.0-6 libgpg-error0_1.35-1 libhogweed4_3.4.1-1 libicu63_63.1-6+deb10u1 libidn2-0_2.0.5-1+deb10u1 libisl19_0.20-2 libitm1_8.3.0-6 liblsan0_8.3.0-6 liblz4-1_1.8.3-1 liblzma5_5.2.4-1 libmagic-mgc_1:5.35-4+deb10u2 libmagic1_1:5.35-4+deb10u2 libmount1_2.33.1-0.1 libmpc3_1.1.0-1 libmpfr6_4.0.2-1 libmpx2_8.3.0-6 libncurses6_6.1+20181013-2+deb10u2 libncursesw6_6.1+20181013-2+deb10u2 libnettle6_3.4.1-1 libnspr4_2:4.20-1 libnss3_2:3.42.1-1+deb10u3 libnss3-tools_2:3.42.1-1+deb10u3 libp11-kit0_0.23.15-2+deb10u1 libpam-modules_1.3.1-5 libpam-modules-bin_1.3.1-5 libpam-runtime_1.3.1-5 libpam0g_1.3.1-5 libpcre3_2:8.39-12 libpcsclite1_1.8.24-1 libperl5.28_5.28.1-6+deb10u1 libpipeline1_1.5.1-2 libpopt0_1.16-12 libquadmath0_8.3.0-6 libreadline7_7.0-5 libseccomp2_2.3.3-4 libselinux1_2.8-1+b1 libsemanage-common_2.8-2 libsemanage1_2.8-2 libsepol1_2.8-1 libsigsegv2_2.12-2 libsmartcols1_2.33.1-0.1 libsqlite3-0_3.27.2-3+deb10u1 libss2_1.44.5-1+deb10u3 libssl1.1_1.1.1d-0+deb10u5 libstdc++-8-dev_8.3.0-6 libstdc++6_8.3.0-6 libsystemd0_241-7~deb10u7 libtasn1-6_4.13-3 libtinfo6_6.1+20181013-2+deb10u2 libtool_2.4.6-9 libtsan0_8.3.0-6 libubsan1_8.3.0-6 libuchardet0_0.0.6-3 libudev1_241-7~deb10u7 libunistring2_0.9.10-1 libuuid1_2.33.1-0.1 libxml2_2.9.4+dfsg1-7+deb10u1 libzstd1_1.3.8+dfsg-3+deb10u2 linux-libc-dev_4.19.181-1 login_1:4.5-1.1 m4_1.4.18-2 make_4.2.1-1.2 man-db_2.8.5-2 mawk_1.3.3-17+b3 mount_2.33.1-0.1 ncurses-base_6.1+20181013-2+deb10u2 ncurses-bin_6.1+20181013-2+deb10u2 opensc_0.19.0-1 opensc-pkcs11_0.19.0-1 openssl_1.1.1d-0+deb10u5 passwd_1:4.5-1.1 patch_2.7.6-3+deb10u1 perl_5.28.1-6+deb10u1 perl-base_5.28.1-6+deb10u1 perl-modules-5.28_5.28.1-6+deb10u1 pesign_0.112-5 po-debconf_1.0.21 policyrcd-script-zg2_0.1-3 readline-common_7.0-5 sbsigntool_0.9.2-2 sbuild-build-depends-main-dummy_0.invalid.0 sed_4.7-1 sensible-utils_0.0.12 sysvinit-utils_2.93-8 tar_1.30+dfsg-6 tzdata_2021a-0+deb10u1 util-linux_2.33.1-0.1 xxd_2:8.1.0875-5 xz-utils_5.2.4-1 zlib1g_1:1.2.11.dfsg-1 zlib1g-dev_1:1.2.11.dfsg-1
 
 +------------------------------------------------------------------------------+
 | Build                                                                        |
@@ -463,7 +464,7 @@ Format: 3.0 (quilt)
 Source: shim
 Binary: shim-unsigned, shim-helpers-amd64-signed-template, shim-helpers-i386-signed-template, shim-helpers-arm64-signed-template
 Architecture: amd64 arm64 i386
-Version: 15.4-1~deb10u1
+Version: 15.4-2~deb10u1
 Maintainer: Debian EFI team &lt;debian-efi@lists.debian.org&gt;
 Uploaders: Steve Langasek &lt;vorlon@debian.org&gt;, Steve McIntyre &lt;93sam@debian.org&gt;
 Standards-Version: 4.3.0
@@ -477,45 +478,47 @@ Package-List:
  shim-unsigned deb admin optional arch=amd64,arm64,i386
 Checksums-Sha1:
  d70485792a300bfa66f551adf7ae766451dfe7c0 1260475 shim_15.4.orig.tar.bz2
- b1b63163c33adde5acac8dfc4115ac47069de249 29592 shim_15.4-1~deb10u1.debian.tar.xz
+ 5c87cdab709c019bbafa4d9e96c14ca9c0f28997 30984 shim_15.4-2~deb10u1.debian.tar.xz
 Checksums-Sha256:
  8344473dd10569588b8238a4656b8fab226714eea9f5363f8c410aa8a5090297 1260475 shim_15.4.orig.tar.bz2
- 89437c02cfd5d58dc35b2673663582dcb996662edb1e857c4710cc5d346dcd15 29592 shim_15.4-1~deb10u1.debian.tar.xz
+ 52a90b74959d63a80ae50ebc360d9ad81aaffdcc1f5c6590f370e4f6b74974b9 30984 shim_15.4-2~deb10u1.debian.tar.xz
 Files:
  e47302f0302e90503ecbfa31ad4ed8fa 1260475 shim_15.4.orig.tar.bz2
- 72a1ef2ad8af43bd606568cd7fecdc4e 29592 shim_15.4-1~deb10u1.debian.tar.xz
+ 55298cc709ffaeb7675a416846b04574 30984 shim_15.4-2~deb10u1.debian.tar.xz
 
 -----BEGIN PGP SIGNATURE-----
 
-iQJFBAEBCAAvFiEEzrtSMB1hfpEDkP4WWHl5VzRCaE4FAmB7D8wRHDkzc2FtQGRl
-Ymlhbi5vcmcACgkQWHl5VzRCaE7hNQ//ZDMPkWp790A22q7hs36QkAxKLS/vqhCN
-1m3Q9ujzTqIn1LQmtCAngJnoBVMxcOJ0fwpo6tBzytGgssIoXdb94+Vb0h1OwccP
-2HqUXvMKuma9/mvMkR/jzXeLOg+dE6rp7q1nFDlxzYpCnrycyXTUBBbdqlQLwGFG
-VouXs0VLm01+yjdr/6d6pONADn+D0O+0m+aSgGXSxLFK6biEbLe2tikw5t0heaOc
-DBjJYidscrNvE8E5AfsE0kiuBn6LTCDx+u9XsDKKe6+mX2Ha+hpIFi/xLYs59PCX
-hsVVBaF/hSVEjGw228TuBiWMgMFWAd2gEWE2WQSL15fdnKih3kv5bX3lhyP5AYMe
-seqaLsHn1qu9xSVHgv2MoqTkuuyV20hm4058zsynROfzmH2+3Ml7yBYyJwTPV+rh
-/UOrKMBWvLJseDfF0UCDNI4fM2aCQTE+psCpHS4+t8hsJaBwURMEeRuK7XWcti9e
-Mrt4odPvapGeNtdrPRWVYGiUYt5YFBDnlQIsWpFyU78lZiX9ZnkFp3KkC96f5asd
-FKHNuFS8oNqfqTvTQIGt9x3RJtFjWZIFDVZKlXGobijQDPEplPiEUrBCP3Cl3mK6
-R66NXg1jHyyOrDNd68CIuGMGrk+6BbfsbunkAb35kpUl3tR3sY0nI0QUqBlSzKLt
-nxdBC8X6cIw=
-=dFvl
+iQJFBAEBCAAvFiEEzrtSMB1hfpEDkP4WWHl5VzRCaE4FAmCAn8IRHDkzc2FtQGRl
+Ymlhbi5vcmcACgkQWHl5VzRCaE67hw//SxYI0PvDWXt3TUY8yKSg5Lgquy/U8aOE
+6fBgFcA6Qz4XR6/IOauJ1EEhXctcwU0QAX6mk+eMdF6EV49hR1bh66FNbgmatrIK
+pJJ7rwLwmaFTfQubrnCUd6oRV6aX/Ul+XEsLKve8NIFtuXJTZr3re5TfWgp2bFjB
+HTw5rbnjIdpsZSeSWgcL0GAX0Gj8LFJn4PO1X9owu8cYXRU/EuMusnZsmxNMZ+3d
+Z3m2a6k5W76yKxHUbzFE+yMxAe4pa3YEZh2ItNdzs3XKqdLEo6mOfZgvj/Havbcd
+IHkwfYpLMfgzBl5WlMrZePt4GXUN0PK3Uv69GKAC1rxfqbgU34RWZcgNDE/EU2VL
+wOAIPDVAXmi/KfprrKePAXoOyJ/NFhk4UujOACIz7LFojqS3QRitt1/KBgbphpKz
+bllUiteen/XA1A6dQk4kcvvZEOLiTkruitn6895ovu9XHHLyKpi44ZATK658SRbo
+KzuD4Mk8Zckv/eG/Mn1xMfDPkloUXbqh3MtBIjNs00U69aDiIDWim6VubGYGinS9
+8kbVDSzjYS30VGH3c37POLeT3vEeWN23NNA2XOeUfTKBoTipTsHHhCUq6RPsWbjN
+AFATl7hxuMiNWzixlVdi7/p8T6BrQNHl11WK1Wgozl+78tkvO2G/q7W9H07T7NTw
+kgZAmko+FmM=
+=LL8M
 -----END PGP SIGNATURE-----
 
 gpgv: unknown type of key resource 'trustedkeys.kbx'
 gpgv: keyblock resource '/sbuild-nonexistent/.gnupg/trustedkeys.kbx': General error
-gpgv: Signature made Sat Apr 17 16:41:48 2021 UTC
+gpgv: Signature made Wed Apr 21 21:57:22 2021 UTC
 gpgv:                using RSA key CEBB52301D617E910390FE16587979573442684E
 gpgv:                issuer &quot;93sam@debian.org&quot;
 gpgv: Can't check signature: No public key
-dpkg-source: warning: failed to verify signature on ./shim_15.4-1~deb10u1.dsc
+dpkg-source: warning: failed to verify signature on ./shim_15.4-2~deb10u1.dsc
 dpkg-source: info: extracting shim in /&lt;&lt;PKGBUILDDIR&gt;&gt;
 dpkg-source: info: unpacking shim_15.4.orig.tar.bz2
-dpkg-source: info: unpacking shim_15.4-1~deb10u1.debian.tar.xz
+dpkg-source: info: unpacking shim_15.4-2~deb10u1.debian.tar.xz
 dpkg-source: info: using patch list from debian/patches/series
+dpkg-source: info: applying fix-import_one_mok_state.patch
 dpkg-source: info: applying fix-broken-ia32-reloc.patch
 dpkg-source: info: applying MOK-BootServicesData.patch
+dpkg-source: info: applying Don-t-call-QueryVariableInfo-on-EFI-1.10-machines.patch
 
 Check disk space
 ----------------
@@ -536,7 +539,7 @@ SCHROOT_CHROOT_NAME=buster-amd64-sbuild
 SCHROOT_COMMAND=env
 SCHROOT_GID=1009
 SCHROOT_GROUP=buildd
-SCHROOT_SESSION_ID=buster-amd64-sbuild-5a64cf78-abee-4a4a-bf2d-ad804e60b376
+SCHROOT_SESSION_ID=buster-amd64-sbuild-65b7e9dd-e890-4d6e-bc6b-919815fcf1aa
 SCHROOT_UID=2952
 SCHROOT_USER=buildd
 SHELL=/bin/sh
@@ -549,9 +552,9 @@ XDG_SESSION_TYPE=unspecified
 dpkg-buildpackage
 -----------------
 
-Command: dpkg-buildpackage -us -uc -mamd64 / i386 Build Daemon (x86-ubc-01) &lt;buildd_amd64-x86-ubc-01@buildd.debian.org&gt; -B -rfakeroot --changes-option=-O../shim_15.4-1~deb10u1_amd64-buildd.changes --buildinfo-option=-O../shim_15.4-1~deb10u1_amd64-buildd.buildinfo
+Command: dpkg-buildpackage -us -uc -mamd64 / i386 Build Daemon (x86-ubc-02) &lt;buildd_amd64-x86-ubc-02@buildd.debian.org&gt; -B -rfakeroot --changes-option=-O../shim_15.4-2~deb10u1_amd64-buildd.changes --buildinfo-option=-O../shim_15.4-2~deb10u1_amd64-buildd.buildinfo
 dpkg-buildpackage: info: source package shim
-dpkg-buildpackage: info: source version 15.4-1~deb10u1
+dpkg-buildpackage: info: source version 15.4-2~deb10u1
 dpkg-buildpackage: info: source distribution buster
  dpkg-source --before-build .
 dpkg-buildpackage: info: host architecture amd64
@@ -703,7 +706,7 @@ make[1]: Entering directory '/&lt;&lt;PKGBUILDDIR&gt;&gt;'
   Adding fe3c2a8c459cde5d38cec357905ea971ff54c30254a6cbb4a52521a49400d672 to dbx list
 rm -f data/sbat.debian.csv
 set -e; \
-sed -e &quot;s/@DEB_VERSION@/15.4-1~deb10u1/g&quot; \
+sed -e &quot;s/@DEB_VERSION@/15.4-2~deb10u1/g&quot; \
 	-e &quot;s/@UPSTREAM_VERSION@/15.4/g&quot; \
 	&lt; debian/sbat.debian.csv.in &gt; data/sbat.debian.csv
 # If we have an empty data/sbat.debian.csv, delete
@@ -1291,7 +1294,7 @@ x86_64-linux-gnu-objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=shimx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 0.000198723 s, 20.1 kB/s
+4 bytes copied, 6.4757e-05 s, 61.8 kB/s
 x86_64-linux-gnu-objcopy -D -j .text -j .sdata -j .data \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .reloc -j .eh_frame -j .sbat \
@@ -1328,7 +1331,7 @@ x86_64-linux-gnu-objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=mmx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 0.000115622 s, 34.6 kB/s
+4 bytes copied, 0.000179546 s, 22.3 kB/s
 x86_64-linux-gnu-objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .reloc -j .eh_frame \
@@ -1338,7 +1341,7 @@ x86_64-linux-gnu-objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=fbx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 0.000114339 s, 35.0 kB/s
+4 bytes copied, 0.00010693 s, 37.4 kB/s
 make: Leaving directory '/&lt;&lt;PKGBUILDDIR&gt;&gt;'
 make[1]: Leaving directory '/&lt;&lt;PKGBUILDDIR&gt;&gt;'
    dh_auto_test -a
@@ -1348,7 +1351,7 @@ make[2]: Entering directory '/&lt;&lt;PKGBUILDDIR&gt;&gt;'
 dd if=/dev/urandom bs=512 count=17 of=random.bin
 17+0 records in
 17+0 records out
-8704 bytes (8.7 kB, 8.5 KiB) copied, 0.000260891 s, 33.4 MB/s
+8704 bytes (8.7 kB, 8.5 KiB) copied, 0.000228306 s, 38.1 MB/s
 xxd -i random.bin test-random.h
 gcc -O2 -ggdb -std=gnu11 -isystem /&lt;&lt;PKGBUILDDIR&gt;&gt;/include/system -I/&lt;&lt;PKGBUILDDIR&gt;&gt;/gnu-efi/inc -I/&lt;&lt;PKGBUILDDIR&gt;&gt;/gnu-efi/inc/x86_64 -I/&lt;&lt;PKGBUILDDIR&gt;&gt;/gnu-efi/inc/protocol -Iinclude -iquote . -fshort-wchar -flto -fno-builtin -Wall -Wextra -Wsign-compare -Wno-deprecated-declarations -Wno-pointer-sign -Wno-unused -Werror -Werror=nonnull -Werror=nonnull-compare  -DEFI_FUNCTION_WRAPPER -DGNU_EFI_USE_MS_ABI -DPAGE_SIZE=4096 -DSHIM_UNIT_TEST &quot;-DDEFAULT_DEBUG_PRINT_STATE=0&quot; -o test-csv test.c test-csv.c csv.c 
 ./test-csv
@@ -1369,10 +1372,10 @@ test_csv_2: passed
 running test_simple_sbat_csv
 test_simple_sbat_csv: passed
 running test_csv_simple_fuzz
-parsed 98 entries
+parsed 105 entries
 test_csv_simple_fuzz: passed
 running test_csv_simple_fuzz
-parsed 2 entries
+parsed 7 entries
 test_csv_simple_fuzz: passed
 gcc -O2 -ggdb -std=gnu11 -isystem /&lt;&lt;PKGBUILDDIR&gt;&gt;/include/system -I/&lt;&lt;PKGBUILDDIR&gt;&gt;/gnu-efi/inc -I/&lt;&lt;PKGBUILDDIR&gt;&gt;/gnu-efi/inc/x86_64 -I/&lt;&lt;PKGBUILDDIR&gt;&gt;/gnu-efi/inc/protocol -Iinclude -iquote . -fshort-wchar -flto -fno-builtin -Wall -Wextra -Wsign-compare -Wno-deprecated-declarations -Wno-pointer-sign -Wno-unused -Werror -Werror=nonnull -Werror=nonnull-compare  -DEFI_FUNCTION_WRAPPER -DGNU_EFI_USE_MS_ABI -DPAGE_SIZE=4096 -DSHIM_UNIT_TEST &quot;-DDEFAULT_DEBUG_PRINT_STATE=0&quot; -o test-sbat test.c test-sbat.c sbat.c csv.c
 ./test-sbat
@@ -1491,7 +1494,7 @@ x86_64-linux-gnu-objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=shimx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 0.000220814 s, 18.1 kB/s
+4 bytes copied, 0.000227628 s, 17.6 kB/s
 x86_64-linux-gnu-objcopy -D -j .text -j .sdata -j .data \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .reloc -j .eh_frame -j .sbat \
@@ -1530,7 +1533,7 @@ rm -f debian/tmp/boot/efi/EFI/BOOT/BOOT*.EFI
 sha256sum *.efi
 235bed925f200748037282b5e77fdc6fa007c1b53d1109c3320f48d86e06d85b  fbx64.efi
 aad11efdb185101abd8e2549849f8b446ef85f84caf08aed3ef82b5f777e6db2  mmx64.efi
-cf51b1752934c98f4134f712cd083b1873563c19f35d85eb4fba935a53d5407f  shimx64.efi
+bc275419a0e2ef8e35ad9a0c0b950b2457c73414c670e0efb9660e7e65611bde  shimx64.efi
 make[1]: Leaving directory '/&lt;&lt;PKGBUILDDIR&gt;&gt;'
    dh_install -a
    dh_installdocs -a
@@ -1550,17 +1553,17 @@ make[1]: Leaving directory '/&lt;&lt;PKGBUILDDIR&gt;&gt;'
 dpkg-gencontrol: warning: Depends field of package shim-unsigned: substitution variable ${shlibs:Depends} used, but is not defined
    dh_md5sums -a
    dh_builddeb -a
-dpkg-deb: building package 'shim-helpers-amd64-signed-template' in '../shim-helpers-amd64-signed-template_15.4-1~deb10u1_amd64.deb'.
-dpkg-deb: building package 'shim-unsigned' in '../shim-unsigned_15.4-1~deb10u1_amd64.deb'.
- dpkg-genbuildinfo -O../shim_15.4-1~deb10u1_amd64-buildd.buildinfo --build=any
- dpkg-genchanges -O../shim_15.4-1~deb10u1_amd64-buildd.changes --build=any -mamd64 / i386 Build Daemon (x86-ubc-01) &lt;buildd_amd64-x86-ubc-01@buildd.debian.org&gt; &gt;../shim_15.4-1~deb10u1_amd64.changes
+dpkg-deb: building package 'shim-unsigned' in '../shim-unsigned_15.4-2~deb10u1_amd64.deb'.
+dpkg-deb: building package 'shim-helpers-amd64-signed-template' in '../shim-helpers-amd64-signed-template_15.4-2~deb10u1_amd64.deb'.
+ dpkg-genbuildinfo -O../shim_15.4-2~deb10u1_amd64-buildd.buildinfo --build=any
+ dpkg-genchanges -O../shim_15.4-2~deb10u1_amd64-buildd.changes --build=any -mamd64 / i386 Build Daemon (x86-ubc-02) &lt;buildd_amd64-x86-ubc-02@buildd.debian.org&gt; &gt;../shim_15.4-2~deb10u1_amd64.changes
  dpkg-source --after-build .
 Use of uninitialized value $files in pattern match (m//) at /usr/bin/dpkg-buildpackage line 871.
 Use of uninitialized value $files in pattern match (m//) at /usr/bin/dpkg-buildpackage line 871.
 Use of uninitialized value $files in pattern match (m//) at /usr/bin/dpkg-buildpackage line 871.
 dpkg-buildpackage: info: source-only upload: Debian-native package
 --------------------------------------------------------------------------------
-Build finished at 2021-04-17T20:37:41Z
+Build finished at 2021-04-22T08:20:42Z
 
 Finished
 --------
@@ -1572,43 +1575,42 @@ I: Built successfully
 +------------------------------------------------------------------------------+
 
 
-shim_15.4-1~deb10u1_amd64-buildd.changes:
+shim_15.4-2~deb10u1_amd64-buildd.changes:
 -----------------------------------------
 
 Format: 1.8
-Date: Wed, 31 Mar 2021 19:56:02 +0100
+Date: Wed, 21 Apr 2021 01:06:27 +0100
 Source: shim
 Binary: shim-helpers-amd64-signed-template shim-unsigned
 Architecture: amd64
-Version: 15.4-1~deb10u1
+Version: 15.4-2~deb10u1
 Distribution: buster
 Urgency: medium
-Maintainer: amd64 / i386 Build Daemon (x86-ubc-01) &lt;buildd_amd64-x86-ubc-01@buildd.debian.org&gt;
+Maintainer: amd64 / i386 Build Daemon (x86-ubc-02) &lt;buildd_amd64-x86-ubc-02@buildd.debian.org&gt;
 Changed-By: Steve McIntyre &lt;93sam@debian.org&gt;
 Description:
  shim-helpers-amd64-signed-template - boot loader to chain-load signed boot loaders (signing template)
  shim-unsigned - boot loader to chain-load signed boot loaders under Secure Boot
 Changes:
- shim (15.4-1~deb10u1) buster; urgency=medium
+ shim (15.4-2~deb10u1) buster; urgency=medium
  .
-   * New upstream release fixing more bugs: SBAT and arm64 support
-   * Print sha256 checksums of the EFI binaries when the build is done
-   * Add two patches from upstream:
-     + fix i386 binary relocations
-     + allocate MOK config table as BootServicesData
+   * Add two further patches from upstream:
+     + fix import_one_mok_state() after split
+     + Don't call QueryVariableInfo() on EFI 1.10 machines (e.g. older
+       Intel Mac machines)
 Checksums-Sha1:
- b4f07a15c2036c5eede857d6d8034e290787579d 13096 shim-helpers-amd64-signed-template_15.4-1~deb10u1_amd64.deb
- 89af76c0785730e7324b2b8b3479a70e1762be3b 429804 shim-unsigned_15.4-1~deb10u1_amd64.deb
- 46d4181b6e9e39f3fcf70755191e1bd42ca0f807 5396 shim_15.4-1~deb10u1_amd64-buildd.buildinfo
+ 0fb4cebce628e69151e03718cd401714aba62b57 13188 shim-helpers-amd64-signed-template_15.4-2~deb10u1_amd64.deb
+ 8d677993c64b8e233e1dd31f2309f362d4f6b062 428712 shim-unsigned_15.4-2~deb10u1_amd64.deb
+ 46e7aa9c588d09a10cd7b07e2d108284b0ace5e3 5396 shim_15.4-2~deb10u1_amd64-buildd.buildinfo
 Checksums-Sha256:
- b3d5f65deeb3a4b67d448df01aa40ba384da0c08c5cd030755c7e22c66b76931 13096 shim-helpers-amd64-signed-template_15.4-1~deb10u1_amd64.deb
- 06c96907dbc8481e85c5105773cb94a9474e5b3ec6bf277cc19a160d55f0f761 429804 shim-unsigned_15.4-1~deb10u1_amd64.deb
- 4ea9412283f830f6e80a528ab16ce502e02a731945bad6ae37071a078915efe9 5396 shim_15.4-1~deb10u1_amd64-buildd.buildinfo
+ 704d348aa146687249a5cf2528919aaa0c3ca335b9b3c4e95944d88026e34bd8 13188 shim-helpers-amd64-signed-template_15.4-2~deb10u1_amd64.deb
+ 7158c9c9a3436b43e83fb93e93facd79103d6c84c2600fbf619596adacd4486e 428712 shim-unsigned_15.4-2~deb10u1_amd64.deb
+ 25f54428a9b3a3bb340444f6b9cf144ae4744a57bec750f7e1b64eb49f882ad6 5396 shim_15.4-2~deb10u1_amd64-buildd.buildinfo
 Files:
- 0d3c921db85e0103b58f7597b1518979 13096 admin optional shim-helpers-amd64-signed-template_15.4-1~deb10u1_amd64.deb
- 7b61fed0cca86bc33b67c09f12dff878 429804 admin optional shim-unsigned_15.4-1~deb10u1_amd64.deb
- e86be11446464cd3b78c579d2c9b3cc6 5396 admin optional shim_15.4-1~deb10u1_amd64-buildd.buildinfo
-/&lt;&lt;BUILDDIR&gt;&gt;/shim_15.4-1~deb10u1_amd64-buildd.changes.new could not be renamed to /&lt;&lt;BUILDDIR&gt;&gt;/shim_15.4-1~deb10u1_amd64-buildd.changes: Illegal seek
+ 2e8787856466c4ea5db728e04e788039 13188 admin optional shim-helpers-amd64-signed-template_15.4-2~deb10u1_amd64.deb
+ 14e0d1683f7a68f8b00cde88369c385d 428712 admin optional shim-unsigned_15.4-2~deb10u1_amd64.deb
+ 93fed5faf3507fec9cd1dfabd862f750 5396 admin optional shim_15.4-2~deb10u1_amd64-buildd.buildinfo
+/&lt;&lt;BUILDDIR&gt;&gt;/shim_15.4-2~deb10u1_amd64-buildd.changes.new could not be renamed to /&lt;&lt;BUILDDIR&gt;&gt;/shim_15.4-2~deb10u1_amd64-buildd.changes: Illegal seek
 Distribution field may be wrong!!!
 +------------------------------------------------------------------------------+
 | Buildinfo                                                                    |
@@ -1618,19 +1620,19 @@ Format: 1.0
 Source: shim
 Binary: shim-unsigned shim-helpers-amd64-signed-template shim-helpers-i386-signed-template shim-helpers-arm64-signed-template
 Architecture: amd64
-Version: 15.4-1~deb10u1
+Version: 15.4-2~deb10u1
 Checksums-Md5:
- 0d3c921db85e0103b58f7597b1518979 13096 shim-helpers-amd64-signed-template_15.4-1~deb10u1_amd64.deb
- 7b61fed0cca86bc33b67c09f12dff878 429804 shim-unsigned_15.4-1~deb10u1_amd64.deb
+ 2e8787856466c4ea5db728e04e788039 13188 shim-helpers-amd64-signed-template_15.4-2~deb10u1_amd64.deb
+ 14e0d1683f7a68f8b00cde88369c385d 428712 shim-unsigned_15.4-2~deb10u1_amd64.deb
 Checksums-Sha1:
- b4f07a15c2036c5eede857d6d8034e290787579d 13096 shim-helpers-amd64-signed-template_15.4-1~deb10u1_amd64.deb
- 89af76c0785730e7324b2b8b3479a70e1762be3b 429804 shim-unsigned_15.4-1~deb10u1_amd64.deb
+ 0fb4cebce628e69151e03718cd401714aba62b57 13188 shim-helpers-amd64-signed-template_15.4-2~deb10u1_amd64.deb
+ 8d677993c64b8e233e1dd31f2309f362d4f6b062 428712 shim-unsigned_15.4-2~deb10u1_amd64.deb
 Checksums-Sha256:
- b3d5f65deeb3a4b67d448df01aa40ba384da0c08c5cd030755c7e22c66b76931 13096 shim-helpers-amd64-signed-template_15.4-1~deb10u1_amd64.deb
- 06c96907dbc8481e85c5105773cb94a9474e5b3ec6bf277cc19a160d55f0f761 429804 shim-unsigned_15.4-1~deb10u1_amd64.deb
+ 704d348aa146687249a5cf2528919aaa0c3ca335b9b3c4e95944d88026e34bd8 13188 shim-helpers-amd64-signed-template_15.4-2~deb10u1_amd64.deb
+ 7158c9c9a3436b43e83fb93e93facd79103d6c84c2600fbf619596adacd4486e 428712 shim-unsigned_15.4-2~deb10u1_amd64.deb
 Build-Origin: Debian
 Build-Architecture: amd64
-Build-Date: Sat, 17 Apr 2021 20:37:40 +0000
+Build-Date: Thu, 22 Apr 2021 08:20:41 +0000
 Build-Path: /&lt;&lt;PKGBUILDDIR&gt;&gt;
 Build-Tainted-By:
  usr-local-has-programs
@@ -1794,7 +1796,7 @@ Installed-Build-Depends:
 Environment:
  DEB_BUILD_OPTIONS=&quot;parallel=4&quot;
  LC_ALL=&quot;C.UTF-8&quot;
- SOURCE_DATE_EPOCH=&quot;1617216962&quot;
+ SOURCE_DATE_EPOCH=&quot;1618963587&quot;
 
 
 +------------------------------------------------------------------------------+
@@ -1802,16 +1804,16 @@ Environment:
 +------------------------------------------------------------------------------+
 
 
-shim-helpers-amd64-signed-template_15.4-1~deb10u1_amd64.deb
+shim-helpers-amd64-signed-template_15.4-2~deb10u1_amd64.deb
 -----------------------------------------------------------
 
  new Debian package, version 2.0.
- size 13096 bytes: control archive=868 bytes.
+ size 13188 bytes: control archive=868 bytes.
      405 bytes,    11 lines      control              
     1270 bytes,    11 lines      md5sums              
  Package: shim-helpers-amd64-signed-template
  Source: shim
- Version: 15.4-1~deb10u1
+ Version: 15.4-2~deb10u1
  Architecture: amd64
  Maintainer: Debian EFI team &lt;debian-efi@lists.debian.org&gt;
  Installed-Size: 50
@@ -1821,41 +1823,41 @@ shim-helpers-amd64-signed-template_15.4-1~deb10u1_amd64.deb
   This package contains template files for shim-helpers-amd64-signed.
   This is only needed for Secure Boot signing.
 
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/code-signing/
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/code-signing/shim-helpers-amd64-signed-template/
--rw-r--r-- root/root       230 2021-03-31 18:56 ./usr/share/code-signing/shim-helpers-amd64-signed-template/files.json
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/
--rw-r--r-- root/root       224 2021-03-31 18:56 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/README.source
--rw-r--r-- root/root       368 2021-03-31 18:56 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/changelog
--rw-r--r-- root/root         3 2021-03-31 18:56 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/compat
--rw-r--r-- root/root      1128 2021-03-31 18:56 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/control
--rw-r--r-- root/root      2290 2021-03-31 18:56 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/copyright
--rwxr-xr-x root/root       450 2021-03-31 18:56 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/rules
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/source/
--rw-r--r-- root/root        13 2021-03-31 18:56 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/source/format
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/doc/
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/doc/shim-helpers-amd64-signed-template/
--rw-r--r-- root/root      5719 2021-03-31 18:56 ./usr/share/doc/shim-helpers-amd64-signed-template/changelog.Debian.gz
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/code-signing/
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/code-signing/shim-helpers-amd64-signed-template/
+-rw-r--r-- root/root       230 2021-04-21 00:06 ./usr/share/code-signing/shim-helpers-amd64-signed-template/files.json
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/
+-rw-r--r-- root/root       224 2021-04-21 00:06 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/README.source
+-rw-r--r-- root/root       368 2021-04-21 00:06 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/changelog
+-rw-r--r-- root/root         3 2021-04-21 00:06 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/compat
+-rw-r--r-- root/root      1128 2021-04-21 00:06 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/control
+-rw-r--r-- root/root      2290 2021-04-21 00:06 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/copyright
+-rwxr-xr-x root/root       450 2021-04-21 00:06 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/rules
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/source/
+-rw-r--r-- root/root        13 2021-04-21 00:06 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/source/format
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/doc/
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/doc/shim-helpers-amd64-signed-template/
+-rw-r--r-- root/root      5824 2021-04-21 00:06 ./usr/share/doc/shim-helpers-amd64-signed-template/changelog.Debian.gz
 -rw-r--r-- root/root     19439 2021-03-24 01:27 ./usr/share/doc/shim-helpers-amd64-signed-template/copyright
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/lintian/
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/lintian/overrides/
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/lintian/
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/lintian/overrides/
 -rw-r--r-- root/root        64 2021-03-24 01:00 ./usr/share/lintian/overrides/shim-helpers-amd64-signed-template
 
 
-shim-unsigned_15.4-1~deb10u1_amd64.deb
+shim-unsigned_15.4-2~deb10u1_amd64.deb
 --------------------------------------
 
  new Debian package, version 2.0.
- size 429804 bytes: control archive=900 bytes.
+ size 428712 bytes: control archive=900 bytes.
      734 bytes,    16 lines      control              
      386 bytes,     6 lines      md5sums              
  Package: shim-unsigned
  Source: shim
- Version: 15.4-1~deb10u1
+ Version: 15.4-2~deb10u1
  Architecture: amd64
  Maintainer: Debian EFI team &lt;debian-efi@lists.debian.org&gt;
  Installed-Size: 1836
@@ -1870,18 +1872,18 @@ shim-unsigned_15.4-1~deb10u1_amd64.deb
   infrequently-changing binary to be signed by the UEFI CA, while allowing
   an OS distributor to revision their main bootloader independently of the CA.
 
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/lib/
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/lib/shim/
--rw-r--r-- root/root       108 2021-03-31 18:56 ./usr/lib/shim/BOOTX64.CSV
--rw-r--r-- root/root     82764 2021-03-31 18:56 ./usr/lib/shim/fbx64.efi
--rw-r--r-- root/root    840696 2021-03-31 18:56 ./usr/lib/shim/mmx64.efi
--rw-r--r-- root/root    920936 2021-03-31 18:56 ./usr/lib/shim/shimx64.efi
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/doc/
-drwxr-xr-x root/root         0 2021-03-31 18:56 ./usr/share/doc/shim-unsigned/
--rw-r--r-- root/root      5719 2021-03-31 18:56 ./usr/share/doc/shim-unsigned/changelog.Debian.gz
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/lib/
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/lib/shim/
+-rw-r--r-- root/root       108 2021-04-21 00:06 ./usr/lib/shim/BOOTX64.CSV
+-rw-r--r-- root/root     82764 2021-04-21 00:06 ./usr/lib/shim/fbx64.efi
+-rw-r--r-- root/root    840696 2021-04-21 00:06 ./usr/lib/shim/mmx64.efi
+-rw-r--r-- root/root    921448 2021-04-21 00:06 ./usr/lib/shim/shimx64.efi
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/doc/
+drwxr-xr-x root/root         0 2021-04-21 00:06 ./usr/share/doc/shim-unsigned/
+-rw-r--r-- root/root      5824 2021-04-21 00:06 ./usr/share/doc/shim-unsigned/changelog.Debian.gz
 -rw-r--r-- root/root     19439 2021-03-24 01:27 ./usr/share/doc/shim-unsigned/copyright
 
 
@@ -1903,40 +1905,40 @@ Not cleaning session: cloned chroot in use
 
 Build Architecture: amd64
 Build Type: any
-Build-Space: 88136
-Build-Time: 96
+Build-Space: 88212
+Build-Time: 94
 Distribution: buster
 Host Architecture: amd64
 Install-Time: 8
-Job: shim_15.4-1~deb10u1
+Job: shim_15.4-2~deb10u1
 Machine Architecture: amd64
 Package: shim
-Package-Time: 114
-Source-Version: 15.4-1~deb10u1
-Space: 88136
+Package-Time: 112
+Source-Version: 15.4-2~deb10u1
+Space: 88212
 Status: successful
-Version: 15.4-1~deb10u1
+Version: 15.4-2~deb10u1
 --------------------------------------------------------------------------------
-Finished at 2021-04-17T20:37:41Z
-Build needed 00:01:54, 88136k disk space
-Signature with key '714E92DC68F1CD2D7CDFFD63787961435CA5266F' requested:
- signfile buildinfo /home/buildd/build/shim_15.4-1~deb10u1_amd64-buildd.buildinfo 714E92DC68F1CD2D7CDFFD63787961435CA5266F
+Finished at 2021-04-22T08:20:42Z
+Build needed 00:01:52, 88212k disk space
+Signature with key '0740DA66C7D705C6DCF6BA4DC4B5B7264A7625EE' requested:
+ signfile buildinfo /home/buildd/build/shim_15.4-2~deb10u1_amd64-buildd.buildinfo 0740DA66C7D705C6DCF6BA4DC4B5B7264A7625EE
 
- fixup_changes buildinfo /home/buildd/build/shim_15.4-1~deb10u1_amd64-buildd.buildinfo /home/buildd/build/shim_15.4-1~deb10u1_amd64-buildd.changes
- signfile changes /home/buildd/build/shim_15.4-1~deb10u1_amd64-buildd.changes 714E92DC68F1CD2D7CDFFD63787961435CA5266F
+ fixup_changes buildinfo /home/buildd/build/shim_15.4-2~deb10u1_amd64-buildd.buildinfo /home/buildd/build/shim_15.4-2~deb10u1_amd64-buildd.changes
+ signfile changes /home/buildd/build/shim_15.4-2~deb10u1_amd64-buildd.changes 0740DA66C7D705C6DCF6BA4DC4B5B7264A7625EE
 
 Successfully signed buildinfo, changes files
 
 </pre>
 </div><div id="footer">
-<small>Page generated on 2021-04-17 22:17:49 UTC<br />
+<small>Page generated on 2021-04-22 17:46:26 UTC<br />
 Pages written by <a href="https://wiki.debian.org/MehdiDogguy">Mehdi Dogguy</a><br />
 Architecture specific issues should be sent to &lt;<a href="https://www.debian.org/intro/organization#ports">$arch@buildd.debian.org</a>&gt;<br />
 Service maintained by the wanna-build team &lt;<a href="https://lists.debian.org/debian-wb-team/">debian-wb-team@lists.debian.org</a>&gt;<br />
 Download code with git: <code>git clone https://salsa.debian.org/wb-team/pgstatus.git</code></small><br />
 <span class="tiny">
-<a href="http://validator.w3.org/check?uri=https%3A%2F%2Fbuildd.debian.org%2Fstatus%2Ffetch.php%3Fpkg%3Dshim%26arch%3Damd64%26ver%3D15.4-1%257Edeb10u1%26stamp%3D1618691868%26raw%3D0">Valid XHTML</a>&nbsp;
-<a href="http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbuildd.debian.org%2Fstatus%2Ffetch.php%3Fpkg%3Dshim%26arch%3Damd64%26ver%3D15.4-1%257Edeb10u1%26stamp%3D1618691868%26raw%3D0">Valid CSS</a>
+<a href="http://validator.w3.org/check?uri=https%3A%2F%2Fbuildd.debian.org%2Fstatus%2Ffetch.php%3Fpkg%3Dshim%26arch%3Damd64%26ver%3D15.4-2%257Edeb10u1%26stamp%3D1619079647%26raw%3D0">Valid XHTML</a>&nbsp;
+<a href="http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbuildd.debian.org%2Fstatus%2Ffetch.php%3Fpkg%3Dshim%26arch%3Damd64%26ver%3D15.4-2%257Edeb10u1%26stamp%3D1619079647%26raw%3D0">Valid CSS</a>
 </span>
 </div>
 </body>
