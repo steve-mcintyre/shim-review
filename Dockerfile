@@ -5,11 +5,10 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends bu
 RUN git clone https://github.com/steve-mcintyre/shim-review.git
 WORKDIR /shim-review
 RUN git checkout debian-shim-debian-11
-#COPY shimx64.efi /shim-review/shimx64.efi
 WORKDIR /
 RUN git clone https://salsa.debian.org/efi-team/shim.git
 WORKDIR /shim
-RUN git checkout debian/15.4-1
+RUN git checkout debian/15.4-2
 RUN apt-get build-dep -y .
 RUN gbp buildpackage -us -uc --git-ignore-branch
 WORKDIR /

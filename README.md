@@ -61,17 +61,32 @@ https://github.com/rhboot/shim/releases/download/15.4/shim-15.4.tar.bz2
 -------------------------------------------------------------------------------
 URL for a repo that contains the exact code which was built to get this binary:
 -------------------------------------------------------------------------------
-https://salsa.debian.org/efi-team/shim/-/tree/debian/15.4-1
+https://salsa.debian.org/efi-team/shim/-/tree/debian/15.4-2
 
 -------------------------------------------------------------------------------
 What patches are being applied and why:
 -------------------------------------------------------------------------------
 
-We're applying two patches from upstream, as recommended in
-discussions in keybase:
+We're applying four patches (3 already upstream, 1 in a PR), as
+recommended for various fixes. See the patches in the debian/patches
+directory in our shim packaging:
 
-5b3ca0d2f7b5f425ba1a14db8ce98b8d95a2f89f Fix a broken file header on ia32
-4068fd42c891ea6ebdec056f461babc6e4048844 mok: allocate MOK config table as BootServicesData
+  * fix-import_one_mok_state.patch
+    issue #362 (Fix mokutil --disable-validation)
+    upstream commit 822d07ad4f07ef66fe447a130e1027c88d02a394
+
+  * fix-broken-ia32-reloc.patch
+    issue #357 (Fix a broken file header on ia32)
+    upstream commit 1bea91ba72165d97c3b453cf769cb4bc5c07207a
+
+  * MOK-BootServicesData.patch
+    issue #361 (mok: allocate MOK config table as BootServicesData)
+    upstream commit 4068fd42c891ea6ebdec056f461babc6e4048844
+
+  * Don-t-call-QueryVariableInfo-on-EFI-1.10-machines.patch
+    issue #364 (fails to boot on older Macs, and other machines with EFI < 2)
+    commit 8b59591775a0412863aab9596ab87bdd493a9c1e in the PR from
+    Peter Jones
 
 -------------------------------------------------------------------------------
 If bootloader, shim loading is, GRUB2: is CVE-2020-14372, CVE-2020-25632,
@@ -193,7 +208,7 @@ We recommend reproducing the binary by way of using the supplied Dockerfile:
 
 `docker build .`
 
-The binary is built on Debian "bullseye" as of 2021-03-24.
+The binaries build reproducibly on Debian "bullseye" as of 2021-04-22.
 
 Versions used can be found in the build logs.
 
@@ -201,8 +216,8 @@ Versions used can be found in the build logs.
 Which files in this repo are the logs for your build?   This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 -------------------------------------------------------------------------------
 
-* ```shim_15.4-1_amd64.log```
-* ```shim_15.4-1_i386.log```
+* ```shim_15.4-2_amd64.log```
+* ```shim_15.4-2_i386.log```
 
 -------------------------------------------------------------------------------
 Add any additional information you think we may need to validate this shim
