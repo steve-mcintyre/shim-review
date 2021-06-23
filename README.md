@@ -67,13 +67,13 @@ https://github.com/rhboot/shim/releases/download/15.4/shim-15.4.tar.bz2
 -------------------------------------------------------------------------------
 URL for a repo that contains the exact code which was built to get this binary:
 -------------------------------------------------------------------------------
-https://salsa.debian.org/efi-team/shim/-/tree/debian/15.4-2_deb10u1
+https://salsa.debian.org/efi-team/shim/-/tree/debian/15.4-6_deb10u1
 
 -------------------------------------------------------------------------------
 What patches are being applied and why:
 -------------------------------------------------------------------------------
 
-We're applying four patches (3 already upstream, 1 in a PR), as
+We're applying six patches (5 already upstream, 1 in PR), as
 recommended for various fixes. See the patches in the debian/patches
 directory in our shim packaging:
 
@@ -89,10 +89,18 @@ directory in our shim packaging:
     issue #361 (mok: allocate MOK config table as BootServicesData)
     upstream commit 4068fd42c891ea6ebdec056f461babc6e4048844
 
-  * Don-t-call-QueryVariableInfo-on-EFI-1.10-machines.patch
-    issue #364 (fails to boot on older Macs, and other machines with EFI < 2)
-    commit 8b59591775a0412863aab9596ab87bdd493a9c1e in the PR from
-    Peter Jones
+   * Don-t-call-QueryVariableInfo-on-EFI-1.10-machines.patch
+     issue #364 (fails to boot on older Macs, and other machines with EFI < 2)
+    upstream commit 493bd940e5c6e28e673034687de7adef9529efff
+
+  * relax_check_for_import_mok_state.patch
+    issue #372 (Relax the check for import_mok_state())
+    upstream commit 9f973e4e95b1136b8c98051dbbdb1773072cc998
+
+  * fix_arm64_rela_sections.patch
+    issue #371 (arm/aa64: fix the size of .rela* sections)
+    commit 9828f65f3e9de29da7bc70cb71069cc1d7ca1b4a in the PR from
+    Gary Lin
 
 -------------------------------------------------------------------------------
 If bootloader, shim loading is, GRUB2: is CVE-2020-14372, CVE-2020-25632,
@@ -188,7 +196,7 @@ please provide exact binaries for which hashes are created via file sharing serv
 available in public with anonymous access for verification
 -------------------------------------------------------------------------------
 
-We include a single vendor CA certificate in pur shim, and that has
+We include a single vendor CA certificate in our shim, and that has
 been used to sign all of our further signer certificates listed
 above. We do not have any hashes added beyond that. See the file
 ```debian-uefi-ca.der``` for that CA certificate.
@@ -202,7 +210,8 @@ apply. Please describe your strategy.
 -------------------------------------------------------------------------------
 
 The shim binary here includes a vendor DBX list that blocks all
-of the grub binaries that we have ever signed for each architecture.
+of the grub binaries that we have ever signed for each architecture
+prior to SBAT being introduced.
 
 -------------------------------------------------------------------------------
 What OS and toolchain must we use to reproduce this build?  Include where to find it, etc.  We're going to try to reproduce your build as close as possible to verify that it's really a build of the source tree you tell us it is, so these need to be fairly thorough. At the very least include the specific versions of gcc, binutils, and gnu-efi which were used, and where to find those binaries.
@@ -213,7 +222,7 @@ We recommend reproducing the binary by way of using the supplied Dockerfile:
 
 `docker build .`
 
-The binary is built on Debian "buster" as of 2021-03-24.
+The binaries build reproducibly on Debian "buster" as of 2021-06-23.
 
 Versions used can be found in the build logs.
 
@@ -221,8 +230,8 @@ Versions used can be found in the build logs.
 Which files in this repo are the logs for your build?   This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 -------------------------------------------------------------------------------
 
-* ```shim_15.4-2~deb10u1_amd64.log```
-* ```shim_15.4-2~deb10u1_i386.log```
+* ```shim_15.4-6~deb10u1_amd64.log```
+* ```shim_15.4-6~deb10u1_i386.log```
 
 -------------------------------------------------------------------------------
 Add any additional information you think we may need to validate this shim

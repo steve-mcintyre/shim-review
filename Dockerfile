@@ -8,7 +8,7 @@ RUN git checkout debian-shim-debian-10
 WORKDIR /
 RUN git clone https://salsa.debian.org/efi-team/shim.git
 WORKDIR /shim
-RUN git checkout debian/15.4-2_deb10u1
+RUN git checkout debian/15.4-6_deb10u1
 RUN apt-get build-dep -y .
 RUN gbp buildpackage -us -uc --git-ignore-branch
 WORKDIR /
