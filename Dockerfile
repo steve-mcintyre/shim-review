@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM i386/debian:buster
 RUN echo "deb-src http://deb.debian.org/debian buster main" > /etc/apt/sources.list.d/deb-src.list
 RUN apt-get update -y
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends build-essential git-buildpackage
