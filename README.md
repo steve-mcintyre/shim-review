@@ -110,7 +110,9 @@ For the other two CVEs listed here:
 * CVE-2022-28735
 * CVE-2022-28736
 
-We have patches included for all of these in our GRUB2 package
+We have patches included for all of these in our GRUB2 packages based
+on version 2.06. Older versions of GRUB2 are still around in Debian
+repos, but will be revoked via SBAT updates.
 
 * CVE-2022-28737
 
@@ -152,6 +154,9 @@ This was fixed in shim 15.6, so we have this fix too.
   Also, the shim binary here includes a vendor DBX list that blocks
   all of those older vulnerable grub binaries that we ever signed for
   this architecture.
+
+* For the June 2022 CVE list, older versions of GRUB2 are still around
+  in Debian repos, but will be revoked via SBAT updates.
 
 -------------------------------------------------------------------------------
 ### If your boot chain of trust includes a Linux kernel:

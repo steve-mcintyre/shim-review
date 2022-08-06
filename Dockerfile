@@ -4,7 +4,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends  c
 RUN echo "deb [check-valid-until=no] https://snapshot.debian.org/archive/debian/20220721T151941Z/ unstable main" > /etc/apt/sources.list
 RUN echo "deb-src [check-valid-until=no] https://snapshot.debian.org/archive/debian/20220721T151941Z/ unstable main" >> /etc/apt/sources.list
 RUN apt-get update -y
-RUN apt-cache policy
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends build-essential git-buildpackage
 RUN git clone https://github.com/steve-mcintyre/shim-review.git
 WORKDIR /shim-review
