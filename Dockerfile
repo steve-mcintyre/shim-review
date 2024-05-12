@@ -1,4 +1,4 @@
-FROM debian:bookworm
+FROM i386/debian:bookworm
 RUN apt-get update -y
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends ca-certificates
 
