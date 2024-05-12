@@ -27,7 +27,7 @@ Debian
 *******************************************************************************
 ### What product or service is this for?
 *******************************************************************************
-Debian GNU/Linux 13 (Trixie)
+Debian GNU/Linux 12 (Bookworm)
 
 *******************************************************************************
 ### What's the justification that this really does need to be signed for the whole world to be able to boot it?
@@ -98,7 +98,7 @@ Hint: If you attach all the patches and modifications that are being used to you
 
 You can also point to your custom git servers, where the code is hosted.
 *******************************************************************************
-https://salsa.debian.org/efi-team/shim/-/tree/debian/15.8-1
+https://salsa.debian.org/efi-team/shim/-/tree/debian/15.8-1_deb12u1
 
 *******************************************************************************
 ### What patches are being applied and why:
@@ -127,7 +127,7 @@ No, we do not have the NX bit set. Our complete boot stack is not ready yet.
 ### What exact implementation of Secure Boot in GRUB2 do you have? (Either Upstream GRUB2 shim_lock verifier or Downstream RHEL/Fedora/Debian/Canonical-like implementation)
 Skip this, if you're not using GRUB2.
 *******************************************************************************
-Current GRUB builds are using shim_lock. Older versions used our own downstream implementation.
+We have our own downstream implementation in bookworm.
 
 *******************************************************************************
 ### Do you have fixes for all the following GRUB2 CVEs applied?
@@ -244,9 +244,9 @@ relevant here.
 ### If not, please describe how you ensure that one kernel build does not load modules built for another kernel.
 *******************************************************************************
 In our current development cycle (Debian 13) we have switched to using
-ephemeral build-time keys. Our older releases are not doing this
-yet. As already mentioned, we will switch to using a new signing
-certificate soon and this will allow us to revoke older
+ephemeral build-time keys. But in bookworm and other older releases we
+are not doing this yet. As already mentioned, we will switch to using
+a new signing certificate soon and this will allow us to revoke older
 configurations.
 
 *******************************************************************************
@@ -277,7 +277,7 @@ We recommend reproducing the binary by way of using the supplied Dockerfile:
 
 `docker build .`
 
-The binaries build reproducibly on Debian "unstable" as of 2024-05-11.
+The binaries build reproducibly on Debian "bookworm" as of 2024-05-11.
 
 Versions used can be found in the build logs.
 
@@ -285,8 +285,9 @@ Versions used can be found in the build logs.
 ### Which files in this repo are the logs for your build?
 This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 *******************************************************************************
-* ```shim_15.8-1_amd64.log```
-* ```shim_15.8-1_arm64.log```
+* ```shim_15.8-1~deb12u1_amd64.log```
+* ```shim_15.8-1~deb12u1_arm64.log```
+* ```shim_15.8-1~deb12u1_i386.log```
 
 *******************************************************************************
 ### What changes were made in the distro's secure boot chain since your SHIM was last signed?
@@ -303,19 +304,14 @@ In shim terms:
 More generally:
 - We've updated our intermediate signing certificates for our signed
   packages.
-- We're no longer support i386/ia32 for Secure Boot in the Debian 13
-  (Trixie) release. We've stopped signing kernels there, shim is no
-  longer being built for it, and in upcoming weeks we're going to stop
-  shipping signed GRUB and fwupd binaries too.
-- We're working on UKI and systemd-boot for Trixie too, but not quite
-  there yet.
 
 *******************************************************************************
 ### What is the SHA256 hash of your final shim binary?
 *******************************************************************************
 ```
-75715344ceaf0faedc7574ea9d41c82d54c657772b9b7e700c43700f8730f450  shimaa64.efi
-81b5ea382dbf336107076b209521217487b9031237e8741577e5ddf2ef11a412  shimx64.efi
+aacb06df9a9e76cf5c921dcd0833f580d960f6b558d12810b5e97931904866a9  shimaa64.efi
+ae5fc6ff75bd454082666c0e0e75ba1a48190c9184c48ac7b7fadf951bc0e466  shimia32.efi
+00c236495d21ed36e12da292e58e3163b8b058d8050559d57ecfd93ce8dafe2a  shimx64.efi
 ```
 
 *******************************************************************************
@@ -349,17 +345,15 @@ Current entries are:
 grub:
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-grub,4,Free Software Foundation,grub,2.12,https://www.gnu.org/software/grub/
-grub.debian,5,Debian,grub2,2.12-2,https://tracker.debian.org/pkg/grub2
-grub.debian13,1,Debian,grub2,2.12-2,https://tracker.debian.org/pkg/grub2
-grub.peimage,2,Canonical,grub2,2.12-2,https://salsa.debian.org/grub-team/grub/-/blob/master/debian/patches/secure-boot/efi-use-peimage-shim.patch
+grub,4,Free Software Foundation,grub,2.06,https://www.gnu.org/software/grub/
+grub.debian,4,Debian,grub2,2.06-13+deb12u1,https://tracker.debian.org/pkg/grub2
 ```
 
 fwupd-efi:
 ```
 sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-fwupd-efi,1,Firmware update daemon,fwupd-efi,1.6,https://github.com/fwupd/fwupd-efi
-fwupd-efi.debian,1,Debian,fwupd,1:1.6-1,https://tracker.debian.org/pkg/fwupd
+fwupd-efi,1,Firmware update daemon,fwupd-efi,1.4,https://github.com/fwupd/fwupd-efi
+fwupd-efi.debian,1,Debian,fwupd,1:1.4-1,https://tracker.debian.org/pkg/fwupd
 ```
 
 shim:
@@ -367,13 +361,6 @@ shim:
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
 shim.debian,1,Debian,shim,15.8,https://tracker.debian.org/pkg/shim
-```
-
-We don't *yet* sign systemd-boot, but it currently looks like:
-```
-sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-systemd-boot,1,The systemd Developers,systemd,255,https://systemd.io/
-systemd-boot.debian,1,Debian GNU/Linux,systemd,255.5-1,https://bugs.debian.org/
 ```
 
 *******************************************************************************
@@ -384,32 +371,32 @@ Hint: this is about those modules that are in the binary itself, not the `.mod` 
 *******************************************************************************
 
 ```
-all_video boot btrfs cat chain configfile cpuid echo efifwsetup efinet
-ext2 f2fs fat font gettext gfxmenu gfxterm gfxterm_background gzio halt
-help hfsplus http iso9660 jfs jpeg keystatus linux loadenv loopback ls
-lsefi lsefimmap lsefisystab lssal memdisk minicmd normal ntfs part_apple
-part_gpt part_msdos password_pbkdf2 peimage play png probe reboot regexp
-search search_fs_file search_fs_uuid search_label serial sleep smbios
-squash4 test tftp tpm true video xfs zfs zfscrypt zfsinfo
+all_video boot btrfs cat chain configfile cpuid cryptodisk echo
+efifwsetup efinet ext2 f2fs fat font gcry_arcfour gcry_blowfish
+gcry_camellia gcry_cast5 gcry_crc gcry_des gcry_dsa gcry_idea gcry_md4
+gcry_md5 gcry_rfc2268 gcry_rijndael gcry_rmd160 gcry_rsa gcry_seed
+gcry_serpent gcry_sha1 gcry_sha256 gcry_sha512 gcry_tiger gcry_twofish
+gcry_whirlpool gettext gfxmenu gfxterm gfxterm_background gzio halt
+help hfsplus iso9660 jfs jpeg keystatus linux linuxefi loadenv
+loopback ls lsefi lsefimmap lsefisystab lssal luks luks2 lvm mdraid09
+mdraid1x memdisk minicmd normal ntfs part_apple part_gpt part_msdos
+password_pbkdf2 play png probe raid5rec raid6rec reboot regexp search
+search_fs_file search_fs_uuid search_label serial sleep smbios squash4
+test tftp tpm true video xfs zfs zfscrypt zfsinfo
 ```
 
 *******************************************************************************
 ### If you are using systemd-boot on arm64 or riscv, is the fix for [unverified Devicetree Blob loading](https://github.com/systemd/systemd/security/advisories/GHSA-6m6p-rjcq-334c) included?
 *******************************************************************************
-Yes.
+N/A.
 
 *******************************************************************************
 ### What is the origin and full version number of your bootloader (GRUB2 or systemd-boot or other)?
 *******************************************************************************
-GRUB2: https://salsa.debian.org/grub-team/grub.git, branch `master` is the
-current version (2.12-2) in Debian Trixie. It is derived from the
-upstream 2.12 release with a number of patches applied - see
+GRUB2: https://salsa.debian.org/grub-team/grub.git, branch `bookworm` is the
+current version (2.06-13+deb12u1) in Debian Bookworm. It is derived from the
+upstream 2.06 release with a number of patches applied - see
 debian/patches there.
-
-systemd-boot: https://salsa.debian.org/systemd-team/systemd.git,
-branch `debian/master` is the current version (255.5-1) in Debian
-Trixie. It is derived from the upstream 255.5 release with a small
-number of patches applied - see debian/patches there.
 
 *******************************************************************************
 ### If your shim launches any other components apart from your bootloader, please provide further details on what is launched.
@@ -442,9 +429,9 @@ No.
 ### What kernel are you using? Which patches and configuration does it include to enforce Secure Boot?
 *******************************************************************************
 
-Trixie is using Linux 6.7.12. It has the usual lockdown patches
+Bookworm is using Linux 6.1.90. It has the usual lockdown patches
 applied - see
-https://salsa.debian.org/kernel-team/linux/-/tree/sid/debian/patches/features/all/lockdown
+https://salsa.debian.org/kernel-team/linux/-/tree/bookworm/debian/patches/features/all/lockdown
 for the current list
 
 *******************************************************************************

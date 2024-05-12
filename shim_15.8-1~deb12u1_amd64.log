@@ -1,40 +1,44 @@
 
-sbuild (Debian sbuild) 0.85.0 (04 January 2023) on x86-csail-01.debian.org
+sbuild (Debian sbuild) 0.85.0 (04 January 2023) on x86-conova-01.debian.org
 
 +==============================================================================+
-| shim 15.8-1 (amd64)                          Mon, 06 May 2024 13:12:17 +0000 |
+| shim 15.8-1~deb12u1 (amd64)                  Wed, 08 May 2024 18:37:23 +0000 |
 +==============================================================================+
 
 Package: shim
-Version: 15.8-1
-Source Version: 15.8-1
-Distribution: sid
+Version: 15.8-1~deb12u1
+Source Version: 15.8-1~deb12u1
+Distribution: bookworm
 Machine Architecture: amd64
 Host Architecture: amd64
 Build Architecture: amd64
 Build Type: any
 
-I: NOTICE: Log filtering will replace 'var/run/schroot/mount/sid-amd64-sbuild-a9084ad9-6a7e-4043-9870-3625c2bf6583' with '<<CHROOT>>'
-I: NOTICE: Log filtering will replace 'build/reproducible-path/resolver-tBAA44' with '<<RESOLVERDIR>>'
+I: NOTICE: Log filtering will replace 'var/run/schroot/mount/bookworm-amd64-sbuild-cf2d9962-f150-4e34-9d57-1f338b759534' with '<<CHROOT>>'
+I: NOTICE: Log filtering will replace 'build/reproducible-path/resolver-aXFLZ0' with '<<RESOLVERDIR>>'
 
 +------------------------------------------------------------------------------+
 | Update chroot                                                                |
 +------------------------------------------------------------------------------+
 
-Get:1 https://incoming.debian.org/debian-buildd buildd-unstable InRelease [53.8 kB]
-Get:2 https://deb.debian.org/debian unstable InRelease [198 kB]
-Get:3 https://incoming.debian.org/debian-buildd buildd-unstable/non-free Sources [2604 B]
-Get:4 https://incoming.debian.org/debian-buildd buildd-unstable/contrib Sources [1136 B]
-Get:5 https://incoming.debian.org/debian-buildd buildd-unstable/main Sources [154 kB]
-Get:6 https://incoming.debian.org/debian-buildd buildd-unstable/main amd64 Packages [186 kB]
-Get:7 https://incoming.debian.org/debian-buildd buildd-unstable/contrib amd64 Packages [1056 B]
-Get:8 https://deb.debian.org/debian unstable/contrib Sources [61.7 kB]
-Get:9 https://deb.debian.org/debian unstable/non-free Sources [85.4 kB]
-Get:10 https://deb.debian.org/debian unstable/main Sources [10.6 MB]
-Get:11 https://deb.debian.org/debian unstable/non-free-firmware Sources [6956 B]
-Get:12 https://deb.debian.org/debian unstable/contrib amd64 Packages [66.1 kB]
-Get:13 https://deb.debian.org/debian unstable/main amd64 Packages [9854 kB]
-Fetched 21.2 MB in 3s (6411 kB/s)
+Get:1 https://deb.debian.org/debian bookworm InRelease [151 kB]
+Get:2 https://deb.debian.org/debian bookworm-proposed-updates InRelease [59.5 kB]
+Get:3 https://deb.debian.org/debian bookworm/main Sources [9489 kB]
+Get:4 https://incoming.debian.org/debian-buildd buildd-bookworm-proposed-updates InRelease [32.1 kB]
+Get:5 https://deb.debian.org/debian bookworm/non-free Sources [77.9 kB]
+Get:6 https://deb.debian.org/debian bookworm/non-free-firmware Sources [6168 B]
+Get:7 https://deb.debian.org/debian bookworm/contrib Sources [51.3 kB]
+Get:8 https://deb.debian.org/debian bookworm/main amd64 Packages [8786 kB]
+Get:9 https://deb.debian.org/debian bookworm/contrib amd64 Packages [54.1 kB]
+Get:10 https://deb.debian.org/debian bookworm-proposed-updates/non-free-firmware Sources [2740 B]
+Get:11 https://deb.debian.org/debian bookworm-proposed-updates/non-free Sources [1544 B]
+Get:12 https://deb.debian.org/debian bookworm-proposed-updates/main Sources [116 kB]
+Get:13 https://deb.debian.org/debian bookworm-proposed-updates/contrib Sources [2264 B]
+Get:14 https://deb.debian.org/debian bookworm-proposed-updates/main amd64 Packages [115 kB]
+Get:15 https://deb.debian.org/debian bookworm-proposed-updates/contrib amd64 Packages [2148 B]
+Get:16 https://incoming.debian.org/debian-buildd buildd-bookworm-proposed-updates/main Sources [16.3 kB]
+Get:17 https://incoming.debian.org/debian-buildd buildd-bookworm-proposed-updates/main amd64 Packages [9328 B]
+Fetched 19.0 MB in 3s (6484 kB/s)
 Reading package lists...
 
 +------------------------------------------------------------------------------+
@@ -57,10 +61,10 @@ Please use:
 git clone https://salsa.debian.org/efi-team/shim.git
 to retrieve the latest (possibly unreleased) updates to the package.
 Need to get 2377 kB of source archives.
-Get:1 https://incoming.debian.org/debian-buildd buildd-unstable/main shim 15.8-1 (dsc) [2490 B]
-Get:2 https://incoming.debian.org/debian-buildd buildd-unstable/main shim 15.8-1 (tar) [2315 kB]
-Get:3 https://incoming.debian.org/debian-buildd buildd-unstable/main shim 15.8-1 (diff) [59.3 kB]
-Fetched 2377 kB in 0s (19.7 MB/s)
+Get:1 https://incoming.debian.org/debian-buildd buildd-bookworm-proposed-updates/main shim 15.8-1~deb12u1 (dsc) [2631 B]
+Get:2 https://incoming.debian.org/debian-buildd buildd-bookworm-proposed-updates/main shim 15.8-1~deb12u1 (tar) [2315 kB]
+Get:3 https://incoming.debian.org/debian-buildd buildd-bookworm-proposed-updates/main shim 15.8-1~deb12u1 (diff) [59.1 kB]
+Fetched 2377 kB in 0s (5556 kB/s)
 Download complete and in download only mode
 I: NOTICE: Log filtering will replace 'build/reproducible-path/shim-15.8' with '<<PKGBUILDDIR>>'
 I: NOTICE: Log filtering will replace 'build/reproducible-path' with '<<BUILDDIR>>'
@@ -93,142 +97,175 @@ Reading package lists...
 Building dependency tree...
 Reading state information...
 The following additional packages will be installed:
-  autoconf automake autopoint autotools-dev bsdextrautils coolkey cpp-12
+  autoconf automake autopoint autotools-dev bsdextrautils bsdutils coolkey
   debhelper dh-autoreconf dh-strip-nondeterminism dos2unix dwz efivar file
-  gcc-12 gcc-12-base gettext gettext-base gnu-efi groff-base intltool-debian
-  libarchive-zip-perl libckyapplet1t64 libdebhelper-perl libeac3
-  libefiboot1t64 libefisec1t64 libefivar-dev libefivar1t64 libelf-dev
-  libelf1t64 libfile-stripnondeterminism-perl libgcc-12-dev libglib2.0-0t64
-  libicu72 libmagic-mgc libmagic1t64 libnspr4 libnss3 libnss3-tools
-  libpcsclite1 libpipeline1 libpopt0 libreadline8t64 libsqlite3-0
-  libsub-override-perl libtool libuchardet0 libxml2 libzstd-dev m4 man-db
+  gettext gettext-base gnu-efi groff-base intltool-debian libarchive-zip-perl
+  libblkid1 libckyapplet1 libdebhelper-perl libefiboot1 libefivar-dev
+  libefivar1 libelf-dev libelf1 libfile-stripnondeterminism-perl libglib2.0-0
+  libicu72 libmagic-mgc libmagic1 libmount1 libnspr4 libnss3 libnss3-tools
+  libpcsclite1 libpipeline1 libpopt0 libreadline8 libsmartcols1 libsqlite3-0
+  libsub-override-perl libtool libuchardet0 libuuid1 libxml2 m4 man-db mount
   opensc opensc-pkcs11 pesign po-debconf readline-common sbsigntool
-  sensible-utils xxd zlib1g-dev
+  sensible-utils util-linux util-linux-extra xxd zlib1g-dev
 Suggested packages:
-  autoconf-archive gnu-standards autoconf-doc gcc-12-locales cpp-12-doc
-  dh-make gcc-12-multilib gcc-12-doc gettext-doc libasprintf-dev
-  libgettextpo-dev groff low-memory-monitor pcscd libtool-doc gfortran
-  | fortran95-compiler gcj-jdk m4-doc apparmor less www-browser
-  libmail-box-perl readline-doc
+  autoconf-archive gnu-standards autoconf-doc dh-make gettext-doc
+  libasprintf-dev libgettextpo-dev groff low-memory-monitor cryptsetup-bin
+  pcscd libtool-doc gfortran | fortran95-compiler gcj-jdk m4-doc apparmor less
+  www-browser nfs-common libmail-box-perl readline-doc dosfstools kbd
+  util-linux-locales
 Recommended packages:
   epiphany-extensions curl | wget | lynx libarchive-cpio-perl libglib2.0-data
-  shared-mime-info xdg-user-dirs libltdl-dev pcscd libmail-sendmail-perl
+  shared-mime-info xdg-user-dirs libltdl-dev uuid-runtime pcscd
+  libmail-sendmail-perl
 The following NEW packages will be installed:
-  autoconf automake autopoint autotools-dev bsdextrautils coolkey cpp-12
-  debhelper dh-autoreconf dh-strip-nondeterminism dos2unix dwz efivar file
-  gcc-12 gcc-12-base gettext gettext-base gnu-efi groff-base intltool-debian
-  libarchive-zip-perl libckyapplet1t64 libdebhelper-perl libeac3
-  libefiboot1t64 libefisec1t64 libefivar-dev libefivar1t64 libelf-dev
-  libelf1t64 libfile-stripnondeterminism-perl libgcc-12-dev libglib2.0-0t64
-  libicu72 libmagic-mgc libmagic1t64 libnspr4 libnss3 libnss3-tools
-  libpcsclite1 libpipeline1 libpopt0 libreadline8t64 libsqlite3-0
-  libsub-override-perl libtool libuchardet0 libxml2 libzstd-dev m4 man-db
-  opensc opensc-pkcs11 pesign po-debconf readline-common sbsigntool
-  sbuild-build-depends-main-dummy sensible-utils xxd zlib1g-dev
-0 upgraded, 62 newly installed, 0 to remove and 0 not upgraded.
-Need to get 60.4 MB of archives.
-After this operation, 227 MB of additional disk space will be used.
-Get:1 copy:/<<RESOLVERDIR>>/apt_archive ./ sbuild-build-depends-main-dummy 0.invalid.0 [956 B]
-Get:2 https://deb.debian.org/debian unstable/main amd64 readline-common all 8.2-4 [69.3 kB]
-Get:3 https://deb.debian.org/debian unstable/main amd64 sensible-utils all 0.0.22 [22.4 kB]
-Get:4 https://deb.debian.org/debian unstable/main amd64 libmagic-mgc amd64 1:5.45-3 [314 kB]
-Get:5 https://deb.debian.org/debian unstable/main amd64 libmagic1t64 amd64 1:5.45-3 [105 kB]
-Get:6 https://deb.debian.org/debian unstable/main amd64 file amd64 1:5.45-3 [42.9 kB]
-Get:7 https://deb.debian.org/debian unstable/main amd64 gettext-base amd64 0.21-14+b1 [161 kB]
-Get:8 https://deb.debian.org/debian unstable/main amd64 libuchardet0 amd64 0.0.8-1+b1 [68.8 kB]
-Get:9 https://deb.debian.org/debian unstable/main amd64 groff-base amd64 1.23.0-4 [1180 kB]
-Get:10 https://deb.debian.org/debian unstable/main amd64 bsdextrautils amd64 2.40-8 [92.8 kB]
-Get:11 https://deb.debian.org/debian unstable/main amd64 libpipeline1 amd64 1.5.7-2 [38.0 kB]
-Get:12 https://deb.debian.org/debian unstable/main amd64 man-db amd64 2.12.1-1 [1411 kB]
-Get:13 https://deb.debian.org/debian unstable/main amd64 m4 amd64 1.4.19-4 [287 kB]
-Get:14 https://deb.debian.org/debian unstable/main amd64 autoconf all 2.71-3 [332 kB]
-Get:15 https://deb.debian.org/debian unstable/main amd64 autotools-dev all 20220109.1 [51.6 kB]
-Get:16 https://deb.debian.org/debian unstable/main amd64 automake all 1:1.16.5-1.3 [823 kB]
-Get:17 https://deb.debian.org/debian unstable/main amd64 autopoint all 0.21-14 [496 kB]
-Get:18 https://deb.debian.org/debian unstable/main amd64 libckyapplet1t64 amd64 1.1.0-16.1 [22.6 kB]
-Get:19 https://deb.debian.org/debian unstable/main amd64 libpcsclite1 amd64 2.2.0-1 [54.7 kB]
-Get:20 https://deb.debian.org/debian unstable/main amd64 coolkey amd64 1.1.0-16.1 [90.8 kB]
-Get:21 https://deb.debian.org/debian unstable/main amd64 gcc-12-base amd64 12.3.0-17 [42.6 kB]
-Get:22 https://deb.debian.org/debian unstable/main amd64 cpp-12 amd64 12.3.0-17 [9859 kB]
-Get:23 https://deb.debian.org/debian unstable/main amd64 libdebhelper-perl all 13.15.3 [88.0 kB]
-Get:24 https://deb.debian.org/debian unstable/main amd64 libgcc-12-dev amd64 12.3.0-17 [2433 kB]
-Get:25 https://deb.debian.org/debian unstable/main amd64 gcc-12 amd64 12.3.0-17 [19.6 MB]
-Get:26 https://deb.debian.org/debian unstable/main amd64 libtool all 2.4.7-7 [517 kB]
-Get:27 https://deb.debian.org/debian unstable/main amd64 dh-autoreconf all 20 [17.1 kB]
-Get:28 https://deb.debian.org/debian unstable/main amd64 libarchive-zip-perl all 1.68-1 [104 kB]
-Get:29 https://deb.debian.org/debian unstable/main amd64 libsub-override-perl all 0.10-1 [10.6 kB]
-Get:30 https://deb.debian.org/debian unstable/main amd64 libfile-stripnondeterminism-perl all 1.13.1-1 [19.4 kB]
-Get:31 https://deb.debian.org/debian unstable/main amd64 dh-strip-nondeterminism all 1.13.1-1 [8620 B]
-Get:32 https://deb.debian.org/debian unstable/main amd64 libelf1t64 amd64 0.191-1+b1 [189 kB]
-Get:33 https://deb.debian.org/debian unstable/main amd64 dwz amd64 0.15-1+b1 [110 kB]
-Get:34 https://deb.debian.org/debian unstable/main amd64 libicu72 amd64 72.1-4+b1 [9395 kB]
-Get:35 https://deb.debian.org/debian unstable/main amd64 libxml2 amd64 2.9.14+dfsg-1.3+b3 [692 kB]
-Get:36 https://deb.debian.org/debian unstable/main amd64 gettext amd64 0.21-14+b1 [1301 kB]
-Get:37 https://deb.debian.org/debian unstable/main amd64 intltool-debian all 0.35.0+20060710.6 [22.9 kB]
-Get:38 https://deb.debian.org/debian unstable/main amd64 po-debconf all 1.0.21+nmu1 [248 kB]
-Get:39 https://deb.debian.org/debian unstable/main amd64 debhelper all 13.15.3 [901 kB]
-Get:40 https://deb.debian.org/debian unstable/main amd64 dos2unix amd64 7.5.2-1 [518 kB]
-Get:41 https://deb.debian.org/debian unstable/main amd64 libefisec1t64 amd64 38-3.1 [16.1 kB]
-Get:42 https://deb.debian.org/debian unstable/main amd64 libefivar1t64 amd64 38-3.1 [57.3 kB]
-Get:43 https://deb.debian.org/debian unstable/main amd64 libefiboot1t64 amd64 38-3.1 [43.0 kB]
-Get:44 https://deb.debian.org/debian unstable/main amd64 efivar amd64 38-3.1 [29.7 kB]
-Get:45 https://deb.debian.org/debian unstable/main amd64 gnu-efi amd64 3.0.18-1 [342 kB]
-Get:46 https://deb.debian.org/debian unstable/main amd64 libeac3 amd64 1.1.2+ds+git20220117+453c3d6b03a0-1.1+b2 [50.8 kB]
-Get:47 https://deb.debian.org/debian unstable/main amd64 libefivar-dev amd64 38-3.1 [18.0 kB]
-Get:48 https://deb.debian.org/debian unstable/main amd64 zlib1g-dev amd64 1:1.3.dfsg-3.1 [918 kB]
-Get:49 https://deb.debian.org/debian unstable/main amd64 libzstd-dev amd64 1.5.5+dfsg2-2 [358 kB]
-Get:50 https://deb.debian.org/debian unstable/main amd64 libelf-dev amd64 0.191-1+b1 [76.2 kB]
-Get:51 https://deb.debian.org/debian unstable/main amd64 libglib2.0-0t64 amd64 2.80.0-9 [1481 kB]
-Get:52 https://deb.debian.org/debian unstable/main amd64 libnspr4 amd64 2:4.35-1.1+b1 [109 kB]
-Get:53 https://deb.debian.org/debian unstable/main amd64 libsqlite3-0 amd64 3.45.3-1 [896 kB]
-Get:54 https://deb.debian.org/debian unstable/main amd64 libnss3 amd64 2:3.99-1 [1408 kB]
-Get:55 https://deb.debian.org/debian unstable/main amd64 libnss3-tools amd64 2:3.99-1 [1068 kB]
-Get:56 https://deb.debian.org/debian unstable/main amd64 libpopt0 amd64 1.19+dfsg-1+b1 [43.6 kB]
-Get:57 https://deb.debian.org/debian unstable/main amd64 libreadline8t64 amd64 8.2-4 [167 kB]
-Get:58 https://deb.debian.org/debian unstable/main amd64 opensc-pkcs11 amd64 0.25.0~rc1-1+b1 [917 kB]
-Get:59 https://deb.debian.org/debian unstable/main amd64 opensc amd64 0.25.0~rc1-1+b1 [390 kB]
-Get:60 https://deb.debian.org/debian unstable/main amd64 pesign amd64 116-7 [119 kB]
-Get:61 https://deb.debian.org/debian unstable/main amd64 sbsigntool amd64 0.9.4-3.1+b1 [68.3 kB]
-Get:62 https://deb.debian.org/debian unstable/main amd64 xxd amd64 2:9.1.0377-1 [94.8 kB]
+  autoconf automake autopoint autotools-dev bsdextrautils coolkey debhelper
+  dh-autoreconf dh-strip-nondeterminism dos2unix dwz efivar file gettext
+  gettext-base gnu-efi groff-base intltool-debian libarchive-zip-perl
+  libckyapplet1 libdebhelper-perl libefiboot1 libefivar-dev libefivar1
+  libelf-dev libelf1 libfile-stripnondeterminism-perl libglib2.0-0 libicu72
+  libmagic-mgc libmagic1 libnspr4 libnss3 libnss3-tools libpcsclite1
+  libpipeline1 libpopt0 libreadline8 libsqlite3-0 libsub-override-perl libtool
+  libuchardet0 libxml2 m4 man-db opensc opensc-pkcs11 pesign po-debconf
+  readline-common sbsigntool sbuild-build-depends-main-dummy sensible-utils
+  xxd zlib1g-dev
+The following packages will be upgraded:
+  bsdutils libblkid1 libmount1 libsmartcols1 libuuid1 mount util-linux
+  util-linux-extra
+8 upgraded, 55 newly installed, 0 to remove and 10 not upgraded.
+Need to get 29.1 MB of archives.
+After this operation, 99.7 MB of additional disk space will be used.
+Get:1 copy:/<<RESOLVERDIR>>/apt_archive ./ sbuild-build-depends-main-dummy 0.invalid.0 [952 B]
+Get:2 https://deb.debian.org/debian bookworm-proposed-updates/main amd64 bsdutils amd64 1:2.38.1-5+deb12u1 [94.3 kB]
+Get:3 https://deb.debian.org/debian bookworm-proposed-updates/main amd64 libsmartcols1 amd64 2.38.1-5+deb12u1 [107 kB]
+Get:4 https://deb.debian.org/debian bookworm-proposed-updates/main amd64 util-linux-extra amd64 2.38.1-5+deb12u1 [110 kB]
+Get:5 https://deb.debian.org/debian bookworm-proposed-updates/main amd64 util-linux amd64 2.38.1-5+deb12u1 [1176 kB]
+Get:6 https://deb.debian.org/debian bookworm-proposed-updates/main amd64 mount amd64 2.38.1-5+deb12u1 [134 kB]
+Get:7 https://deb.debian.org/debian bookworm-proposed-updates/main amd64 libblkid1 amd64 2.38.1-5+deb12u1 [147 kB]
+Get:8 https://deb.debian.org/debian bookworm-proposed-updates/main amd64 libmount1 amd64 2.38.1-5+deb12u1 [165 kB]
+Get:9 https://deb.debian.org/debian bookworm-proposed-updates/main amd64 libuuid1 amd64 2.38.1-5+deb12u1 [28.6 kB]
+Get:10 https://deb.debian.org/debian bookworm/main amd64 readline-common all 8.2-1.3 [69.0 kB]
+Get:11 https://deb.debian.org/debian bookworm/main amd64 sensible-utils all 0.0.17+nmu1 [19.0 kB]
+Get:12 https://deb.debian.org/debian bookworm/main amd64 libmagic-mgc amd64 1:5.44-3 [305 kB]
+Get:13 https://deb.debian.org/debian bookworm/main amd64 libmagic1 amd64 1:5.44-3 [104 kB]
+Get:14 https://deb.debian.org/debian bookworm/main amd64 file amd64 1:5.44-3 [42.5 kB]
+Get:15 https://deb.debian.org/debian bookworm/main amd64 gettext-base amd64 0.21-12 [160 kB]
+Get:16 https://deb.debian.org/debian bookworm/main amd64 libuchardet0 amd64 0.0.7-1 [67.8 kB]
+Get:17 https://deb.debian.org/debian bookworm/main amd64 groff-base amd64 1.22.4-10 [916 kB]
+Get:18 https://deb.debian.org/debian bookworm-proposed-updates/main amd64 bsdextrautils amd64 2.38.1-5+deb12u1 [86.8 kB]
+Get:19 https://deb.debian.org/debian bookworm/main amd64 libpipeline1 amd64 1.5.7-1 [38.5 kB]
+Get:20 https://deb.debian.org/debian bookworm/main amd64 man-db amd64 2.11.2-2 [1386 kB]
+Get:21 https://deb.debian.org/debian bookworm/main amd64 m4 amd64 1.4.19-3 [287 kB]
+Get:22 https://deb.debian.org/debian bookworm/main amd64 autoconf all 2.71-3 [332 kB]
+Get:23 https://deb.debian.org/debian bookworm/main amd64 autotools-dev all 20220109.1 [51.6 kB]
+Get:24 https://deb.debian.org/debian bookworm/main amd64 automake all 1:1.16.5-1.3 [823 kB]
+Get:25 https://deb.debian.org/debian bookworm/main amd64 autopoint all 0.21-12 [495 kB]
+Get:26 https://deb.debian.org/debian bookworm/main amd64 libckyapplet1 amd64 1.1.0-16 [24.5 kB]
+Get:27 https://deb.debian.org/debian bookworm/main amd64 libpcsclite1 amd64 1.9.9-2 [49.7 kB]
+Get:28 https://deb.debian.org/debian bookworm/main amd64 coolkey amd64 1.1.0-16 [90.5 kB]
+Get:29 https://deb.debian.org/debian bookworm/main amd64 libdebhelper-perl all 13.11.4 [81.2 kB]
+Get:30 https://deb.debian.org/debian bookworm-proposed-updates/main amd64 libtool all 2.4.7-7~deb12u1 [517 kB]
+Get:31 https://deb.debian.org/debian bookworm/main amd64 dh-autoreconf all 20 [17.1 kB]
+Get:32 https://deb.debian.org/debian bookworm/main amd64 libarchive-zip-perl all 1.68-1 [104 kB]
+Get:33 https://deb.debian.org/debian bookworm/main amd64 libsub-override-perl all 0.09-4 [9304 B]
+Get:34 https://deb.debian.org/debian bookworm/main amd64 libfile-stripnondeterminism-perl all 1.13.1-1 [19.4 kB]
+Get:35 https://deb.debian.org/debian bookworm/main amd64 dh-strip-nondeterminism all 1.13.1-1 [8620 B]
+Get:36 https://deb.debian.org/debian bookworm/main amd64 libelf1 amd64 0.188-2.1 [174 kB]
+Get:37 https://deb.debian.org/debian bookworm/main amd64 dwz amd64 0.15-1 [109 kB]
+Get:38 https://deb.debian.org/debian bookworm/main amd64 libicu72 amd64 72.1-3 [9376 kB]
+Get:39 https://deb.debian.org/debian bookworm/main amd64 libxml2 amd64 2.9.14+dfsg-1.3~deb12u1 [687 kB]
+Get:40 https://deb.debian.org/debian bookworm/main amd64 gettext amd64 0.21-12 [1300 kB]
+Get:41 https://deb.debian.org/debian bookworm/main amd64 intltool-debian all 0.35.0+20060710.6 [22.9 kB]
+Get:42 https://deb.debian.org/debian bookworm/main amd64 po-debconf all 1.0.21+nmu1 [248 kB]
+Get:43 https://deb.debian.org/debian bookworm/main amd64 debhelper all 13.11.4 [942 kB]
+Get:44 https://deb.debian.org/debian bookworm/main amd64 dos2unix amd64 7.4.3-1 [430 kB]
+Get:45 https://incoming.debian.org/debian-buildd buildd-bookworm-proposed-updates/main amd64 libglib2.0-0 amd64 2.74.6-2+deb12u1 [1401 kB]
+Get:46 https://deb.debian.org/debian bookworm/main amd64 libefivar1 amd64 37-6 [50.0 kB]
+Get:47 https://deb.debian.org/debian bookworm/main amd64 libefiboot1 amd64 37-6 [44.1 kB]
+Get:48 https://deb.debian.org/debian bookworm/main amd64 efivar amd64 37-6 [13.1 kB]
+Get:49 https://deb.debian.org/debian bookworm/main amd64 gnu-efi amd64 3.0.15-1 [140 kB]
+Get:50 https://deb.debian.org/debian bookworm/main amd64 libefivar-dev amd64 37-6 [20.2 kB]
+Get:51 https://deb.debian.org/debian bookworm/main amd64 zlib1g-dev amd64 1:1.2.13.dfsg-1 [916 kB]
+Get:52 https://deb.debian.org/debian bookworm/main amd64 libelf-dev amd64 0.188-2.1 [72.9 kB]
+Get:53 https://deb.debian.org/debian bookworm/main amd64 libnspr4 amd64 2:4.35-1 [113 kB]
+Get:54 https://deb.debian.org/debian bookworm/main amd64 libsqlite3-0 amd64 3.40.1-2 [837 kB]
+Get:55 https://deb.debian.org/debian bookworm/main amd64 libnss3 amd64 2:3.87.1-1 [1331 kB]
+Get:56 https://deb.debian.org/debian bookworm/main amd64 libnss3-tools amd64 2:3.87.1-1 [1054 kB]
+Get:57 https://deb.debian.org/debian bookworm/main amd64 libpopt0 amd64 1.19+dfsg-1 [43.3 kB]
+Get:58 https://deb.debian.org/debian bookworm/main amd64 libreadline8 amd64 8.2-1.3 [166 kB]
+Get:59 https://deb.debian.org/debian bookworm/main amd64 opensc-pkcs11 amd64 0.23.0-0.3+deb12u1 [914 kB]
+Get:60 https://deb.debian.org/debian bookworm/main amd64 opensc amd64 0.23.0-0.3+deb12u1 [371 kB]
+Get:61 https://deb.debian.org/debian bookworm/main amd64 pesign amd64 0.112-6 [94.0 kB]
+Get:62 https://deb.debian.org/debian bookworm/main amd64 sbsigntool amd64 0.9.4-3.1 [68.4 kB]
+Get:63 https://deb.debian.org/debian bookworm/main amd64 xxd amd64 2:9.0.1378-2 [83.7 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 60.4 MB in 1s (48.0 MB/s)
+Fetched 29.1 MB in 0s (64.7 MB/s)
+(Reading database ... 12751 files and directories currently installed.)
+Preparing to unpack .../bsdutils_1%3a2.38.1-5+deb12u1_amd64.deb ...
+Unpacking bsdutils (1:2.38.1-5+deb12u1) over (1:2.38.1-5+b1) ...
+Setting up bsdutils (1:2.38.1-5+deb12u1) ...
+(Reading database ... 12750 files and directories currently installed.)
+Preparing to unpack .../libsmartcols1_2.38.1-5+deb12u1_amd64.deb ...
+Unpacking libsmartcols1:amd64 (2.38.1-5+deb12u1) over (2.38.1-5+b1) ...
+Setting up libsmartcols1:amd64 (2.38.1-5+deb12u1) ...
+(Reading database ... 12749 files and directories currently installed.)
+Preparing to unpack .../util-linux-extra_2.38.1-5+deb12u1_amd64.deb ...
+Unpacking util-linux-extra (2.38.1-5+deb12u1) over (2.38.1-5+b1) ...
+Setting up util-linux-extra (2.38.1-5+deb12u1) ...
+(Reading database ... 12748 files and directories currently installed.)
+Preparing to unpack .../util-linux_2.38.1-5+deb12u1_amd64.deb ...
+Unpacking util-linux (2.38.1-5+deb12u1) over (2.38.1-5+b1) ...
+Setting up util-linux (2.38.1-5+deb12u1) ...
+(Reading database ... 12747 files and directories currently installed.)
+Preparing to unpack .../mount_2.38.1-5+deb12u1_amd64.deb ...
+Unpacking mount (2.38.1-5+deb12u1) over (2.38.1-5+b1) ...
+Preparing to unpack .../libblkid1_2.38.1-5+deb12u1_amd64.deb ...
+Unpacking libblkid1:amd64 (2.38.1-5+deb12u1) over (2.38.1-5+b1) ...
+Setting up libblkid1:amd64 (2.38.1-5+deb12u1) ...
+(Reading database ... 12745 files and directories currently installed.)
+Preparing to unpack .../libmount1_2.38.1-5+deb12u1_amd64.deb ...
+Unpacking libmount1:amd64 (2.38.1-5+deb12u1) over (2.38.1-5+b1) ...
+Setting up libmount1:amd64 (2.38.1-5+deb12u1) ...
+(Reading database ... 12744 files and directories currently installed.)
+Preparing to unpack .../libuuid1_2.38.1-5+deb12u1_amd64.deb ...
+Unpacking libuuid1:amd64 (2.38.1-5+deb12u1) over (2.38.1-5+b1) ...
+Setting up libuuid1:amd64 (2.38.1-5+deb12u1) ...
 Selecting previously unselected package readline-common.
-(Reading database ... 13487 files and directories currently installed.)
-Preparing to unpack .../00-readline-common_8.2-4_all.deb ...
-Unpacking readline-common (8.2-4) ...
+(Reading database ... 12743 files and directories currently installed.)
+Preparing to unpack .../00-readline-common_8.2-1.3_all.deb ...
+Unpacking readline-common (8.2-1.3) ...
 Selecting previously unselected package sensible-utils.
-Preparing to unpack .../01-sensible-utils_0.0.22_all.deb ...
-Unpacking sensible-utils (0.0.22) ...
+Preparing to unpack .../01-sensible-utils_0.0.17+nmu1_all.deb ...
+Unpacking sensible-utils (0.0.17+nmu1) ...
 Selecting previously unselected package libmagic-mgc.
-Preparing to unpack .../02-libmagic-mgc_1%3a5.45-3_amd64.deb ...
-Unpacking libmagic-mgc (1:5.45-3) ...
-Selecting previously unselected package libmagic1t64:amd64.
-Preparing to unpack .../03-libmagic1t64_1%3a5.45-3_amd64.deb ...
-Unpacking libmagic1t64:amd64 (1:5.45-3) ...
+Preparing to unpack .../02-libmagic-mgc_1%3a5.44-3_amd64.deb ...
+Unpacking libmagic-mgc (1:5.44-3) ...
+Selecting previously unselected package libmagic1:amd64.
+Preparing to unpack .../03-libmagic1_1%3a5.44-3_amd64.deb ...
+Unpacking libmagic1:amd64 (1:5.44-3) ...
 Selecting previously unselected package file.
-Preparing to unpack .../04-file_1%3a5.45-3_amd64.deb ...
-Unpacking file (1:5.45-3) ...
+Preparing to unpack .../04-file_1%3a5.44-3_amd64.deb ...
+Unpacking file (1:5.44-3) ...
 Selecting previously unselected package gettext-base.
-Preparing to unpack .../05-gettext-base_0.21-14+b1_amd64.deb ...
-Unpacking gettext-base (0.21-14+b1) ...
+Preparing to unpack .../05-gettext-base_0.21-12_amd64.deb ...
+Unpacking gettext-base (0.21-12) ...
 Selecting previously unselected package libuchardet0:amd64.
-Preparing to unpack .../06-libuchardet0_0.0.8-1+b1_amd64.deb ...
-Unpacking libuchardet0:amd64 (0.0.8-1+b1) ...
+Preparing to unpack .../06-libuchardet0_0.0.7-1_amd64.deb ...
+Unpacking libuchardet0:amd64 (0.0.7-1) ...
 Selecting previously unselected package groff-base.
-Preparing to unpack .../07-groff-base_1.23.0-4_amd64.deb ...
-Unpacking groff-base (1.23.0-4) ...
+Preparing to unpack .../07-groff-base_1.22.4-10_amd64.deb ...
+Unpacking groff-base (1.22.4-10) ...
 Selecting previously unselected package bsdextrautils.
-Preparing to unpack .../08-bsdextrautils_2.40-8_amd64.deb ...
-Unpacking bsdextrautils (2.40-8) ...
+Preparing to unpack .../08-bsdextrautils_2.38.1-5+deb12u1_amd64.deb ...
+Unpacking bsdextrautils (2.38.1-5+deb12u1) ...
 Selecting previously unselected package libpipeline1:amd64.
-Preparing to unpack .../09-libpipeline1_1.5.7-2_amd64.deb ...
-Unpacking libpipeline1:amd64 (1.5.7-2) ...
+Preparing to unpack .../09-libpipeline1_1.5.7-1_amd64.deb ...
+Unpacking libpipeline1:amd64 (1.5.7-1) ...
 Selecting previously unselected package man-db.
-Preparing to unpack .../10-man-db_2.12.1-1_amd64.deb ...
-Unpacking man-db (2.12.1-1) ...
+Preparing to unpack .../10-man-db_2.11.2-2_amd64.deb ...
+Unpacking man-db (2.11.2-2) ...
 Selecting previously unselected package m4.
-Preparing to unpack .../11-m4_1.4.19-4_amd64.deb ...
-Unpacking m4 (1.4.19-4) ...
+Preparing to unpack .../11-m4_1.4.19-3_amd64.deb ...
+Unpacking m4 (1.4.19-3) ...
 Selecting previously unselected package autoconf.
 Preparing to unpack .../12-autoconf_2.71-3_all.deb ...
 Unpacking autoconf (2.71-3) ...
@@ -239,230 +276,199 @@ Selecting previously unselected package automake.
 Preparing to unpack .../14-automake_1%3a1.16.5-1.3_all.deb ...
 Unpacking automake (1:1.16.5-1.3) ...
 Selecting previously unselected package autopoint.
-Preparing to unpack .../15-autopoint_0.21-14_all.deb ...
-Unpacking autopoint (0.21-14) ...
-Selecting previously unselected package libckyapplet1t64.
-Preparing to unpack .../16-libckyapplet1t64_1.1.0-16.1_amd64.deb ...
-Unpacking libckyapplet1t64 (1.1.0-16.1) ...
+Preparing to unpack .../15-autopoint_0.21-12_all.deb ...
+Unpacking autopoint (0.21-12) ...
+Selecting previously unselected package libckyapplet1.
+Preparing to unpack .../16-libckyapplet1_1.1.0-16_amd64.deb ...
+Unpacking libckyapplet1 (1.1.0-16) ...
 Selecting previously unselected package libpcsclite1:amd64.
-Preparing to unpack .../17-libpcsclite1_2.2.0-1_amd64.deb ...
-Unpacking libpcsclite1:amd64 (2.2.0-1) ...
+Preparing to unpack .../17-libpcsclite1_1.9.9-2_amd64.deb ...
+Unpacking libpcsclite1:amd64 (1.9.9-2) ...
 Selecting previously unselected package coolkey.
-Preparing to unpack .../18-coolkey_1.1.0-16.1_amd64.deb ...
-Unpacking coolkey (1.1.0-16.1) ...
-Selecting previously unselected package gcc-12-base:amd64.
-Preparing to unpack .../19-gcc-12-base_12.3.0-17_amd64.deb ...
-Unpacking gcc-12-base:amd64 (12.3.0-17) ...
-Selecting previously unselected package cpp-12.
-Preparing to unpack .../20-cpp-12_12.3.0-17_amd64.deb ...
-Unpacking cpp-12 (12.3.0-17) ...
+Preparing to unpack .../18-coolkey_1.1.0-16_amd64.deb ...
+Unpacking coolkey (1.1.0-16) ...
 Selecting previously unselected package libdebhelper-perl.
-Preparing to unpack .../21-libdebhelper-perl_13.15.3_all.deb ...
-Unpacking libdebhelper-perl (13.15.3) ...
-Selecting previously unselected package libgcc-12-dev:amd64.
-Preparing to unpack .../22-libgcc-12-dev_12.3.0-17_amd64.deb ...
-Unpacking libgcc-12-dev:amd64 (12.3.0-17) ...
-Selecting previously unselected package gcc-12.
-Preparing to unpack .../23-gcc-12_12.3.0-17_amd64.deb ...
-Unpacking gcc-12 (12.3.0-17) ...
+Preparing to unpack .../19-libdebhelper-perl_13.11.4_all.deb ...
+Unpacking libdebhelper-perl (13.11.4) ...
 Selecting previously unselected package libtool.
-Preparing to unpack .../24-libtool_2.4.7-7_all.deb ...
-Unpacking libtool (2.4.7-7) ...
+Preparing to unpack .../20-libtool_2.4.7-7~deb12u1_all.deb ...
+Unpacking libtool (2.4.7-7~deb12u1) ...
 Selecting previously unselected package dh-autoreconf.
-Preparing to unpack .../25-dh-autoreconf_20_all.deb ...
+Preparing to unpack .../21-dh-autoreconf_20_all.deb ...
 Unpacking dh-autoreconf (20) ...
 Selecting previously unselected package libarchive-zip-perl.
-Preparing to unpack .../26-libarchive-zip-perl_1.68-1_all.deb ...
+Preparing to unpack .../22-libarchive-zip-perl_1.68-1_all.deb ...
 Unpacking libarchive-zip-perl (1.68-1) ...
 Selecting previously unselected package libsub-override-perl.
-Preparing to unpack .../27-libsub-override-perl_0.10-1_all.deb ...
-Unpacking libsub-override-perl (0.10-1) ...
+Preparing to unpack .../23-libsub-override-perl_0.09-4_all.deb ...
+Unpacking libsub-override-perl (0.09-4) ...
 Selecting previously unselected package libfile-stripnondeterminism-perl.
-Preparing to unpack .../28-libfile-stripnondeterminism-perl_1.13.1-1_all.deb ...
+Preparing to unpack .../24-libfile-stripnondeterminism-perl_1.13.1-1_all.deb ...
 Unpacking libfile-stripnondeterminism-perl (1.13.1-1) ...
 Selecting previously unselected package dh-strip-nondeterminism.
-Preparing to unpack .../29-dh-strip-nondeterminism_1.13.1-1_all.deb ...
+Preparing to unpack .../25-dh-strip-nondeterminism_1.13.1-1_all.deb ...
 Unpacking dh-strip-nondeterminism (1.13.1-1) ...
-Selecting previously unselected package libelf1t64:amd64.
-Preparing to unpack .../30-libelf1t64_0.191-1+b1_amd64.deb ...
-Unpacking libelf1t64:amd64 (0.191-1+b1) ...
+Selecting previously unselected package libelf1:amd64.
+Preparing to unpack .../26-libelf1_0.188-2.1_amd64.deb ...
+Unpacking libelf1:amd64 (0.188-2.1) ...
 Selecting previously unselected package dwz.
-Preparing to unpack .../31-dwz_0.15-1+b1_amd64.deb ...
-Unpacking dwz (0.15-1+b1) ...
+Preparing to unpack .../27-dwz_0.15-1_amd64.deb ...
+Unpacking dwz (0.15-1) ...
 Selecting previously unselected package libicu72:amd64.
-Preparing to unpack .../32-libicu72_72.1-4+b1_amd64.deb ...
-Unpacking libicu72:amd64 (72.1-4+b1) ...
+Preparing to unpack .../28-libicu72_72.1-3_amd64.deb ...
+Unpacking libicu72:amd64 (72.1-3) ...
 Selecting previously unselected package libxml2:amd64.
-Preparing to unpack .../33-libxml2_2.9.14+dfsg-1.3+b3_amd64.deb ...
-Unpacking libxml2:amd64 (2.9.14+dfsg-1.3+b3) ...
+Preparing to unpack .../29-libxml2_2.9.14+dfsg-1.3~deb12u1_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.14+dfsg-1.3~deb12u1) ...
 Selecting previously unselected package gettext.
-Preparing to unpack .../34-gettext_0.21-14+b1_amd64.deb ...
-Unpacking gettext (0.21-14+b1) ...
+Preparing to unpack .../30-gettext_0.21-12_amd64.deb ...
+Unpacking gettext (0.21-12) ...
 Selecting previously unselected package intltool-debian.
-Preparing to unpack .../35-intltool-debian_0.35.0+20060710.6_all.deb ...
+Preparing to unpack .../31-intltool-debian_0.35.0+20060710.6_all.deb ...
 Unpacking intltool-debian (0.35.0+20060710.6) ...
 Selecting previously unselected package po-debconf.
-Preparing to unpack .../36-po-debconf_1.0.21+nmu1_all.deb ...
+Preparing to unpack .../32-po-debconf_1.0.21+nmu1_all.deb ...
 Unpacking po-debconf (1.0.21+nmu1) ...
 Selecting previously unselected package debhelper.
-Preparing to unpack .../37-debhelper_13.15.3_all.deb ...
-Unpacking debhelper (13.15.3) ...
+Preparing to unpack .../33-debhelper_13.11.4_all.deb ...
+Unpacking debhelper (13.11.4) ...
 Selecting previously unselected package dos2unix.
-Preparing to unpack .../38-dos2unix_7.5.2-1_amd64.deb ...
-Unpacking dos2unix (7.5.2-1) ...
-Selecting previously unselected package libefisec1t64:amd64.
-Preparing to unpack .../39-libefisec1t64_38-3.1_amd64.deb ...
-Unpacking libefisec1t64:amd64 (38-3.1) ...
-Selecting previously unselected package libefivar1t64:amd64.
-Preparing to unpack .../40-libefivar1t64_38-3.1_amd64.deb ...
-Unpacking libefivar1t64:amd64 (38-3.1) ...
-Selecting previously unselected package libefiboot1t64:amd64.
-Preparing to unpack .../41-libefiboot1t64_38-3.1_amd64.deb ...
-Unpacking libefiboot1t64:amd64 (38-3.1) ...
+Preparing to unpack .../34-dos2unix_7.4.3-1_amd64.deb ...
+Unpacking dos2unix (7.4.3-1) ...
+Selecting previously unselected package libefivar1:amd64.
+Preparing to unpack .../35-libefivar1_37-6_amd64.deb ...
+Unpacking libefivar1:amd64 (37-6) ...
+Selecting previously unselected package libefiboot1:amd64.
+Preparing to unpack .../36-libefiboot1_37-6_amd64.deb ...
+Unpacking libefiboot1:amd64 (37-6) ...
 Selecting previously unselected package efivar.
-Preparing to unpack .../42-efivar_38-3.1_amd64.deb ...
-Unpacking efivar (38-3.1) ...
+Preparing to unpack .../37-efivar_37-6_amd64.deb ...
+Unpacking efivar (37-6) ...
 Selecting previously unselected package gnu-efi.
-Preparing to unpack .../43-gnu-efi_3.0.18-1_amd64.deb ...
-Unpacking gnu-efi (3.0.18-1) ...
-Selecting previously unselected package libeac3:amd64.
-Preparing to unpack .../44-libeac3_1.1.2+ds+git20220117+453c3d6b03a0-1.1+b2_amd64.deb ...
-Unpacking libeac3:amd64 (1.1.2+ds+git20220117+453c3d6b03a0-1.1+b2) ...
+Preparing to unpack .../38-gnu-efi_3.0.15-1_amd64.deb ...
+Unpacking gnu-efi (3.0.15-1) ...
 Selecting previously unselected package libefivar-dev:amd64.
-Preparing to unpack .../45-libefivar-dev_38-3.1_amd64.deb ...
-Unpacking libefivar-dev:amd64 (38-3.1) ...
+Preparing to unpack .../39-libefivar-dev_37-6_amd64.deb ...
+Unpacking libefivar-dev:amd64 (37-6) ...
 Selecting previously unselected package zlib1g-dev:amd64.
-Preparing to unpack .../46-zlib1g-dev_1%3a1.3.dfsg-3.1_amd64.deb ...
-Unpacking zlib1g-dev:amd64 (1:1.3.dfsg-3.1) ...
-Selecting previously unselected package libzstd-dev:amd64.
-Preparing to unpack .../47-libzstd-dev_1.5.5+dfsg2-2_amd64.deb ...
-Unpacking libzstd-dev:amd64 (1.5.5+dfsg2-2) ...
+Preparing to unpack .../40-zlib1g-dev_1%3a1.2.13.dfsg-1_amd64.deb ...
+Unpacking zlib1g-dev:amd64 (1:1.2.13.dfsg-1) ...
 Selecting previously unselected package libelf-dev:amd64.
-Preparing to unpack .../48-libelf-dev_0.191-1+b1_amd64.deb ...
-Unpacking libelf-dev:amd64 (0.191-1+b1) ...
-Selecting previously unselected package libglib2.0-0t64:amd64.
-Preparing to unpack .../49-libglib2.0-0t64_2.80.0-9_amd64.deb ...
-Unpacking libglib2.0-0t64:amd64 (2.80.0-9) ...
+Preparing to unpack .../41-libelf-dev_0.188-2.1_amd64.deb ...
+Unpacking libelf-dev:amd64 (0.188-2.1) ...
+Selecting previously unselected package libglib2.0-0:amd64.
+Preparing to unpack .../42-libglib2.0-0_2.74.6-2+deb12u1_amd64.deb ...
+Unpacking libglib2.0-0:amd64 (2.74.6-2+deb12u1) ...
 Selecting previously unselected package libnspr4:amd64.
-Preparing to unpack .../50-libnspr4_2%3a4.35-1.1+b1_amd64.deb ...
-Unpacking libnspr4:amd64 (2:4.35-1.1+b1) ...
+Preparing to unpack .../43-libnspr4_2%3a4.35-1_amd64.deb ...
+Unpacking libnspr4:amd64 (2:4.35-1) ...
 Selecting previously unselected package libsqlite3-0:amd64.
-Preparing to unpack .../51-libsqlite3-0_3.45.3-1_amd64.deb ...
-Unpacking libsqlite3-0:amd64 (3.45.3-1) ...
+Preparing to unpack .../44-libsqlite3-0_3.40.1-2_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.40.1-2) ...
 Selecting previously unselected package libnss3:amd64.
-Preparing to unpack .../52-libnss3_2%3a3.99-1_amd64.deb ...
-Unpacking libnss3:amd64 (2:3.99-1) ...
+Preparing to unpack .../45-libnss3_2%3a3.87.1-1_amd64.deb ...
+Unpacking libnss3:amd64 (2:3.87.1-1) ...
 Selecting previously unselected package libnss3-tools.
-Preparing to unpack .../53-libnss3-tools_2%3a3.99-1_amd64.deb ...
-Unpacking libnss3-tools (2:3.99-1) ...
+Preparing to unpack .../46-libnss3-tools_2%3a3.87.1-1_amd64.deb ...
+Unpacking libnss3-tools (2:3.87.1-1) ...
 Selecting previously unselected package libpopt0:amd64.
-Preparing to unpack .../54-libpopt0_1.19+dfsg-1+b1_amd64.deb ...
-Unpacking libpopt0:amd64 (1.19+dfsg-1+b1) ...
-Selecting previously unselected package libreadline8t64:amd64.
-Preparing to unpack .../55-libreadline8t64_8.2-4_amd64.deb ...
-Adding 'diversion of /lib/x86_64-linux-gnu/libhistory.so.8 to /lib/x86_64-linux-gnu/libhistory.so.8.usr-is-merged by libreadline8t64'
-Adding 'diversion of /lib/x86_64-linux-gnu/libhistory.so.8.2 to /lib/x86_64-linux-gnu/libhistory.so.8.2.usr-is-merged by libreadline8t64'
-Adding 'diversion of /lib/x86_64-linux-gnu/libreadline.so.8 to /lib/x86_64-linux-gnu/libreadline.so.8.usr-is-merged by libreadline8t64'
-Adding 'diversion of /lib/x86_64-linux-gnu/libreadline.so.8.2 to /lib/x86_64-linux-gnu/libreadline.so.8.2.usr-is-merged by libreadline8t64'
-Unpacking libreadline8t64:amd64 (8.2-4) ...
+Preparing to unpack .../47-libpopt0_1.19+dfsg-1_amd64.deb ...
+Unpacking libpopt0:amd64 (1.19+dfsg-1) ...
+Selecting previously unselected package libreadline8:amd64.
+Preparing to unpack .../48-libreadline8_8.2-1.3_amd64.deb ...
+Unpacking libreadline8:amd64 (8.2-1.3) ...
 Selecting previously unselected package opensc-pkcs11:amd64.
-Preparing to unpack .../56-opensc-pkcs11_0.25.0~rc1-1+b1_amd64.deb ...
-Unpacking opensc-pkcs11:amd64 (0.25.0~rc1-1+b1) ...
+Preparing to unpack .../49-opensc-pkcs11_0.23.0-0.3+deb12u1_amd64.deb ...
+Unpacking opensc-pkcs11:amd64 (0.23.0-0.3+deb12u1) ...
 Selecting previously unselected package opensc.
-Preparing to unpack .../57-opensc_0.25.0~rc1-1+b1_amd64.deb ...
-Unpacking opensc (0.25.0~rc1-1+b1) ...
+Preparing to unpack .../50-opensc_0.23.0-0.3+deb12u1_amd64.deb ...
+Unpacking opensc (0.23.0-0.3+deb12u1) ...
 Selecting previously unselected package pesign.
-Preparing to unpack .../58-pesign_116-7_amd64.deb ...
-Unpacking pesign (116-7) ...
+Preparing to unpack .../51-pesign_0.112-6_amd64.deb ...
+Unpacking pesign (0.112-6) ...
 Selecting previously unselected package sbsigntool.
-Preparing to unpack .../59-sbsigntool_0.9.4-3.1+b1_amd64.deb ...
-Unpacking sbsigntool (0.9.4-3.1+b1) ...
+Preparing to unpack .../52-sbsigntool_0.9.4-3.1_amd64.deb ...
+Unpacking sbsigntool (0.9.4-3.1) ...
 Selecting previously unselected package xxd.
-Preparing to unpack .../60-xxd_2%3a9.1.0377-1_amd64.deb ...
-Unpacking xxd (2:9.1.0377-1) ...
+Preparing to unpack .../53-xxd_2%3a9.0.1378-2_amd64.deb ...
+Unpacking xxd (2:9.0.1378-2) ...
 Selecting previously unselected package sbuild-build-depends-main-dummy.
-Preparing to unpack .../61-sbuild-build-depends-main-dummy_0.invalid.0_amd64.deb ...
+Preparing to unpack .../54-sbuild-build-depends-main-dummy_0.invalid.0_amd64.deb ...
 Unpacking sbuild-build-depends-main-dummy (0.invalid.0) ...
-Setting up gnu-efi (3.0.18-1) ...
-Setting up libpipeline1:amd64 (1.5.7-2) ...
-Setting up libicu72:amd64 (72.1-4+b1) ...
-Setting up libzstd-dev:amd64 (1.5.5+dfsg2-2) ...
-Setting up bsdextrautils (2.40-8) ...
-Setting up libckyapplet1t64 (1.1.0-16.1) ...
-Setting up libmagic-mgc (1:5.45-3) ...
+Setting up gnu-efi (3.0.15-1) ...
+Setting up libpipeline1:amd64 (1.5.7-1) ...
+Setting up libckyapplet1 (1.1.0-16) ...
+Setting up libicu72:amd64 (72.1-3) ...
+Setting up bsdextrautils (2.38.1-5+deb12u1) ...
+Setting up libmagic-mgc (1:5.44-3) ...
 Setting up libarchive-zip-perl (1.68-1) ...
-Setting up libefivar1t64:amd64 (38-3.1) ...
-Setting up libdebhelper-perl (13.15.3) ...
-Setting up libsqlite3-0:amd64 (3.45.3-1) ...
-Setting up libmagic1t64:amd64 (1:5.45-3) ...
-Setting up gettext-base (0.21-14+b1) ...
-Setting up m4 (1.4.19-4) ...
-Setting up file (1:5.45-3) ...
-Setting up libefisec1t64:amd64 (38-3.1) ...
-Setting up xxd (2:9.1.0377-1) ...
-Setting up libelf1t64:amd64 (0.191-1+b1) ...
-Setting up libeac3:amd64 (1.1.2+ds+git20220117+453c3d6b03a0-1.1+b2) ...
-Setting up gcc-12-base:amd64 (12.3.0-17) ...
-Setting up autotools-dev (20220109.1) ...
-Setting up libglib2.0-0t64:amd64 (2.80.0-9) ...
+Setting up libglib2.0-0:amd64 (2.74.6-2+deb12u1) ...
 No schema files found: doing nothing.
-Setting up libnspr4:amd64 (2:4.35-1.1+b1) ...
-Setting up libgcc-12-dev:amd64 (12.3.0-17) ...
-Setting up autopoint (0.21-14) ...
-Setting up libpcsclite1:amd64 (2.2.0-1) ...
+Setting up libdebhelper-perl (13.11.4) ...
+Setting up libsqlite3-0:amd64 (3.40.1-2) ...
+Setting up libmagic1:amd64 (1:5.44-3) ...
+Setting up gettext-base (0.21-12) ...
+Setting up m4 (1.4.19-3) ...
+Setting up file (1:5.44-3) ...
+Setting up xxd (2:9.0.1378-2) ...
+Setting up opensc-pkcs11:amd64 (0.23.0-0.3+deb12u1) ...
+Setting up autotools-dev (20220109.1) ...
+Setting up libnspr4:amd64 (2:4.35-1) ...
+Setting up autopoint (0.21-12) ...
+Setting up libpcsclite1:amd64 (1.9.9-2) ...
 Setting up autoconf (2.71-3) ...
-Setting up zlib1g-dev:amd64 (1:1.3.dfsg-3.1) ...
-Setting up dwz (0.15-1+b1) ...
-Setting up sensible-utils (0.0.22) ...
-Setting up libuchardet0:amd64 (0.0.8-1+b1) ...
-Setting up libefiboot1t64:amd64 (38-3.1) ...
-Setting up libsub-override-perl (0.10-1) ...
-Setting up dos2unix (7.5.2-1) ...
-Setting up sbsigntool (0.9.4-3.1+b1) ...
-Setting up libefivar-dev:amd64 (38-3.1) ...
-Setting up readline-common (8.2-4) ...
-Setting up libxml2:amd64 (2.9.14+dfsg-1.3+b3) ...
-Setting up libpopt0:amd64 (1.19+dfsg-1+b1) ...
+Setting up zlib1g-dev:amd64 (1:1.2.13.dfsg-1) ...
+Setting up mount (2.38.1-5+deb12u1) ...
+Setting up sensible-utils (0.0.17+nmu1) ...
+Setting up libuchardet0:amd64 (0.0.7-1) ...
+Setting up libefivar1:amd64 (37-6) ...
+Setting up libsub-override-perl (0.09-4) ...
+Setting up dos2unix (7.4.3-1) ...
+Setting up sbsigntool (0.9.4-3.1) ...
+Setting up libefivar-dev:amd64 (37-6) ...
+Setting up libelf1:amd64 (0.188-2.1) ...
+Setting up readline-common (8.2-1.3) ...
+Setting up libxml2:amd64 (2.9.14+dfsg-1.3~deb12u1) ...
+Setting up libpopt0:amd64 (1.19+dfsg-1) ...
 Setting up automake (1:1.16.5-1.3) ...
 update-alternatives: using /usr/bin/automake-1.16 to provide /usr/bin/automake (automake) in auto mode
 Setting up libfile-stripnondeterminism-perl (1.13.1-1) ...
-Setting up cpp-12 (12.3.0-17) ...
-Setting up gettext (0.21-14+b1) ...
-Setting up libtool (2.4.7-7) ...
-Setting up libnss3:amd64 (2:3.99-1) ...
-Setting up coolkey (1.1.0-16.1) ...
+Setting up gettext (0.21-12) ...
+Setting up libtool (2.4.7-7~deb12u1) ...
+Setting up libreadline8:amd64 (8.2-1.3) ...
+Setting up opensc (0.23.0-0.3+deb12u1) ...
+Setting up libefiboot1:amd64 (37-6) ...
+Setting up libnss3:amd64 (2:3.87.1-1) ...
+Setting up coolkey (1.1.0-16) ...
 Setting up intltool-debian (0.35.0+20060710.6) ...
-Setting up efivar (38-3.1) ...
+Setting up efivar (37-6) ...
 Setting up dh-autoreconf (20) ...
-Setting up opensc-pkcs11:amd64 (0.25.0~rc1-1+b1) ...
-Setting up gcc-12 (12.3.0-17) ...
-Setting up libelf-dev:amd64 (0.191-1+b1) ...
-Setting up libreadline8t64:amd64 (8.2-4) ...
+Setting up libelf-dev:amd64 (0.188-2.1) ...
 Setting up dh-strip-nondeterminism (1.13.1-1) ...
-Setting up groff-base (1.23.0-4) ...
-Setting up libnss3-tools (2:3.99-1) ...
+Setting up dwz (0.15-1) ...
+Setting up groff-base (1.22.4-10) ...
+Setting up libnss3-tools (2:3.87.1-1) ...
 Setting up po-debconf (1.0.21+nmu1) ...
-Setting up opensc (0.25.0~rc1-1+b1) ...
-Setting up pesign (116-7) ...
-Setting up man-db (2.12.1-1) ...
+Setting up pesign (0.112-6) ...
+Setting up man-db (2.11.2-2) ...
 Not building database; man-db/auto-update is not 'true'.
-Setting up debhelper (13.15.3) ...
+Setting up debhelper (13.11.4) ...
 Setting up sbuild-build-depends-main-dummy (0.invalid.0) ...
-Processing triggers for libc-bin (2.38-7) ...
+Processing triggers for libc-bin (2.36-9+deb12u4) ...
 
 +------------------------------------------------------------------------------+
 | Check architectures                                                          |
 +------------------------------------------------------------------------------+
 
-Arch check ok (amd64 included in amd64 arm64)
+Arch check ok (amd64 included in amd64 arm64 i386)
 
 +------------------------------------------------------------------------------+
 | Build environment                                                            |
 +------------------------------------------------------------------------------+
 
-Kernel: Linux 6.1.0-20-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.85-1 (2024-04-11) amd64 (x86_64)
-Toolchain package versions: binutils_2.42-4 dpkg-dev_1.22.6 g++-13_13.2.0-24 gcc-12_12.3.0-17 gcc-13_13.2.0-24 libc6-dev_2.38-7 libstdc++-13-dev_13.2.0-24 libstdc++6_14-20240429-1 linux-libc-dev_6.7.12-1
-Package versions: apt_2.9.2 autoconf_2.71-3 automake_1:1.16.5-1.3 autopoint_0.21-14 autotools-dev_20220109.1 base-files_13.2 base-passwd_3.6.3 bash_5.2.21-2 binutils_2.42-4 binutils-common_2.42-4 binutils-x86-64-linux-gnu_2.42-4 bsdextrautils_2.40-8 bsdutils_1:2.40-8 build-essential_12.10 bzip2_1.0.8-5.1 ca-certificates_20240203 coolkey_1.1.0-16.1 coreutils_9.4-3.1 cpp_4:13.2.0-7 cpp-12_12.3.0-17 cpp-13_13.2.0-24 cpp-13-x86-64-linux-gnu_13.2.0-24 cpp-x86-64-linux-gnu_4:13.2.0-7 dash_0.5.12-6 debconf_1.5.86 debhelper_13.15.3 debian-archive-keyring_2023.4 debianutils_5.17 dh-autoreconf_20 dh-strip-nondeterminism_1.13.1-1 diffutils_1:3.10-1 dos2unix_7.5.2-1 dpkg_1.22.6 dpkg-dev_1.22.6 dumb-init_1.2.5-3 dwz_0.15-1+b1 e2fsprogs_1.47.1~rc2-1 efivar_38-3.1 fakeroot_1.34-1 file_1:5.45-3 findutils_4.9.0-5 g++_4:13.2.0-7 g++-13_13.2.0-24 g++-13-x86-64-linux-gnu_13.2.0-24 g++-x86-64-linux-gnu_4:13.2.0-7 gcc_4:13.2.0-7 gcc-12_12.3.0-17 gcc-12-base_12.3.0-17 gcc-13_13.2.0-24 gcc-13-base_13.2.0-24 gcc-13-x86-64-linux-gnu_13.2.0-24 gcc-14-base_14-20240429-1 gcc-x86-64-linux-gnu_4:13.2.0-7 gettext_0.21-14+b1 gettext-base_0.21-14+b1 gnu-efi_3.0.18-1 gpgv_2.2.40-3 grep_3.11-4 groff-base_1.23.0-4 gzip_1.12-1.1 hostname_3.23+nmu2 init-system-helpers_1.66 intltool-debian_0.35.0+20060710.6 libacl1_2.3.2-2 libapt-pkg6.0t64_2.9.2 libarchive-zip-perl_1.68-1 libasan8_14-20240429-1 libatomic1_14-20240429-1 libattr1_1:2.5.2-1 libaudit-common_1:3.1.2-2.1 libaudit1_1:3.1.2-2.1 libbinutils_2.42-4 libblkid1_2.40-8 libbz2-1.0_1.0.8-5.1 libc-bin_2.38-7 libc-dev-bin_2.38-7 libc6_2.38-7 libc6-dev_2.38-7 libcap-ng0_0.8.5-1 libcap2_1:2.66-5 libcc1-0_14-20240429-1 libckyapplet1t64_1.1.0-16.1 libcom-err2_1.47.1~rc2-1 libcrypt-dev_1:4.4.36-4 libcrypt1_1:4.4.36-4 libctf-nobfd0_2.42-4 libctf0_2.42-4 libdb5.3t64_5.3.28+dfsg2-7 libdebconfclient0_0.271+b3 libdebhelper-perl_13.15.3 libdpkg-perl_1.22.6 libeac3_1.1.2+ds+git20220117+453c3d6b03a0-1.1+b2 libefiboot1t64_38-3.1 libefisec1t64_38-3.1 libefivar-dev_38-3.1 libefivar1t64_38-3.1 libelf-dev_0.191-1+b1 libelf1t64_0.191-1+b1 libext2fs2t64_1.47.1~rc2-1 libfakeroot_1.34-1 libffi8_3.4.6-1 libfile-stripnondeterminism-perl_1.13.1-1 libgcc-12-dev_12.3.0-17 libgcc-13-dev_13.2.0-24 libgcc-s1_14-20240429-1 libgcrypt20_1.10.3-2+b1 libgdbm-compat4t64_1.23-5.1+b1 libgdbm6t64_1.23-5.1+b1 libglib2.0-0t64_2.80.0-9 libgmp10_2:6.3.0+dfsg-2+b1 libgnutls30t64_3.8.5-2 libgomp1_14-20240429-1 libgpg-error0_1.47-3+b1 libgprofng0_2.42-4 libhogweed6t64_3.9.1-2.2 libhwasan0_14-20240429-1 libicu72_72.1-4+b1 libidn2-0_2.3.7-2 libisl23_0.26-3+b2 libitm1_14-20240429-1 libjansson4_2.14-2+b2 liblsan0_14-20240429-1 liblz4-1_1.9.4-2 liblzma5_5.6.1+really5.4.5-1 libmagic-mgc_1:5.45-3 libmagic1t64_1:5.45-3 libmd0_1.1.0-2 libmount1_2.40-8 libmpc3_1.3.1-1+b2 libmpfr6_4.2.1-1+b1 libnettle8t64_3.9.1-2.2 libnspr4_2:4.35-1.1+b1 libnss3_2:3.99-1 libnss3-tools_2:3.99-1 libp11-kit0_0.25.3-5 libpam-modules_1.5.3-7 libpam-modules-bin_1.5.3-7 libpam-runtime_1.5.3-7 libpam0g_1.5.3-7 libpcre2-8-0_10.42-4+b1 libpcsclite1_2.2.0-1 libperl5.38t64_5.38.2-4 libpipeline1_1.5.7-2 libpopt0_1.19+dfsg-1+b1 libquadmath0_14-20240429-1 libre-engine-re2-perl_0.18+ds-1+b4 libre2-10_20230301-3+b1 libreadline8t64_8.2-4 libseccomp2_2.5.5-1 libselinux1_3.5-2+b2 libsemanage-common_3.5-1 libsemanage2_3.5-1+b3 libsepol2_3.5-2+b1 libsframe1_2.42-4 libsmartcols1_2.40-8 libsqlite3-0_3.45.3-1 libss2_1.47.1~rc2-1 libssl3t64_3.2.1-3 libstdc++-13-dev_13.2.0-24 libstdc++6_14-20240429-1 libsub-override-perl_0.10-1 libsystemd0_255.5-1 libtasn1-6_4.19.0-3+b2 libtinfo6_6.4+20240414-1 libtool_2.4.7-7 libtsan2_14-20240429-1 libubsan1_14-20240429-1 libuchardet0_0.0.8-1+b1 libudev1_255.5-1 libunistring5_1.2-1 libuuid1_2.40-8 libxml2_2.9.14+dfsg-1.3+b3 libxxhash0_0.8.2-2+b1 libzstd-dev_1.5.5+dfsg2-2 libzstd1_1.5.5+dfsg2-2 linux-libc-dev_6.7.12-1 login_1:4.13+dfsg1-4 logsave_1.47.1~rc2-1 m4_1.4.19-4 make_4.3-4.1 man-db_2.12.1-1 mawk_1.3.4.20240123-1 mount_2.40-8 ncurses-base_6.4+20240414-1 ncurses-bin_6.4+20240414-1 opensc_0.25.0~rc1-1+b1 opensc-pkcs11_0.25.0~rc1-1+b1 openssl_3.2.1-3 passwd_1:4.13+dfsg1-4 patch_2.7.6-7 perl_5.38.2-4 perl-base_5.38.2-4 perl-modules-5.38_5.38.2-4 pesign_116-7 po-debconf_1.0.21+nmu1 policy-rcd-declarative_0.6 policy-rcd-declarative-deny-all_0.6 readline-common_8.2-4 rpcsvc-proto_1.4.3-1 sbsigntool_0.9.4-3.1+b1 sbuild-build-depends-main-dummy_0.invalid.0 sed_4.9-2 sensible-utils_0.0.22 sysvinit-utils_3.09-1 tar_1.35+dfsg-3 tzdata_2024a-4 usr-is-merged_39 util-linux_2.40-8 xxd_2:9.1.0377-1 xz-utils_5.6.1+really5.4.5-1 zlib1g_1:1.3.dfsg-3.1 zlib1g-dev_1:1.3.dfsg-3.1
+Kernel: Linux 6.1.0-21-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.90-1 (2024-05-03) amd64 (x86_64)
+Toolchain package versions: binutils_2.40-2 dpkg-dev_1.21.22 g++-12_12.2.0-14 gcc-12_12.2.0-14 libc6-dev_2.36-9+deb12u4 libstdc++-12-dev_12.2.0-14 libstdc++6_12.2.0-14 linux-libc-dev_6.1.76-1
+Package versions: adduser_3.134 apt_2.6.1 autoconf_2.71-3 automake_1:1.16.5-1.3 autopoint_0.21-12 autotools-dev_20220109.1 base-files_12.4+deb12u5 base-passwd_3.6.1 bash_5.2.15-2+b2 binutils_2.40-2 binutils-common_2.40-2 binutils-x86-64-linux-gnu_2.40-2 bsdextrautils_2.38.1-5+deb12u1 bsdutils_1:2.38.1-5+deb12u1 build-essential_12.9 bzip2_1.0.8-5+b1 ca-certificates_20230311 coolkey_1.1.0-16 coreutils_9.1-1 cpp_4:12.2.0-3 cpp-12_12.2.0-14 dash_0.5.12-2 debconf_1.5.82 debhelper_13.11.4 debian-archive-keyring_2023.3+deb12u1 debianutils_5.7-0.5~deb12u1 dh-autoreconf_20 dh-strip-nondeterminism_1.13.1-1 diffutils_1:3.8-4 dos2unix_7.4.3-1 dpkg_1.21.22 dpkg-dev_1.21.22 dumb-init_1.2.5-2 dwz_0.15-1 e2fsprogs_1.47.0-2 efivar_37-6 fakeroot_1.31-1.2 file_1:5.44-3 findutils_4.9.0-4 g++_4:12.2.0-3 g++-12_12.2.0-14 gcc_4:12.2.0-3 gcc-12_12.2.0-14 gcc-12-base_12.2.0-14 gettext_0.21-12 gettext-base_0.21-12 gnu-efi_3.0.15-1 gpgv_2.2.40-1.1 grep_3.8-5 groff-base_1.22.4-10 gzip_1.12-1 hostname_3.23+nmu1 init-system-helpers_1.65.2 intltool-debian_0.35.0+20060710.6 libacl1_2.3.1-3 libapt-pkg6.0_2.6.1 libarchive-zip-perl_1.68-1 libasan8_12.2.0-14 libatomic1_12.2.0-14 libattr1_1:2.5.1-4 libaudit-common_1:3.0.9-1 libaudit1_1:3.0.9-1 libbinutils_2.40-2 libblkid1_2.38.1-5+deb12u1 libbz2-1.0_1.0.8-5+b1 libc-bin_2.36-9+deb12u4 libc-dev-bin_2.36-9+deb12u4 libc6_2.36-9+deb12u4 libc6-dev_2.36-9+deb12u4 libcap-ng0_0.8.3-1+b3 libcap2_1:2.66-4 libcc1-0_12.2.0-14 libckyapplet1_1.1.0-16 libcom-err2_1.47.0-2 libcrypt-dev_1:4.4.33-2 libcrypt1_1:4.4.33-2 libctf-nobfd0_2.40-2 libctf0_2.40-2 libdb5.3_5.3.28+dfsg2-1 libdebconfclient0_0.270 libdebhelper-perl_13.11.4 libdpkg-perl_1.21.22 libefiboot1_37-6 libefivar-dev_37-6 libefivar1_37-6 libelf-dev_0.188-2.1 libelf1_0.188-2.1 libext2fs2_1.47.0-2 libfakeroot_1.31-1.2 libffi8_3.4.4-1 libfile-stripnondeterminism-perl_1.13.1-1 libgcc-12-dev_12.2.0-14 libgcc-s1_12.2.0-14 libgcrypt20_1.10.1-3 libgdbm-compat4_1.23-3 libgdbm6_1.23-3 libglib2.0-0_2.74.6-2+deb12u1 libgmp10_2:6.2.1+dfsg1-1.1 libgnutls30_3.7.9-2+deb12u2 libgomp1_12.2.0-14 libgpg-error0_1.46-1 libgprofng0_2.40-2 libgssapi-krb5-2_1.20.1-2+deb12u1 libhogweed6_3.8.1-2 libicu72_72.1-3 libidn2-0_2.3.3-1+b1 libisl23_0.25-1.1 libitm1_12.2.0-14 libjansson4_2.14-2 libk5crypto3_1.20.1-2+deb12u1 libkeyutils1_1.6.3-2 libkrb5-3_1.20.1-2+deb12u1 libkrb5support0_1.20.1-2+deb12u1 liblsan0_12.2.0-14 liblz4-1_1.9.4-1 liblzma5_5.4.1-0.2 libmagic-mgc_1:5.44-3 libmagic1_1:5.44-3 libmd0_1.0.4-2 libmount1_2.38.1-5+deb12u1 libmpc3_1.3.1-1 libmpfr6_4.2.0-1 libnettle8_3.8.1-2 libnsl-dev_1.3.0-2 libnsl2_1.3.0-2 libnspr4_2:4.35-1 libnss3_2:3.87.1-1 libnss3-tools_2:3.87.1-1 libp11-kit0_0.24.1-2 libpam-modules_1.5.2-6+deb12u1 libpam-modules-bin_1.5.2-6+deb12u1 libpam-runtime_1.5.2-6+deb12u1 libpam0g_1.5.2-6+deb12u1 libpcre2-8-0_10.42-1 libpcsclite1_1.9.9-2 libperl5.36_5.36.0-7+deb12u1 libpipeline1_1.5.7-1 libpopt0_1.19+dfsg-1 libquadmath0_12.2.0-14 libre-engine-re2-perl_0.17+ds-1 libre2-9_20220601+dfsg-1+b1 libreadline8_8.2-1.3 libseccomp2_2.5.4-1+b3 libselinux1_3.4-1+b6 libsemanage-common_3.4-1 libsemanage2_3.4-1+b5 libsepol2_3.4-2.1 libsmartcols1_2.38.1-5+deb12u1 libsqlite3-0_3.40.1-2 libss2_1.47.0-2 libssl3_3.0.11-1~deb12u2 libstdc++-12-dev_12.2.0-14 libstdc++6_12.2.0-14 libsub-override-perl_0.09-4 libsystemd0_252.22-1~deb12u1 libtasn1-6_4.19.0-2 libtinfo6_6.4-4 libtirpc-common_1.3.3+ds-1 libtirpc-dev_1.3.3+ds-1 libtirpc3_1.3.3+ds-1 libtool_2.4.7-7~deb12u1 libtsan2_12.2.0-14 libubsan1_12.2.0-14 libuchardet0_0.0.7-1 libudev1_252.22-1~deb12u1 libunistring2_1.0-2 libuuid1_2.38.1-5+deb12u1 libxml2_2.9.14+dfsg-1.3~deb12u1 libxxhash0_0.8.1-1 libzstd1_1.5.4+dfsg2-5 linux-libc-dev_6.1.76-1 login_1:4.13+dfsg1-1+b1 logsave_1.47.0-2 m4_1.4.19-3 make_4.3-4.1 man-db_2.11.2-2 mawk_1.3.4.20200120-3.1 mount_2.38.1-5+deb12u1 ncurses-base_6.4-4 ncurses-bin_6.4-4 opensc_0.23.0-0.3+deb12u1 opensc-pkcs11_0.23.0-0.3+deb12u1 openssl_3.0.11-1~deb12u2 passwd_1:4.13+dfsg1-1+b1 patch_2.7.6-7 perl_5.36.0-7+deb12u1 perl-base_5.36.0-7+deb12u1 perl-modules-5.36_5.36.0-7+deb12u1 pesign_0.112-6 po-debconf_1.0.21+nmu1 policy-rcd-declarative_0.6 policy-rcd-declarative-deny-all_0.6 readline-common_8.2-1.3 rpcsvc-proto_1.4.3-1 sbsigntool_0.9.4-3.1 sbuild-build-depends-main-dummy_0.invalid.0 sed_4.9-1 sensible-utils_0.0.17+nmu1 sysvinit-utils_3.06-4 tar_1.34+dfsg-1.2+deb12u1 tzdata_2024a-0+deb12u1 usr-is-merged_37~deb12u1 util-linux_2.38.1-5+deb12u1 util-linux-extra_2.38.1-5+deb12u1 xxd_2:9.0.1378-2 xz-utils_5.4.1-0.2 zlib1g_1:1.2.13.dfsg-1 zlib1g-dev_1:1.2.13.dfsg-1
 
 +------------------------------------------------------------------------------+
 | Build                                                                        |
@@ -477,9 +483,9 @@ Hash: SHA256
 
 Format: 3.0 (quilt)
 Source: shim
-Binary: shim-unsigned, shim-helpers-amd64-signed-template, shim-helpers-arm64-signed-template
-Architecture: amd64 arm64
-Version: 15.8-1
+Binary: shim-unsigned, shim-helpers-amd64-signed-template, shim-helpers-i386-signed-template, shim-helpers-arm64-signed-template
+Architecture: amd64 arm64 i386
+Version: 15.8-1~deb12u1
 Maintainer: Debian EFI team <debian-efi@lists.debian.org>
 Uploaders: Steve Langasek <vorlon@debian.org>, Steve McIntyre <93sam@debian.org>
 Standards-Version: 4.6.2
@@ -491,43 +497,44 @@ Build-Depends: debhelper-compat (= 12), gnu-efi (>= 3.0u), sbsigntool, openssl, 
 Package-List:
  shim-helpers-amd64-signed-template deb admin optional arch=amd64
  shim-helpers-arm64-signed-template deb admin optional arch=arm64
- shim-unsigned deb admin optional arch=amd64,arm64
+ shim-helpers-i386-signed-template deb admin optional arch=i386
+ shim-unsigned deb admin optional arch=amd64,arm64,i386
 Checksums-Sha1:
  cdec924ca437a4509dcb178396996ddf92c11183 2315201 shim_15.8.orig.tar.bz2
- 5b62d9edbaad7ece7546868dfd6e6e5be42de236 59308 shim_15.8-1.debian.tar.xz
+ e7559e3b15883b3b8dfcfd7cd6bebe55af846381 59116 shim_15.8-1~deb12u1.debian.tar.xz
 Checksums-Sha256:
  a79f0a9b89f3681ab384865b1a46ab3f79d88b11b4ca59aa040ab03fffae80a9 2315201 shim_15.8.orig.tar.bz2
- fad222c56f31a20b65753f16c66e270082295a2cccf2909686a980f19be665de 59308 shim_15.8-1.debian.tar.xz
+ 6c15c6111e7e40683f6aec2e8302a3ae830caa4144aba7e448553e574de30647 59116 shim_15.8-1~deb12u1.debian.tar.xz
 Files:
  a9452c2e6fafe4e1b87ab2e1cac9ec00 2315201 shim_15.8.orig.tar.bz2
- 4689fb8317f8a9a5ca53107743d67a27 59308 shim_15.8-1.debian.tar.xz
+ 36e1403be664711c56eb17926930aac1 59116 shim_15.8-1~deb12u1.debian.tar.xz
 
 -----BEGIN PGP SIGNATURE-----
 
-iQJFBAEBCAAvFiEEzrtSMB1hfpEDkP4WWHl5VzRCaE4FAmY40P0RHDkzc2FtQGRl
-Ymlhbi5vcmcACgkQWHl5VzRCaE4BOQ//TFvPi/xtqPWI8XJCI7FI3yjTFgQWLY6m
-ENw40bnxVbLctQ7Sg4vHxeHTHorZTdaJ6+t0wT7J1u0sN7C5dxzbQb+lwPelI8T7
-Vdp2UUV2FGIseLE+n317eyThct4uKC9kIA90B5PU5ZIsjNClWOHSW/1EJ+gnye+s
-N+QfXsZd+jF2KNv/Gd9xpth8yvAXgByo494CX2f5TcX9VzSeTEjVw0Un4tD+FgYt
-ru7oVn2AxCYZF8Uk/FFPmNAO8rtnxkspKASdhz7F1LjEdT4GSbbZcrrTDp7bNe/7
-StDm5ZNnPDyTqvOfeE5FRqAVoU6P0MQ/pni1nem9THKUD0SvQuwP0TZ4UG8LE0iN
-MTkGHJMJzzDEPXra1w0W4sYMizpM7tMF8vRpbluiMzFBTZmPfXDBjOg1F1r/oair
-b6dtfO39wFR4WQB1SgCewxvykMFwxttQzlmTCK8imYpwdvydUJnCFu6PDV3M1esx
-Yox8i+jwx01Wp4KJtUtuMZauR23wqjoipWwVl/C+Wq3XA83PXB/m0vsI1wHAQq/H
-bKQcQPx609aBDswFSzZssprhtCwzyKlZnwAdVq6jWmr7xdywlrhJTASvr6BjhhYF
-bPOH5b1S0tkPxQfFLJKXIZs5RIw+/Kh+s5hVOthYnEkvEe/mXVWP78M5aDQtedYQ
-Ci8lf0AJSEs=
-=/d2q
+iQJFBAEBCAAvFiEEzrtSMB1hfpEDkP4WWHl5VzRCaE4FAmY40WYRHDkzc2FtQGRl
+Ymlhbi5vcmcACgkQWHl5VzRCaE5tdBAAxtb4BFz9cjk6XYgTUoM/MS2Ap1T65LOu
+trw57d6YFeieRrmgJfLVw7J87MfGlnvlc2EqSzAaGwvmmOMJigTNymFfkZfy47AW
+UOhABs9Q+Z0maaXh4gALyu0K2zyYXHbfqazKeDE7+/1j8+qG6DsYQVMSx/w211eI
+FBjmWWFePriZSKovnaSu4StVyZHnrFMbMGFaW8egzTAVQCICfApl5BObgByjAFsj
+CR9YsHGp9q5ZxXf01HxfsE59TmvXedLxUjIhoPJnM7avvWKvWHjmQW6/yi7Visg0
+l+HHSMCcyho4DOzcTTgLUXkm3z+McrNl24p/uBuFwixEi6LNIqymMC7DxW3mBVPn
+p+cHI62W8nQq5ByyuCQOh92h0X93lhlCkVn3M+vhUMc5F1Bpa88kwcMQDMMSECK1
+ufLPAUI+gu0OUKaqOc0uZpijS3M7eTM64nI5/u5AGkaAM+wYtEDB+0kLc4Bon9xu
+czL1UK1p4/qT2LezwLIPVLYW15t4AAUGC2TwpFglBMiQ0EPW5hTwmvGFAEJqwsGS
+jQ1LJlFGpOfMnHm4Ar6kidICJNDmsQFEO+OXXWYR8gCp0HdVjx0gv3YnZ6/8zukH
+3D+u8A6qAoSrAbSkfu4RLdaqWMRuoxE3iUKMGa83NEiwR/Wu8v23X+FM9JZhlnTO
+FXSePCFJWZA=
+=WOTa
 -----END PGP SIGNATURE-----
 
-gpgv: Signature made Mon May  6 12:45:49 2024 UTC
+gpgv: Signature made Mon May  6 12:47:34 2024 UTC
 gpgv:                using RSA key CEBB52301D617E910390FE16587979573442684E
 gpgv:                issuer "93sam@debian.org"
 gpgv: Can't check signature: No public key
-dpkg-source: warning: cannot verify inline signature for ./shim_15.8-1.dsc: no acceptable signature found
+dpkg-source: warning: cannot verify inline signature for ./shim_15.8-1~deb12u1.dsc: no acceptable signature found
 dpkg-source: info: extracting shim in /<<PKGBUILDDIR>>
 dpkg-source: info: unpacking shim_15.8.orig.tar.bz2
-dpkg-source: info: unpacking shim_15.8-1.debian.tar.xz
+dpkg-source: info: unpacking shim_15.8-1~deb12u1.debian.tar.xz
 dpkg-source: info: using patch list from debian/patches/series
 dpkg-source: info: applying 0001-sbat-Add-grub.peimage-2-to-latest-CVE-2024-2312.patch
 dpkg-source: info: applying 0002-sbat-Also-bump-latest-for-grub-4-and-to-todays-date.patch
@@ -546,12 +553,12 @@ HOME=/sbuild-nonexistent
 LC_ALL=C.UTF-8
 LOGNAME=buildd
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
-SCHROOT_ALIAS_NAME=sid-amd64-sbuild
-SCHROOT_CHROOT_NAME=sid-amd64-sbuild
+SCHROOT_ALIAS_NAME=bookworm-amd64-sbuild
+SCHROOT_CHROOT_NAME=bookworm-amd64-sbuild
 SCHROOT_COMMAND=env
 SCHROOT_GID=1009
 SCHROOT_GROUP=buildd
-SCHROOT_SESSION_ID=sid-amd64-sbuild-a9084ad9-6a7e-4043-9870-3625c2bf6583
+SCHROOT_SESSION_ID=bookworm-amd64-sbuild-cf2d9962-f150-4e34-9d57-1f338b759534
 SCHROOT_UID=2952
 SCHROOT_USER=buildd
 SHELL=/bin/sh
@@ -560,12 +567,12 @@ USER=buildd
 dpkg-buildpackage
 -----------------
 
-Command: dpkg-buildpackage --sanitize-env -us -uc -mamd64 / i386 Build Daemon (x86-csail-01) <buildd_amd64-x86-csail-01@buildd.debian.org> -B -rfakeroot --changes-option=-O../shim_15.8-1_amd64-buildd.changes --buildinfo-option=-O../shim_15.8-1_amd64-buildd.buildinfo
+Command: dpkg-buildpackage --sanitize-env -us -uc -mall / amd64 / i386 Build Daemon (x86-conova-01) <buildd_amd64-x86-conova-01@buildd.debian.org> -B -rfakeroot --changes-option=-O../shim_15.8-1~deb12u1_amd64-buildd.changes --buildinfo-option=-O../shim_15.8-1~deb12u1_amd64-buildd.buildinfo
 dpkg-buildpackage: warning: passing -O via --changes-option is not supported; please use --changes-file instead
 dpkg-buildpackage: warning: passing -O via --buildinfo-option is not supported; please use --buildinfo-file instead
 dpkg-buildpackage: info: source package shim
-dpkg-buildpackage: info: source version 15.8-1
-dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source version 15.8-1~deb12u1
+dpkg-buildpackage: info: source distribution bookworm
  dpkg-source --before-build .
 dpkg-buildpackage: info: host architecture amd64
  fakeroot debian/rules clean
@@ -726,7 +733,7 @@ make[1]: Entering directory '/<<PKGBUILDDIR>>'
   Adding fe3c2a8c459cde5d38cec357905ea971ff54c30254a6cbb4a52521a49400d672 to dbx list
 rm -f data/sbat.debian.csv
 set -e; \
-sed -e "s/@DEB_VERSION@/15.8-1/g" \
+sed -e "s/@DEB_VERSION@/15.8-1~deb12u1/g" \
 	-e "s/@UPSTREAM_VERSION@/15.8/g" \
 	< debian/sbat.debian.csv.in > data/sbat.debian.csv
 # If we have an empty data/sbat.debian.csv, delete
@@ -1270,9 +1277,9 @@ x86_64-linux-gnu-gcc-12 -I/<<PKGBUILDDIR>>/gnu-efi//lib -I/<<PKGBUILDDIR>>/gnu-e
 x86_64-linux-gnu-gcc-12 -I/<<PKGBUILDDIR>>/gnu-efi//lib -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -std=gnu11 -ggdb -ffreestanding -fmacro-prefix-map=/<<PKGBUILDDIR>>/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/<<PKGBUILDDIR>>/Cryptlib -I/<<PKGBUILDDIR>>/Cryptlib/Include -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -I/<<PKGBUILDDIR>>/include -iquote /<<PKGBUILDDIR>> -iquote /<<PKGBUILDDIR>> -isystem /<<PKGBUILDDIR>>/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.8-15.8/"' -DVENDOR_CERT_FILE=\"debian/debian-uefi-ca.der\" -DVENDOR_DBX_FILE=\"dbx.esl\" -DSBAT_AUTOMATIC_DATE=2024010900 -DGNU_EFI_USE_EXTERNAL_STDARG -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wdate-time -D_FORTIFY_SOURCE=2 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /<<PKGBUILDDIR>>/gnu-efi//lib/x86_64/initplat.c -o x86_64/initplat.o
 x86_64-linux-gnu-gcc-12 -I/<<PKGBUILDDIR>>/gnu-efi//lib -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -std=gnu11 -ggdb -ffreestanding -fmacro-prefix-map=/<<PKGBUILDDIR>>/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/<<PKGBUILDDIR>>/Cryptlib -I/<<PKGBUILDDIR>>/Cryptlib/Include -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -I/<<PKGBUILDDIR>>/include -iquote /<<PKGBUILDDIR>> -iquote /<<PKGBUILDDIR>> -isystem /<<PKGBUILDDIR>>/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.8-15.8/"' -DVENDOR_CERT_FILE=\"debian/debian-uefi-ca.der\" -DVENDOR_DBX_FILE=\"dbx.esl\" -DSBAT_AUTOMATIC_DATE=2024010900 -DGNU_EFI_USE_EXTERNAL_STDARG -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wdate-time -D_FORTIFY_SOURCE=2 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /<<PKGBUILDDIR>>/gnu-efi//lib/x86_64/math.c -o x86_64/math.o
 x86_64-linux-gnu-gcc-12 -I/<<PKGBUILDDIR>>/gnu-efi//lib -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -std=gnu11 -ggdb -ffreestanding -fmacro-prefix-map=/<<PKGBUILDDIR>>/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/<<PKGBUILDDIR>>/Cryptlib -I/<<PKGBUILDDIR>>/Cryptlib/Include -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -I/<<PKGBUILDDIR>>/include -iquote /<<PKGBUILDDIR>> -iquote /<<PKGBUILDDIR>> -isystem /<<PKGBUILDDIR>>/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.8-15.8/"' -DVENDOR_CERT_FILE=\"debian/debian-uefi-ca.der\" -DVENDOR_DBX_FILE=\"dbx.esl\" -DSBAT_AUTOMATIC_DATE=2024010900 -DGNU_EFI_USE_EXTERNAL_STDARG -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wdate-time -D_FORTIFY_SOURCE=2 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /<<PKGBUILDDIR>>/gnu-efi//lib/x86_64/setjmp.S -o x86_64/setjmp.o
+x86_64-linux-gnu-gcc-12 -I/<<PKGBUILDDIR>>/gnu-efi//lib -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -std=gnu11 -ggdb -ffreestanding -fmacro-prefix-map=/<<PKGBUILDDIR>>/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/<<PKGBUILDDIR>>/Cryptlib -I/<<PKGBUILDDIR>>/Cryptlib/Include -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -I/<<PKGBUILDDIR>>/include -iquote /<<PKGBUILDDIR>> -iquote /<<PKGBUILDDIR>> -isystem /<<PKGBUILDDIR>>/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.8-15.8/"' -DVENDOR_CERT_FILE=\"debian/debian-uefi-ca.der\" -DVENDOR_DBX_FILE=\"dbx.esl\" -DSBAT_AUTOMATIC_DATE=2024010900 -DGNU_EFI_USE_EXTERNAL_STDARG -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wdate-time -D_FORTIFY_SOURCE=2 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /<<PKGBUILDDIR>>/gnu-efi//lib/x86_64/callwrap.c -o x86_64/callwrap.o
 /<<PKGBUILDDIR>>/gnu-efi//lib/x86_64/setjmp.S: Assembler messages:
 /<<PKGBUILDDIR>>/gnu-efi//lib/x86_64/setjmp.S:49: Warning: setting incorrect section attributes for .note.GNU-stack
-x86_64-linux-gnu-gcc-12 -I/<<PKGBUILDDIR>>/gnu-efi//lib -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -std=gnu11 -ggdb -ffreestanding -fmacro-prefix-map=/<<PKGBUILDDIR>>/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/<<PKGBUILDDIR>>/Cryptlib -I/<<PKGBUILDDIR>>/Cryptlib/Include -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -I/<<PKGBUILDDIR>>/include -iquote /<<PKGBUILDDIR>> -iquote /<<PKGBUILDDIR>> -isystem /<<PKGBUILDDIR>>/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.8-15.8/"' -DVENDOR_CERT_FILE=\"debian/debian-uefi-ca.der\" -DVENDOR_DBX_FILE=\"dbx.esl\" -DSBAT_AUTOMATIC_DATE=2024010900 -DGNU_EFI_USE_EXTERNAL_STDARG -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wdate-time -D_FORTIFY_SOURCE=2 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /<<PKGBUILDDIR>>/gnu-efi//lib/x86_64/callwrap.c -o x86_64/callwrap.o
 x86_64-linux-gnu-gcc-12 -I/<<PKGBUILDDIR>>/gnu-efi//lib -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -std=gnu11 -ggdb -ffreestanding -fmacro-prefix-map=/<<PKGBUILDDIR>>/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/<<PKGBUILDDIR>>/Cryptlib -I/<<PKGBUILDDIR>>/Cryptlib/Include -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -I/<<PKGBUILDDIR>>/include -iquote /<<PKGBUILDDIR>> -iquote /<<PKGBUILDDIR>> -isystem /<<PKGBUILDDIR>>/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.8-15.8/"' -DVENDOR_CERT_FILE=\"debian/debian-uefi-ca.der\" -DVENDOR_DBX_FILE=\"dbx.esl\" -DSBAT_AUTOMATIC_DATE=2024010900 -DGNU_EFI_USE_EXTERNAL_STDARG -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wdate-time -D_FORTIFY_SOURCE=2 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /<<PKGBUILDDIR>>/gnu-efi//lib/x86_64/efi_stub.S -o x86_64/efi_stub.o
 /<<PKGBUILDDIR>>/gnu-efi//lib/x86_64/efi_stub.S: Assembler messages:
 /<<PKGBUILDDIR>>/gnu-efi//lib/x86_64/efi_stub.S:190: Warning: setting incorrect section attributes for .note.GNU-stack
@@ -1384,7 +1391,7 @@ make: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
 dd if=/dev/urandom bs=512 count=17 of=random.bin
 17+0 records in
 17+0 records out
-8704 bytes (8.7 kB, 8.5 KiB) copied, 0.000276757 s, 31.4 MB/s
+8704 bytes (8.7 kB, 8.5 KiB) copied, 0.000377476 s, 23.1 MB/s
 xxd -i random.bin test-random.h
 make -C gnu-efi \
 	COMPILER="gcc" \
@@ -1404,24 +1411,24 @@ removed directory 'x86_64/inc'
 removed 'x86_64/lib/libefi.a'
 removed 'x86_64/lib/print.o'
 removed 'x86_64/lib/str.o'
-removed 'x86_64/lib/misc.o'
-removed 'x86_64/lib/hand.o'
 removed 'x86_64/lib/cmdline.o'
-removed 'x86_64/lib/dpath.o'
+removed 'x86_64/lib/misc.o'
 removed 'x86_64/lib/sread.o'
+removed 'x86_64/lib/dpath.o'
+removed 'x86_64/lib/hand.o'
 removed 'x86_64/lib/pause.o'
-removed 'x86_64/lib/hw.o'
 removed 'x86_64/lib/init.o'
 removed 'x86_64/lib/lock.o'
-removed 'x86_64/lib/guid.o'
+removed 'x86_64/lib/hw.o'
 removed 'x86_64/lib/event.o'
+removed 'x86_64/lib/guid.o'
 removed 'x86_64/lib/exit.o'
 removed 'x86_64/lib/error.o'
-removed 'x86_64/lib/data.o'
-removed 'x86_64/lib/smbios.o'
+removed 'x86_64/lib/crc.o'
 removed 'x86_64/lib/debug.o'
 removed 'x86_64/lib/console.o'
-removed 'x86_64/lib/crc.o'
+removed 'x86_64/lib/data.o'
+removed 'x86_64/lib/smbios.o'
 removed 'x86_64/lib/boxdraw.o'
 removed 'x86_64/lib/runtime/rtstr.o'
 removed 'x86_64/lib/runtime/vm.o'
@@ -1435,8 +1442,8 @@ removed directory 'x86_64/lib/aarch64'
 removed directory 'x86_64/lib/ia64'
 removed 'x86_64/lib/x86_64/math.o'
 removed 'x86_64/lib/x86_64/efi_stub.o'
-removed 'x86_64/lib/x86_64/initplat.o'
 removed 'x86_64/lib/x86_64/callwrap.o'
+removed 'x86_64/lib/x86_64/initplat.o'
 removed 'x86_64/lib/x86_64/setjmp.o'
 removed directory 'x86_64/lib/x86_64'
 removed directory 'x86_64/lib/ia32'
@@ -1587,10 +1594,10 @@ test_csv_3: passed
 running test_simple_sbat_csv
 test_simple_sbat_csv: passed
 running test_csv_simple_fuzz
-parsed 2 entries
+parsed 1 entries
 test_csv_simple_fuzz: passed
 running test_csv_simple_fuzz
-parsed 57 entries
+parsed 67 entries
 test_csv_simple_fuzz: passed
 x86_64-linux-gnu-gcc-12 -O2 -ggdb -std=gnu11 -isystem /<<PKGBUILDDIR>>/include/system -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -Iinclude -iquote . -isystem /usr/include -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096   -fshort-wchar -fno-builtin -rdynamic -fno-inline -fno-eliminate-unused-debug-types -fno-eliminate-unused-debug-symbols -gpubnames -grecord-gcc-switches  -Wall -Wextra -Wno-missing-field-initializers -Wsign-compare -Wno-deprecated-declarations -Wno-unused-but-set-variable -Wno-unused-variable -Wno-pointer-sign -Werror -Werror=nonnull -Werror=nonnull-compare  -DEFI_FUNCTION_WRAPPER -DGNU_EFI_USE_MS_ABI -DPAGE_SIZE=4096 -DSHIM_UNIT_TEST "-DDEFAULT_DEBUG_PRINT_STATE=0" -isystem include-fixed -isystem /usr/include/x86_64-linux-gnu -DHAVE_SHIM_LOCK_GUID -o test-load-options lib/guid.c load-options.c test-load-options.c test.c libefi-test.a -lefivar
 ./test-load-options
@@ -1859,9 +1866,9 @@ make -C /<<PKGBUILDDIR>>/gnu-efi/x86_64/lib -f /<<PKGBUILDDIR>>/gnu-efi//lib/Mak
 make: Entering directory '/<<PKGBUILDDIR>>/gnu-efi/x86_64/lib'
 make -C /<<PKGBUILDDIR>>/gnu-efi/x86_64/inc -f /<<PKGBUILDDIR>>/gnu-efi//inc/Makefile SRCDIR=/<<PKGBUILDDIR>>/gnu-efi//inc ARCH=x86_64
 make: Entering directory '/<<PKGBUILDDIR>>/gnu-efi/x86_64/inc'
-x86_64-linux-gnu-gcc-12 -I/<<PKGBUILDDIR>>/gnu-efi//lib -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -std=gnu11 -ggdb -ffreestanding -fmacro-prefix-map=/<<PKGBUILDDIR>>/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/<<PKGBUILDDIR>>/Cryptlib -I/<<PKGBUILDDIR>>/Cryptlib/Include -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -I/<<PKGBUILDDIR>>/include -iquote /<<PKGBUILDDIR>> -iquote /<<PKGBUILDDIR>> -isystem /<<PKGBUILDDIR>>/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.8-15.8/"' -DVENDOR_CERT_FILE=\"debian/debian-uefi-ca.der\" -DVENDOR_DBX_FILE=\"dbx.esl\" -DSBAT_AUTOMATIC_DATE=2024010900 -DGNU_EFI_USE_EXTERNAL_STDARG -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wdate-time -D_FORTIFY_SOURCE=2 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /<<PKGBUILDDIR>>/gnu-efi//lib/boxdraw.c -o boxdraw.o
 make: Nothing to be done for 'all'.
 make: Leaving directory '/<<PKGBUILDDIR>>/gnu-efi/x86_64/inc'
+x86_64-linux-gnu-gcc-12 -I/<<PKGBUILDDIR>>/gnu-efi//lib -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -std=gnu11 -ggdb -ffreestanding -fmacro-prefix-map=/<<PKGBUILDDIR>>/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/<<PKGBUILDDIR>>/Cryptlib -I/<<PKGBUILDDIR>>/Cryptlib/Include -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -I/<<PKGBUILDDIR>>/include -iquote /<<PKGBUILDDIR>> -iquote /<<PKGBUILDDIR>> -isystem /<<PKGBUILDDIR>>/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.8-15.8/"' -DVENDOR_CERT_FILE=\"debian/debian-uefi-ca.der\" -DVENDOR_DBX_FILE=\"dbx.esl\" -DSBAT_AUTOMATIC_DATE=2024010900 -DGNU_EFI_USE_EXTERNAL_STDARG -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wdate-time -D_FORTIFY_SOURCE=2 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /<<PKGBUILDDIR>>/gnu-efi//lib/boxdraw.c -o boxdraw.o
 x86_64-linux-gnu-gcc-12 -I/<<PKGBUILDDIR>>/gnu-efi//lib -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -std=gnu11 -ggdb -ffreestanding -fmacro-prefix-map=/<<PKGBUILDDIR>>/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/<<PKGBUILDDIR>>/Cryptlib -I/<<PKGBUILDDIR>>/Cryptlib/Include -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -I/<<PKGBUILDDIR>>/include -iquote /<<PKGBUILDDIR>> -iquote /<<PKGBUILDDIR>> -isystem /<<PKGBUILDDIR>>/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.8-15.8/"' -DVENDOR_CERT_FILE=\"debian/debian-uefi-ca.der\" -DVENDOR_DBX_FILE=\"dbx.esl\" -DSBAT_AUTOMATIC_DATE=2024010900 -DGNU_EFI_USE_EXTERNAL_STDARG -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wdate-time -D_FORTIFY_SOURCE=2 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /<<PKGBUILDDIR>>/gnu-efi//lib/smbios.c -o smbios.o
 x86_64-linux-gnu-gcc-12 -I/<<PKGBUILDDIR>>/gnu-efi//lib -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -std=gnu11 -ggdb -ffreestanding -fmacro-prefix-map=/<<PKGBUILDDIR>>/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/<<PKGBUILDDIR>>/Cryptlib -I/<<PKGBUILDDIR>>/Cryptlib/Include -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -I/<<PKGBUILDDIR>>/include -iquote /<<PKGBUILDDIR>> -iquote /<<PKGBUILDDIR>> -isystem /<<PKGBUILDDIR>>/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.8-15.8/"' -DVENDOR_CERT_FILE=\"debian/debian-uefi-ca.der\" -DVENDOR_DBX_FILE=\"dbx.esl\" -DSBAT_AUTOMATIC_DATE=2024010900 -DGNU_EFI_USE_EXTERNAL_STDARG -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wdate-time -D_FORTIFY_SOURCE=2 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /<<PKGBUILDDIR>>/gnu-efi//lib/console.c -o console.o
 x86_64-linux-gnu-gcc-12 -I/<<PKGBUILDDIR>>/gnu-efi//lib -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -std=gnu11 -ggdb -ffreestanding -fmacro-prefix-map=/<<PKGBUILDDIR>>/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/<<PKGBUILDDIR>>/Cryptlib -I/<<PKGBUILDDIR>>/Cryptlib/Include -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -I/<<PKGBUILDDIR>>/include -iquote /<<PKGBUILDDIR>> -iquote /<<PKGBUILDDIR>> -isystem /<<PKGBUILDDIR>>/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.8-15.8/"' -DVENDOR_CERT_FILE=\"debian/debian-uefi-ca.der\" -DVENDOR_DBX_FILE=\"dbx.esl\" -DSBAT_AUTOMATIC_DATE=2024010900 -DGNU_EFI_USE_EXTERNAL_STDARG -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wdate-time -D_FORTIFY_SOURCE=2 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /<<PKGBUILDDIR>>/gnu-efi//lib/crc.c -o crc.o
@@ -1891,9 +1898,9 @@ x86_64-linux-gnu-gcc-12 -I/<<PKGBUILDDIR>>/gnu-efi//lib -I/<<PKGBUILDDIR>>/gnu-e
 x86_64-linux-gnu-gcc-12 -I/<<PKGBUILDDIR>>/gnu-efi//lib -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -std=gnu11 -ggdb -ffreestanding -fmacro-prefix-map=/<<PKGBUILDDIR>>/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/<<PKGBUILDDIR>>/Cryptlib -I/<<PKGBUILDDIR>>/Cryptlib/Include -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -I/<<PKGBUILDDIR>>/include -iquote /<<PKGBUILDDIR>> -iquote /<<PKGBUILDDIR>> -isystem /<<PKGBUILDDIR>>/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.8-15.8/"' -DVENDOR_CERT_FILE=\"debian/debian-uefi-ca.der\" -DVENDOR_DBX_FILE=\"dbx.esl\" -DSBAT_AUTOMATIC_DATE=2024010900 -DGNU_EFI_USE_EXTERNAL_STDARG -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wdate-time -D_FORTIFY_SOURCE=2 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /<<PKGBUILDDIR>>/gnu-efi//lib/x86_64/math.c -o x86_64/math.o
 x86_64-linux-gnu-gcc-12 -I/<<PKGBUILDDIR>>/gnu-efi//lib -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -std=gnu11 -ggdb -ffreestanding -fmacro-prefix-map=/<<PKGBUILDDIR>>/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/<<PKGBUILDDIR>>/Cryptlib -I/<<PKGBUILDDIR>>/Cryptlib/Include -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -I/<<PKGBUILDDIR>>/include -iquote /<<PKGBUILDDIR>> -iquote /<<PKGBUILDDIR>> -isystem /<<PKGBUILDDIR>>/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.8-15.8/"' -DVENDOR_CERT_FILE=\"debian/debian-uefi-ca.der\" -DVENDOR_DBX_FILE=\"dbx.esl\" -DSBAT_AUTOMATIC_DATE=2024010900 -DGNU_EFI_USE_EXTERNAL_STDARG -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wdate-time -D_FORTIFY_SOURCE=2 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /<<PKGBUILDDIR>>/gnu-efi//lib/x86_64/setjmp.S -o x86_64/setjmp.o
 x86_64-linux-gnu-gcc-12 -I/<<PKGBUILDDIR>>/gnu-efi//lib -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -std=gnu11 -ggdb -ffreestanding -fmacro-prefix-map=/<<PKGBUILDDIR>>/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/<<PKGBUILDDIR>>/Cryptlib -I/<<PKGBUILDDIR>>/Cryptlib/Include -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -I/<<PKGBUILDDIR>>/include -iquote /<<PKGBUILDDIR>> -iquote /<<PKGBUILDDIR>> -isystem /<<PKGBUILDDIR>>/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.8-15.8/"' -DVENDOR_CERT_FILE=\"debian/debian-uefi-ca.der\" -DVENDOR_DBX_FILE=\"dbx.esl\" -DSBAT_AUTOMATIC_DATE=2024010900 -DGNU_EFI_USE_EXTERNAL_STDARG -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wdate-time -D_FORTIFY_SOURCE=2 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /<<PKGBUILDDIR>>/gnu-efi//lib/x86_64/callwrap.c -o x86_64/callwrap.o
+x86_64-linux-gnu-gcc-12 -I/<<PKGBUILDDIR>>/gnu-efi//lib -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -std=gnu11 -ggdb -ffreestanding -fmacro-prefix-map=/<<PKGBUILDDIR>>/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/<<PKGBUILDDIR>>/Cryptlib -I/<<PKGBUILDDIR>>/Cryptlib/Include -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -I/<<PKGBUILDDIR>>/include -iquote /<<PKGBUILDDIR>> -iquote /<<PKGBUILDDIR>> -isystem /<<PKGBUILDDIR>>/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.8-15.8/"' -DVENDOR_CERT_FILE=\"debian/debian-uefi-ca.der\" -DVENDOR_DBX_FILE=\"dbx.esl\" -DSBAT_AUTOMATIC_DATE=2024010900 -DGNU_EFI_USE_EXTERNAL_STDARG -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wdate-time -D_FORTIFY_SOURCE=2 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /<<PKGBUILDDIR>>/gnu-efi//lib/x86_64/efi_stub.S -o x86_64/efi_stub.o
 /<<PKGBUILDDIR>>/gnu-efi//lib/x86_64/setjmp.S: Assembler messages:
 /<<PKGBUILDDIR>>/gnu-efi//lib/x86_64/setjmp.S:49: Warning: setting incorrect section attributes for .note.GNU-stack
-x86_64-linux-gnu-gcc-12 -I/<<PKGBUILDDIR>>/gnu-efi//lib -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -std=gnu11 -ggdb -ffreestanding -fmacro-prefix-map=/<<PKGBUILDDIR>>/= -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Os -Wall -Wextra -Wno-missing-field-initializers  -mno-mmx -mno-sse -mno-red-zone -nostdinc -maccumulate-outgoing-args  -m64 -DMDE_CPU_X64 -DPAGE_SIZE=4096 -Werror -nostdinc -I/<<PKGBUILDDIR>>/Cryptlib -I/<<PKGBUILDDIR>>/Cryptlib/Include -I/<<PKGBUILDDIR>>/gnu-efi/inc -I/<<PKGBUILDDIR>>/gnu-efi/inc/x86_64 -I/<<PKGBUILDDIR>>/gnu-efi/inc/protocol -I/<<PKGBUILDDIR>>/include -iquote /<<PKGBUILDDIR>> -iquote /<<PKGBUILDDIR>> -isystem /<<PKGBUILDDIR>>/include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -DDEFAULT_LOADER='L"\\\\grubx64.efi"' -DDEFAULT_LOADER_CHAR='"\\\\grubx64.efi"' -DEFI_ARCH='L"x64"' -DDEBUGDIR='L"/usr/lib/debug/usr/share/shim/x64-15.8-15.8/"' -DVENDOR_CERT_FILE=\"debian/debian-uefi-ca.der\" -DVENDOR_DBX_FILE=\"dbx.esl\" -DSBAT_AUTOMATIC_DATE=2024010900 -DGNU_EFI_USE_EXTERNAL_STDARG -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wno-error=pragmas -mno-red-zone -mno-avx -fpic  -Os -Wall -Wextra -Wno-missing-field-initializers -Werror -fshort-wchar -fno-strict-aliasing -ffreestanding -fno-stack-protector -fno-stack-check -nostdinc   -isystem /<<PKGBUILDDIR>>/gnu-efi/../include/system -isystem /usr/lib/gcc/x86_64-linux-gnu/12/include -fno-merge-all-constants -Wdate-time -D_FORTIFY_SOURCE=2 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -DCONFIG_x86_64 -DGNU_EFI_USE_MS_ABI -DGNU_EFI_USE_EXTERNAL_STDARG -maccumulate-outgoing-args --std=c11 -c /<<PKGBUILDDIR>>/gnu-efi//lib/x86_64/efi_stub.S -o x86_64/efi_stub.o
 /<<PKGBUILDDIR>>/gnu-efi//lib/x86_64/efi_stub.S: Assembler messages:
 /<<PKGBUILDDIR>>/gnu-efi//lib/x86_64/efi_stub.S:190: Warning: setting incorrect section attributes for .note.GNU-stack
 x86_64-linux-gnu-gcc-ar rv -U libefi.a boxdraw.o smbios.o console.o crc.o data.o debug.o dpath.o error.o event.o exit.o guid.o hand.o hw.o init.o lock.o misc.o pause.o print.o sread.o str.o cmdline.o runtime/rtlock.o runtime/efirtlib.o runtime/rtstr.o runtime/vm.o runtime/rtdata.o x86_64/initplat.o x86_64/math.o x86_64/setjmp.o x86_64/callwrap.o x86_64/efi_stub.o
@@ -2023,9 +2030,9 @@ Checking NX bit on shimx64.efi:
   DllCharacteristics 00000000
   NOT tagged as NX-compatible
 sha256sum *.efi
-9169fe2816d0d53cd84592e9c3192b67f98af8ad30a7e448469b29c0d189f7d8  fbx64.efi
-7178218d8f3659fa3acda6de27529a6f825b2edddb167b9405feb7a267a5d27f  mmx64.efi
-81b5ea382dbf336107076b209521217487b9031237e8741577e5ddf2ef11a412  shimx64.efi
+ec55d39f29ab51a9986443f44032e67c493000a90e4f51278271b236c8278c18  fbx64.efi
+de5e6f2f33ff4bf73168b3812f95d14032a31a472f2c370c6109875a438e8a61  mmx64.efi
+00c236495d21ed36e12da292e58e3163b8b058d8050559d57ecfd93ce8dafe2a  shimx64.efi
 make[1]: Leaving directory '/<<PKGBUILDDIR>>'
    dh_install -a
    dh_installdocs -a
@@ -2046,15 +2053,15 @@ make[1]: Leaving directory '/<<PKGBUILDDIR>>'
 dpkg-gencontrol: warning: Depends field of package shim-unsigned: substitution variable ${shlibs:Depends} used, but is not defined
    dh_md5sums -a
    dh_builddeb -a
-dpkg-deb: building package 'shim-helpers-amd64-signed-template' in '../shim-helpers-amd64-signed-template_15.8-1_amd64.deb'.
-dpkg-deb: building package 'shim-unsigned' in '../shim-unsigned_15.8-1_amd64.deb'.
- dpkg-genbuildinfo --build=any -O../shim_15.8-1_amd64-buildd.buildinfo
- dpkg-genchanges --build=any -mamd64 / i386 Build Daemon (x86-csail-01) <buildd_amd64-x86-csail-01@buildd.debian.org> -O../shim_15.8-1_amd64-buildd.changes
+dpkg-deb: building package 'shim-helpers-amd64-signed-template' in '../shim-helpers-amd64-signed-template_15.8-1~deb12u1_amd64.deb'.
+dpkg-deb: building package 'shim-unsigned' in '../shim-unsigned_15.8-1~deb12u1_amd64.deb'.
+ dpkg-genbuildinfo --build=any -O../shim_15.8-1~deb12u1_amd64-buildd.buildinfo
+ dpkg-genchanges --build=any -mall / amd64 / i386 Build Daemon (x86-conova-01) <buildd_amd64-x86-conova-01@buildd.debian.org> -O../shim_15.8-1~deb12u1_amd64-buildd.changes
 dpkg-genchanges: info: binary-only arch-specific upload (source code and arch-indep packages not included)
  dpkg-source --after-build .
 dpkg-buildpackage: info: binary-only upload (no source included)
 --------------------------------------------------------------------------------
-Build finished at 2024-05-06T13:13:45Z
+Build finished at 2024-05-08T18:38:49Z
 
 Finished
 --------
@@ -2066,38 +2073,29 @@ I: Built successfully
 +------------------------------------------------------------------------------+
 
 
-shim_15.8-1_amd64-buildd.changes:
----------------------------------
+shim_15.8-1~deb12u1_amd64-buildd.changes:
+-----------------------------------------
 
 Format: 1.8
-Date: Sat, 04 May 2024 23:29:52 +0100
+Date: Sat, 04 May 2024 21:28:21 +0100
 Source: shim
 Binary: shim-helpers-amd64-signed-template shim-unsigned
 Architecture: amd64
-Version: 15.8-1
-Distribution: sid
+Version: 15.8-1~deb12u1
+Distribution: bookworm
 Urgency: medium
-Maintainer: amd64 / i386 Build Daemon (x86-csail-01) <buildd_amd64-x86-csail-01@buildd.debian.org>
+Maintainer: all / amd64 / i386 Build Daemon (x86-conova-01) <buildd_amd64-x86-conova-01@buildd.debian.org>
 Changed-By: Steve McIntyre <93sam@debian.org>
 Description:
  shim-helpers-amd64-signed-template - boot loader to chain-load signed boot loaders (signing template)
  shim-unsigned - boot loader to chain-load signed boot loaders under Secure Boot
-Closes: 936009 1043485 1046268 1054210 1057606 1061519 1064220 1069054
+Closes: 936009 1046268 1069054
 Changes:
- shim (15.8-1) unstable; urgency=medium
+ shim (15.8-1~deb12u1) bookworm; urgency=medium
  .
    [ Steve McIntyre ]
-   * Cope with changes in pesign packaging. Closes: #1057606
-   * New upstream release fixing more bugs. Closes: #1061519, #1064220
-     + CVE-2023-40546 mok: fix LogError() invocation (Closes: #1054210)
-     + CVE-2023-40547 - avoid incorrectly trusting HTTP headers
-     + CVE-2023-40548 Fix integer overflow on SBAT section size on
-       32-bit system
-     + CVE-2023-40549 Authenticode: verify that the signature header is
-       in bounds.
-     + CVE-2023-40550 pe: Fix an out-of-bound read in
-       verify_buffer_sbat()
-     + CVE-2023-40551: pe-relocate: Fix bounds check for MZ binaries
+   * Cope with changes in pesign packaging.
+   * New upstream release fixing more bugs
    * Remove all our previous patches, no longer needed:
      + Make-sbat_var.S-parse-right-with-buggy-gcc-binutils.patch (now
        upstream)
@@ -2108,9 +2106,6 @@ Changes:
    * Cherry-pick 2 new patches from upstream for grub revocations:
      + 0001-sbat-Add-grub.peimage-2-to-latest-CVE-2024-2312.patch
      + 0002-sbat-Also-bump-latest-for-grub-4-and-to-todays-date.patch
-   * NOTE: Stop building for i386
-     + Debian kernels are no longer signed for i386, it's time to stop
-       supporting i386 SB.
    * Log if the build is nx-compatible or not
    * Force shim to use the latest revocations by default to block some
      older grub / peimage issues. This is:
@@ -2123,19 +2118,19 @@ Changes:
    * Port autopkgtest from ubuntu
    * Import MR-12: "shim-unsigned:amd64 cannot be installed alongside
      shim-unsigned:i386", thanks to adrian15 adrian15 (Closes: #936009).
-   * Fix debian/watch and check signature (Closes: #1043485)
+   * Fix debian/watch and check signature
 Checksums-Sha1:
- 68070b30fb058a932a834bd55e50ca4c66b703da 11784 shim-helpers-amd64-signed-template_15.8-1_amd64.deb
- 127e7ed4b820e11cd4017b99a346665fc927d603 439720 shim-unsigned_15.8-1_amd64.deb
- 308d4199d975dbf9640ec0ea1a843d4f8528b123 6131 shim_15.8-1_amd64-buildd.buildinfo
+ 6aaf164f8c6fd8fde4bf10f0d567436bdccad518 11528 shim-helpers-amd64-signed-template_15.8-1~deb12u1_amd64.deb
+ 109cb3e6cd07c89034c7a12c63e8505fb85393c0 440260 shim-unsigned_15.8-1~deb12u1_amd64.deb
+ 641ae023f715cfc6c3ec771276a087ec7a1c1534 5963 shim_15.8-1~deb12u1_amd64-buildd.buildinfo
 Checksums-Sha256:
- ae9caaa55e54a77374bef243f7535f3003671f2d3c1331c3b09e7c54fa2636dc 11784 shim-helpers-amd64-signed-template_15.8-1_amd64.deb
- d3d87eddfe78b0089f6e95c8c278ea7a5d8b1152df243414e9cc82e13fb7f118 439720 shim-unsigned_15.8-1_amd64.deb
- d24f51711c1b07cefb0b291be7f304af2b1ae783b4428a4c764d7d80e21520ae 6131 shim_15.8-1_amd64-buildd.buildinfo
+ 4cd91b5bbd81e277d98d9da4bd8f72833100e225f774d33185fb9118fa4c8c2a 11528 shim-helpers-amd64-signed-template_15.8-1~deb12u1_amd64.deb
+ 97e810e1f55cb7f9361a02e06c5adb5385a71c2586c9254184a545f04473fa9e 440260 shim-unsigned_15.8-1~deb12u1_amd64.deb
+ a0f0ddc8b1896c2b98166c4ff788eb231156613e81b28eea05dc2676802973c4 5963 shim_15.8-1~deb12u1_amd64-buildd.buildinfo
 Files:
- d7a5f5663c3d3a8ba589afdfb9f693cd 11784 admin optional shim-helpers-amd64-signed-template_15.8-1_amd64.deb
- 5bd153c58b81f65252abdff4ab053f95 439720 admin optional shim-unsigned_15.8-1_amd64.deb
- e2fcab598e35b3737e4e81167c473ab3 6131 admin optional shim_15.8-1_amd64-buildd.buildinfo
+ 52fcb4662f5f9175b385e50f1067890a 11528 admin optional shim-helpers-amd64-signed-template_15.8-1~deb12u1_amd64.deb
+ b4189c307006e5159d2edac72d6a8b5a 440260 admin optional shim-unsigned_15.8-1~deb12u1_amd64.deb
+ e958d5816a3d20d151e6aa556fe141db 5963 admin optional shim_15.8-1~deb12u1_amd64-buildd.buildinfo
 
 +------------------------------------------------------------------------------+
 | Buildinfo                                                                    |
@@ -2145,213 +2140,203 @@ Format: 1.0
 Source: shim
 Binary: shim-helpers-amd64-signed-template shim-unsigned
 Architecture: amd64
-Version: 15.8-1
+Version: 15.8-1~deb12u1
 Checksums-Md5:
- d7a5f5663c3d3a8ba589afdfb9f693cd 11784 shim-helpers-amd64-signed-template_15.8-1_amd64.deb
- 5bd153c58b81f65252abdff4ab053f95 439720 shim-unsigned_15.8-1_amd64.deb
+ 52fcb4662f5f9175b385e50f1067890a 11528 shim-helpers-amd64-signed-template_15.8-1~deb12u1_amd64.deb
+ b4189c307006e5159d2edac72d6a8b5a 440260 shim-unsigned_15.8-1~deb12u1_amd64.deb
 Checksums-Sha1:
- 68070b30fb058a932a834bd55e50ca4c66b703da 11784 shim-helpers-amd64-signed-template_15.8-1_amd64.deb
- 127e7ed4b820e11cd4017b99a346665fc927d603 439720 shim-unsigned_15.8-1_amd64.deb
+ 6aaf164f8c6fd8fde4bf10f0d567436bdccad518 11528 shim-helpers-amd64-signed-template_15.8-1~deb12u1_amd64.deb
+ 109cb3e6cd07c89034c7a12c63e8505fb85393c0 440260 shim-unsigned_15.8-1~deb12u1_amd64.deb
 Checksums-Sha256:
- ae9caaa55e54a77374bef243f7535f3003671f2d3c1331c3b09e7c54fa2636dc 11784 shim-helpers-amd64-signed-template_15.8-1_amd64.deb
- d3d87eddfe78b0089f6e95c8c278ea7a5d8b1152df243414e9cc82e13fb7f118 439720 shim-unsigned_15.8-1_amd64.deb
+ 4cd91b5bbd81e277d98d9da4bd8f72833100e225f774d33185fb9118fa4c8c2a 11528 shim-helpers-amd64-signed-template_15.8-1~deb12u1_amd64.deb
+ 97e810e1f55cb7f9361a02e06c5adb5385a71c2586c9254184a545f04473fa9e 440260 shim-unsigned_15.8-1~deb12u1_amd64.deb
 Build-Origin: Debian
 Build-Architecture: amd64
-Build-Date: Mon, 06 May 2024 13:13:45 +0000
+Build-Date: Wed, 08 May 2024 18:38:49 +0000
 Build-Path: /<<PKGBUILDDIR>>
-Build-Tainted-By:
- merged-usr-via-aliased-dirs
 Installed-Build-Depends:
  autoconf (= 2.71-3),
  automake (= 1:1.16.5-1.3),
- autopoint (= 0.21-14),
+ autopoint (= 0.21-12),
  autotools-dev (= 20220109.1),
- base-files (= 13.2),
- base-passwd (= 3.6.3),
- bash (= 5.2.21-2),
- binutils (= 2.42-4),
- binutils-common (= 2.42-4),
- binutils-x86-64-linux-gnu (= 2.42-4),
- bsdextrautils (= 2.40-8),
- bsdutils (= 1:2.40-8),
- build-essential (= 12.10),
- bzip2 (= 1.0.8-5.1),
- coolkey (= 1.1.0-16.1),
- coreutils (= 9.4-3.1),
- cpp (= 4:13.2.0-7),
- cpp-12 (= 12.3.0-17),
- cpp-13 (= 13.2.0-24),
- cpp-13-x86-64-linux-gnu (= 13.2.0-24),
- cpp-x86-64-linux-gnu (= 4:13.2.0-7),
- dash (= 0.5.12-6),
- debconf (= 1.5.86),
- debhelper (= 13.15.3),
- debianutils (= 5.17),
+ base-files (= 12.4+deb12u5),
+ base-passwd (= 3.6.1),
+ bash (= 5.2.15-2+b2),
+ binutils (= 2.40-2),
+ binutils-common (= 2.40-2),
+ binutils-x86-64-linux-gnu (= 2.40-2),
+ bsdextrautils (= 2.38.1-5+deb12u1),
+ bsdutils (= 1:2.38.1-5+deb12u1),
+ build-essential (= 12.9),
+ bzip2 (= 1.0.8-5+b1),
+ coolkey (= 1.1.0-16),
+ coreutils (= 9.1-1),
+ cpp (= 4:12.2.0-3),
+ cpp-12 (= 12.2.0-14),
+ dash (= 0.5.12-2),
+ debconf (= 1.5.82),
+ debhelper (= 13.11.4),
+ debianutils (= 5.7-0.5~deb12u1),
  dh-autoreconf (= 20),
  dh-strip-nondeterminism (= 1.13.1-1),
- diffutils (= 1:3.10-1),
- dos2unix (= 7.5.2-1),
- dpkg (= 1.22.6),
- dpkg-dev (= 1.22.6),
- dwz (= 0.15-1+b1),
- efivar (= 38-3.1),
- file (= 1:5.45-3),
- findutils (= 4.9.0-5),
- g++ (= 4:13.2.0-7),
- g++-13 (= 13.2.0-24),
- g++-13-x86-64-linux-gnu (= 13.2.0-24),
- g++-x86-64-linux-gnu (= 4:13.2.0-7),
- gcc (= 4:13.2.0-7),
- gcc-12 (= 12.3.0-17),
- gcc-12-base (= 12.3.0-17),
- gcc-13 (= 13.2.0-24),
- gcc-13-base (= 13.2.0-24),
- gcc-13-x86-64-linux-gnu (= 13.2.0-24),
- gcc-14-base (= 14-20240429-1),
- gcc-x86-64-linux-gnu (= 4:13.2.0-7),
- gettext (= 0.21-14+b1),
- gettext-base (= 0.21-14+b1),
- gnu-efi (= 3.0.18-1),
- grep (= 3.11-4),
- groff-base (= 1.23.0-4),
- gzip (= 1.12-1.1),
- hostname (= 3.23+nmu2),
- init-system-helpers (= 1.66),
+ diffutils (= 1:3.8-4),
+ dos2unix (= 7.4.3-1),
+ dpkg (= 1.21.22),
+ dpkg-dev (= 1.21.22),
+ dwz (= 0.15-1),
+ efivar (= 37-6),
+ file (= 1:5.44-3),
+ findutils (= 4.9.0-4),
+ g++ (= 4:12.2.0-3),
+ g++-12 (= 12.2.0-14),
+ gcc (= 4:12.2.0-3),
+ gcc-12 (= 12.2.0-14),
+ gcc-12-base (= 12.2.0-14),
+ gettext (= 0.21-12),
+ gettext-base (= 0.21-12),
+ gnu-efi (= 3.0.15-1),
+ grep (= 3.8-5),
+ groff-base (= 1.22.4-10),
+ gzip (= 1.12-1),
+ hostname (= 3.23+nmu1),
+ init-system-helpers (= 1.65.2),
  intltool-debian (= 0.35.0+20060710.6),
- libacl1 (= 2.3.2-2),
+ libacl1 (= 2.3.1-3),
  libarchive-zip-perl (= 1.68-1),
- libasan8 (= 14-20240429-1),
- libatomic1 (= 14-20240429-1),
- libattr1 (= 1:2.5.2-1),
- libaudit-common (= 1:3.1.2-2.1),
- libaudit1 (= 1:3.1.2-2.1),
- libbinutils (= 2.42-4),
- libblkid1 (= 2.40-8),
- libbz2-1.0 (= 1.0.8-5.1),
- libc-bin (= 2.38-7),
- libc-dev-bin (= 2.38-7),
- libc6 (= 2.38-7),
- libc6-dev (= 2.38-7),
- libcap-ng0 (= 0.8.5-1),
- libcap2 (= 1:2.66-5),
- libcc1-0 (= 14-20240429-1),
- libckyapplet1t64 (= 1.1.0-16.1),
- libcrypt-dev (= 1:4.4.36-4),
- libcrypt1 (= 1:4.4.36-4),
- libctf-nobfd0 (= 2.42-4),
- libctf0 (= 2.42-4),
- libdb5.3t64 (= 5.3.28+dfsg2-7),
- libdebconfclient0 (= 0.271+b3),
- libdebhelper-perl (= 13.15.3),
- libdpkg-perl (= 1.22.6),
- libeac3 (= 1.1.2+ds+git20220117+453c3d6b03a0-1.1+b2),
- libefiboot1t64 (= 38-3.1),
- libefisec1t64 (= 38-3.1),
- libefivar-dev (= 38-3.1),
- libefivar1t64 (= 38-3.1),
- libelf-dev (= 0.191-1+b1),
- libelf1t64 (= 0.191-1+b1),
- libffi8 (= 3.4.6-1),
+ libasan8 (= 12.2.0-14),
+ libatomic1 (= 12.2.0-14),
+ libattr1 (= 1:2.5.1-4),
+ libaudit-common (= 1:3.0.9-1),
+ libaudit1 (= 1:3.0.9-1),
+ libbinutils (= 2.40-2),
+ libblkid1 (= 2.38.1-5+deb12u1),
+ libbz2-1.0 (= 1.0.8-5+b1),
+ libc-bin (= 2.36-9+deb12u4),
+ libc-dev-bin (= 2.36-9+deb12u4),
+ libc6 (= 2.36-9+deb12u4),
+ libc6-dev (= 2.36-9+deb12u4),
+ libcap-ng0 (= 0.8.3-1+b3),
+ libcap2 (= 1:2.66-4),
+ libcc1-0 (= 12.2.0-14),
+ libckyapplet1 (= 1.1.0-16),
+ libcom-err2 (= 1.47.0-2),
+ libcrypt-dev (= 1:4.4.33-2),
+ libcrypt1 (= 1:4.4.33-2),
+ libctf-nobfd0 (= 2.40-2),
+ libctf0 (= 2.40-2),
+ libdb5.3 (= 5.3.28+dfsg2-1),
+ libdebconfclient0 (= 0.270),
+ libdebhelper-perl (= 13.11.4),
+ libdpkg-perl (= 1.21.22),
+ libefiboot1 (= 37-6),
+ libefivar-dev (= 37-6),
+ libefivar1 (= 37-6),
+ libelf-dev (= 0.188-2.1),
+ libelf1 (= 0.188-2.1),
+ libffi8 (= 3.4.4-1),
  libfile-stripnondeterminism-perl (= 1.13.1-1),
- libgcc-12-dev (= 12.3.0-17),
- libgcc-13-dev (= 13.2.0-24),
- libgcc-s1 (= 14-20240429-1),
- libgcrypt20 (= 1.10.3-2+b1),
- libgdbm-compat4t64 (= 1.23-5.1+b1),
- libgdbm6t64 (= 1.23-5.1+b1),
- libglib2.0-0t64 (= 2.80.0-9),
- libgmp10 (= 2:6.3.0+dfsg-2+b1),
- libgomp1 (= 14-20240429-1),
- libgpg-error0 (= 1.47-3+b1),
- libgprofng0 (= 2.42-4),
- libhwasan0 (= 14-20240429-1),
- libicu72 (= 72.1-4+b1),
- libisl23 (= 0.26-3+b2),
- libitm1 (= 14-20240429-1),
- libjansson4 (= 2.14-2+b2),
- liblsan0 (= 14-20240429-1),
- liblz4-1 (= 1.9.4-2),
- liblzma5 (= 5.6.1+really5.4.5-1),
- libmagic-mgc (= 1:5.45-3),
- libmagic1t64 (= 1:5.45-3),
- libmd0 (= 1.1.0-2),
- libmount1 (= 2.40-8),
- libmpc3 (= 1.3.1-1+b2),
- libmpfr6 (= 4.2.1-1+b1),
- libnspr4 (= 2:4.35-1.1+b1),
- libnss3 (= 2:3.99-1),
- libnss3-tools (= 2:3.99-1),
- libpam-modules (= 1.5.3-7),
- libpam-modules-bin (= 1.5.3-7),
- libpam-runtime (= 1.5.3-7),
- libpam0g (= 1.5.3-7),
- libpcre2-8-0 (= 10.42-4+b1),
- libpcsclite1 (= 2.2.0-1),
- libperl5.38t64 (= 5.38.2-4),
- libpipeline1 (= 1.5.7-2),
- libpopt0 (= 1.19+dfsg-1+b1),
- libquadmath0 (= 14-20240429-1),
- libreadline8t64 (= 8.2-4),
- libseccomp2 (= 2.5.5-1),
- libselinux1 (= 3.5-2+b2),
- libsemanage-common (= 3.5-1),
- libsemanage2 (= 3.5-1+b3),
- libsepol2 (= 3.5-2+b1),
- libsframe1 (= 2.42-4),
- libsmartcols1 (= 2.40-8),
- libsqlite3-0 (= 3.45.3-1),
- libssl3t64 (= 3.2.1-3),
- libstdc++-13-dev (= 13.2.0-24),
- libstdc++6 (= 14-20240429-1),
- libsub-override-perl (= 0.10-1),
- libsystemd0 (= 255.5-1),
- libtinfo6 (= 6.4+20240414-1),
- libtool (= 2.4.7-7),
- libtsan2 (= 14-20240429-1),
- libubsan1 (= 14-20240429-1),
- libuchardet0 (= 0.0.8-1+b1),
- libudev1 (= 255.5-1),
- libunistring5 (= 1.2-1),
- libuuid1 (= 2.40-8),
- libxml2 (= 2.9.14+dfsg-1.3+b3),
- libzstd-dev (= 1.5.5+dfsg2-2),
- libzstd1 (= 1.5.5+dfsg2-2),
- linux-libc-dev (= 6.7.12-1),
- login (= 1:4.13+dfsg1-4),
- m4 (= 1.4.19-4),
+ libgcc-12-dev (= 12.2.0-14),
+ libgcc-s1 (= 12.2.0-14),
+ libgcrypt20 (= 1.10.1-3),
+ libgdbm-compat4 (= 1.23-3),
+ libgdbm6 (= 1.23-3),
+ libglib2.0-0 (= 2.74.6-2+deb12u1),
+ libgmp10 (= 2:6.2.1+dfsg1-1.1),
+ libgomp1 (= 12.2.0-14),
+ libgpg-error0 (= 1.46-1),
+ libgprofng0 (= 2.40-2),
+ libgssapi-krb5-2 (= 1.20.1-2+deb12u1),
+ libicu72 (= 72.1-3),
+ libisl23 (= 0.25-1.1),
+ libitm1 (= 12.2.0-14),
+ libjansson4 (= 2.14-2),
+ libk5crypto3 (= 1.20.1-2+deb12u1),
+ libkeyutils1 (= 1.6.3-2),
+ libkrb5-3 (= 1.20.1-2+deb12u1),
+ libkrb5support0 (= 1.20.1-2+deb12u1),
+ liblsan0 (= 12.2.0-14),
+ liblz4-1 (= 1.9.4-1),
+ liblzma5 (= 5.4.1-0.2),
+ libmagic-mgc (= 1:5.44-3),
+ libmagic1 (= 1:5.44-3),
+ libmd0 (= 1.0.4-2),
+ libmount1 (= 2.38.1-5+deb12u1),
+ libmpc3 (= 1.3.1-1),
+ libmpfr6 (= 4.2.0-1),
+ libnsl-dev (= 1.3.0-2),
+ libnsl2 (= 1.3.0-2),
+ libnspr4 (= 2:4.35-1),
+ libnss3 (= 2:3.87.1-1),
+ libnss3-tools (= 2:3.87.1-1),
+ libpam-modules (= 1.5.2-6+deb12u1),
+ libpam-modules-bin (= 1.5.2-6+deb12u1),
+ libpam-runtime (= 1.5.2-6+deb12u1),
+ libpam0g (= 1.5.2-6+deb12u1),
+ libpcre2-8-0 (= 10.42-1),
+ libpcsclite1 (= 1.9.9-2),
+ libperl5.36 (= 5.36.0-7+deb12u1),
+ libpipeline1 (= 1.5.7-1),
+ libpopt0 (= 1.19+dfsg-1),
+ libquadmath0 (= 12.2.0-14),
+ libreadline8 (= 8.2-1.3),
+ libseccomp2 (= 2.5.4-1+b3),
+ libselinux1 (= 3.4-1+b6),
+ libsmartcols1 (= 2.38.1-5+deb12u1),
+ libsqlite3-0 (= 3.40.1-2),
+ libssl3 (= 3.0.11-1~deb12u2),
+ libstdc++-12-dev (= 12.2.0-14),
+ libstdc++6 (= 12.2.0-14),
+ libsub-override-perl (= 0.09-4),
+ libsystemd0 (= 252.22-1~deb12u1),
+ libtinfo6 (= 6.4-4),
+ libtirpc-common (= 1.3.3+ds-1),
+ libtirpc-dev (= 1.3.3+ds-1),
+ libtirpc3 (= 1.3.3+ds-1),
+ libtool (= 2.4.7-7~deb12u1),
+ libtsan2 (= 12.2.0-14),
+ libubsan1 (= 12.2.0-14),
+ libuchardet0 (= 0.0.7-1),
+ libudev1 (= 252.22-1~deb12u1),
+ libunistring2 (= 1.0-2),
+ libuuid1 (= 2.38.1-5+deb12u1),
+ libxml2 (= 2.9.14+dfsg-1.3~deb12u1),
+ libzstd1 (= 1.5.4+dfsg2-5),
+ linux-libc-dev (= 6.1.76-1),
+ login (= 1:4.13+dfsg1-1+b1),
+ m4 (= 1.4.19-3),
  make (= 4.3-4.1),
- man-db (= 2.12.1-1),
- mawk (= 1.3.4.20240123-1),
- ncurses-base (= 6.4+20240414-1),
- ncurses-bin (= 6.4+20240414-1),
- opensc (= 0.25.0~rc1-1+b1),
- opensc-pkcs11 (= 0.25.0~rc1-1+b1),
- openssl (= 3.2.1-3),
- passwd (= 1:4.13+dfsg1-4),
+ man-db (= 2.11.2-2),
+ mawk (= 1.3.4.20200120-3.1),
+ ncurses-base (= 6.4-4),
+ ncurses-bin (= 6.4-4),
+ opensc (= 0.23.0-0.3+deb12u1),
+ opensc-pkcs11 (= 0.23.0-0.3+deb12u1),
+ openssl (= 3.0.11-1~deb12u2),
  patch (= 2.7.6-7),
- perl (= 5.38.2-4),
- perl-base (= 5.38.2-4),
- perl-modules-5.38 (= 5.38.2-4),
- pesign (= 116-7),
+ perl (= 5.36.0-7+deb12u1),
+ perl-base (= 5.36.0-7+deb12u1),
+ perl-modules-5.36 (= 5.36.0-7+deb12u1),
+ pesign (= 0.112-6),
  po-debconf (= 1.0.21+nmu1),
- readline-common (= 8.2-4),
+ readline-common (= 8.2-1.3),
  rpcsvc-proto (= 1.4.3-1),
- sbsigntool (= 0.9.4-3.1+b1),
- sed (= 4.9-2),
- sensible-utils (= 0.0.22),
- sysvinit-utils (= 3.09-1),
- tar (= 1.35+dfsg-3),
- usr-is-merged (= 39),
- util-linux (= 2.40-8),
- xxd (= 2:9.1.0377-1),
- xz-utils (= 5.6.1+really5.4.5-1),
- zlib1g (= 1:1.3.dfsg-3.1),
- zlib1g-dev (= 1:1.3.dfsg-3.1)
+ sbsigntool (= 0.9.4-3.1),
+ sed (= 4.9-1),
+ sensible-utils (= 0.0.17+nmu1),
+ sysvinit-utils (= 3.06-4),
+ tar (= 1.34+dfsg-1.2+deb12u1),
+ usr-is-merged (= 37~deb12u1),
+ util-linux (= 2.38.1-5+deb12u1),
+ util-linux-extra (= 2.38.1-5+deb12u1),
+ xxd (= 2:9.0.1378-2),
+ xz-utils (= 5.4.1-0.2),
+ zlib1g (= 1:1.2.13.dfsg-1),
+ zlib1g-dev (= 1:1.2.13.dfsg-1)
 Environment:
  DEB_BUILD_OPTIONS="parallel=6"
  LC_ALL="C.UTF-8"
  LC_COLLATE="C.UTF-8"
- SOURCE_DATE_EPOCH="1714861792"
+ SOURCE_DATE_EPOCH="1714854501"
 
 
 +------------------------------------------------------------------------------+
@@ -2359,65 +2344,65 @@ Environment:
 +------------------------------------------------------------------------------+
 
 
-shim-helpers-amd64-signed-template_15.8-1_amd64.deb
----------------------------------------------------
+shim-helpers-amd64-signed-template_15.8-1~deb12u1_amd64.deb
+-----------------------------------------------------------
 
  new Debian package, version 2.0.
- size 11784 bytes: control archive=916 bytes.
-     397 bytes,    11 lines      control
-    1568 bytes,    13 lines      md5sums
+ size 11528 bytes: control archive=920 bytes.
+     405 bytes,    11 lines      control              
+    1568 bytes,    13 lines      md5sums              
  Package: shim-helpers-amd64-signed-template
  Source: shim
- Version: 15.8-1
+ Version: 15.8-1~deb12u1
  Architecture: amd64
  Maintainer: Debian EFI team <debian-efi@lists.debian.org>
- Installed-Size: 52
+ Installed-Size: 51
  Section: admin
  Priority: optional
  Description: boot loader to chain-load signed boot loaders (signing template)
   This package contains template files for shim-helpers-amd64-signed.
   This is only needed for Secure Boot signing.
 
-drwxr-xr-x root/root         0 2024-05-04 22:29 ./
-drwxr-xr-x root/root         0 2024-05-04 22:29 ./usr/
-drwxr-xr-x root/root         0 2024-05-04 22:29 ./usr/share/
-drwxr-xr-x root/root         0 2024-05-04 22:29 ./usr/share/code-signing/
-drwxr-xr-x root/root         0 2024-05-04 22:29 ./usr/share/code-signing/shim-helpers-amd64-signed-template/
--rw-r--r-- root/root       230 2024-05-04 22:29 ./usr/share/code-signing/shim-helpers-amd64-signed-template/files.json
-drwxr-xr-x root/root         0 2024-05-04 22:29 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/
-drwxr-xr-x root/root         0 2024-05-04 22:29 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/
--rw-r--r-- root/root       224 2024-05-04 22:29 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/README.source
--rw-r--r-- root/root       354 2024-05-04 22:29 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/changelog
--rw-r--r-- root/root         3 2024-05-04 22:29 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/compat
--rw-r--r-- root/root      1104 2024-05-04 22:29 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/control
--rw-r--r-- root/root      2290 2024-05-04 22:29 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/copyright
--rwxr-xr-x root/root       450 2024-05-04 22:29 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/rules
--rwxr-xr-x root/root      2038 2024-05-04 22:29 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/shim-helpers-amd64-signed.postinst
--rwxr-xr-x root/root      1082 2024-05-04 22:29 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/shim-helpers-amd64-signed.postrm
-drwxr-xr-x root/root         0 2024-05-04 22:29 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/source/
--rw-r--r-- root/root        13 2024-05-04 22:29 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/source/format
-drwxr-xr-x root/root         0 2024-05-04 22:29 ./usr/share/doc/
-drwxr-xr-x root/root         0 2024-05-04 22:29 ./usr/share/doc/shim-helpers-amd64-signed-template/
--rw-r--r-- root/root      3323 2024-05-04 22:29 ./usr/share/doc/shim-helpers-amd64-signed-template/changelog.Debian.gz
+drwxr-xr-x root/root         0 2024-05-04 20:28 ./
+drwxr-xr-x root/root         0 2024-05-04 20:28 ./usr/
+drwxr-xr-x root/root         0 2024-05-04 20:28 ./usr/share/
+drwxr-xr-x root/root         0 2024-05-04 20:28 ./usr/share/code-signing/
+drwxr-xr-x root/root         0 2024-05-04 20:28 ./usr/share/code-signing/shim-helpers-amd64-signed-template/
+-rw-r--r-- root/root       230 2024-05-04 20:28 ./usr/share/code-signing/shim-helpers-amd64-signed-template/files.json
+drwxr-xr-x root/root         0 2024-05-04 20:28 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/
+drwxr-xr-x root/root         0 2024-05-04 20:28 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/
+-rw-r--r-- root/root       224 2024-05-04 20:28 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/README.source
+-rw-r--r-- root/root       370 2024-05-04 20:28 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/changelog
+-rw-r--r-- root/root         3 2024-05-04 20:28 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/compat
+-rw-r--r-- root/root      1128 2024-05-04 20:28 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/control
+-rw-r--r-- root/root      2290 2024-05-04 20:28 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/copyright
+-rwxr-xr-x root/root       450 2024-05-04 20:28 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/rules
+-rwxr-xr-x root/root      2038 2024-05-04 20:28 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/shim-helpers-amd64-signed.postinst
+-rwxr-xr-x root/root      1082 2024-05-04 20:28 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/shim-helpers-amd64-signed.postrm
+drwxr-xr-x root/root         0 2024-05-04 20:28 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/source/
+-rw-r--r-- root/root        13 2024-05-04 20:28 ./usr/share/code-signing/shim-helpers-amd64-signed-template/source-template/debian/source/format
+drwxr-xr-x root/root         0 2024-05-04 20:28 ./usr/share/doc/
+drwxr-xr-x root/root         0 2024-05-04 20:28 ./usr/share/doc/shim-helpers-amd64-signed-template/
+-rw-r--r-- root/root      3058 2024-05-04 20:28 ./usr/share/doc/shim-helpers-amd64-signed-template/changelog.Debian.gz
 -rw-r--r-- root/root     19439 2024-04-17 20:37 ./usr/share/doc/shim-helpers-amd64-signed-template/copyright
-drwxr-xr-x root/root         0 2024-05-04 22:29 ./usr/share/lintian/
-drwxr-xr-x root/root         0 2024-05-04 22:29 ./usr/share/lintian/overrides/
+drwxr-xr-x root/root         0 2024-05-04 20:28 ./usr/share/lintian/
+drwxr-xr-x root/root         0 2024-05-04 20:28 ./usr/share/lintian/overrides/
 -rw-r--r-- root/root        64 2024-04-17 20:37 ./usr/share/lintian/overrides/shim-helpers-amd64-signed-template
 
 
-shim-unsigned_15.8-1_amd64.deb
-------------------------------
+shim-unsigned_15.8-1~deb12u1_amd64.deb
+--------------------------------------
 
  new Debian package, version 2.0.
- size 439720 bytes: control archive=936 bytes.
-     743 bytes,    17 lines      control
-     454 bytes,     7 lines      md5sums
+ size 440260 bytes: control archive=948 bytes.
+     751 bytes,    17 lines      control              
+     454 bytes,     7 lines      md5sums              
  Package: shim-unsigned
  Source: shim
- Version: 15.8-1
+ Version: 15.8-1~deb12u1
  Architecture: amd64
  Maintainer: Debian EFI team <debian-efi@lists.debian.org>
- Installed-Size: 1874
+ Installed-Size: 1875
  Conflicts: shim (<< 15+1533136590.3beb971-3~)
  Replaces: shim (<< 15+1533136590.3beb971-3~)
  Section: admin
@@ -2430,21 +2415,21 @@ shim-unsigned_15.8-1_amd64.deb
   infrequently-changing binary to be signed by the UEFI CA, while allowing
   an OS distributor to revision their main bootloader independently of the CA.
 
-drwxr-xr-x root/root         0 2024-05-04 22:29 ./
-drwxr-xr-x root/root         0 2024-05-04 22:29 ./usr/
-drwxr-xr-x root/root         0 2024-05-04 22:29 ./usr/lib/
-drwxr-xr-x root/root         0 2024-05-04 22:29 ./usr/lib/shim/
--rw-r--r-- root/root       108 2024-05-04 22:29 ./usr/lib/shim/BOOTX64.CSV
--rw-r--r-- root/root     86411 2024-05-04 22:29 ./usr/lib/shim/fbx64.efi
--rw-r--r-- root/root    848697 2024-05-04 22:29 ./usr/lib/shim/mmx64.efi
--rw-r--r-- root/root    947368 2024-05-04 22:29 ./usr/lib/shim/shimx64.efi
-drwxr-xr-x root/root         0 2024-05-04 22:29 ./usr/share/
-drwxr-xr-x root/root         0 2024-05-04 22:29 ./usr/share/doc/
-drwxr-xr-x root/root         0 2024-05-04 22:29 ./usr/share/doc/shim-unsigned/
--rw-r--r-- root/root      3316 2024-05-04 22:29 ./usr/share/doc/shim-unsigned/changelog.Debian.gz
+drwxr-xr-x root/root         0 2024-05-04 20:28 ./
+drwxr-xr-x root/root         0 2024-05-04 20:28 ./usr/
+drwxr-xr-x root/root         0 2024-05-04 20:28 ./usr/lib/
+drwxr-xr-x root/root         0 2024-05-04 20:28 ./usr/lib/shim/
+-rw-r--r-- root/root       108 2024-05-04 20:28 ./usr/lib/shim/BOOTX64.CSV
+-rw-r--r-- root/root     85899 2024-05-04 20:28 ./usr/lib/shim/fbx64.efi
+-rw-r--r-- root/root    848697 2024-05-04 20:28 ./usr/lib/shim/mmx64.efi
+-rw-r--r-- root/root    950440 2024-05-04 20:28 ./usr/lib/shim/shimx64.efi
+drwxr-xr-x root/root         0 2024-05-04 20:28 ./usr/share/
+drwxr-xr-x root/root         0 2024-05-04 20:28 ./usr/share/doc/
+drwxr-xr-x root/root         0 2024-05-04 20:28 ./usr/share/doc/shim-unsigned/
+-rw-r--r-- root/root      3050 2024-05-04 20:28 ./usr/share/doc/shim-unsigned/changelog.Debian.gz
 -rw-r--r-- root/root     19439 2024-04-17 20:37 ./usr/share/doc/shim-unsigned/copyright
-drwxr-xr-x root/root         0 2024-05-04 22:29 ./usr/share/shim/
--rw-r--r-- root/root       930 2024-05-04 22:29 ./usr/share/shim/debian-uefi-ca.der
+drwxr-xr-x root/root         0 2024-05-04 20:28 ./usr/share/shim/
+-rw-r--r-- root/root       930 2024-05-04 20:28 ./usr/share/shim/debian-uefi-ca.der
 
 
 +------------------------------------------------------------------------------+
@@ -2465,26 +2450,26 @@ Not cleaning session: cloned chroot in use
 
 Build Architecture: amd64
 Build Type: any
-Build-Space: 72108
-Build-Time: 63
-Distribution: sid
+Build-Space: 72048
+Build-Time: 65
+Distribution: bookworm
 Host Architecture: amd64
-Install-Time: 13
-Job: shim_15.8-1
+Install-Time: 10
+Job: shim_15.8-1~deb12u1
 Machine Architecture: amd64
 Package: shim
-Package-Time: 88
-Source-Version: 15.8-1
-Space: 72108
+Package-Time: 86
+Source-Version: 15.8-1~deb12u1
+Space: 72048
 Status: successful
-Version: 15.8-1
+Version: 15.8-1~deb12u1
 --------------------------------------------------------------------------------
-Finished at 2024-05-06T13:13:45Z
-Build needed 00:01:28, 72108k disk space
-Signature with key 'BF2E9DEB934D60F6CBE88408110D67A282BF2004' requested:
- signfile buildinfo /home/buildd/build/shim_15.8-1_amd64-buildd.buildinfo BF2E9DEB934D60F6CBE88408110D67A282BF2004
+Finished at 2024-05-08T18:38:49Z
+Build needed 00:01:26, 72048k disk space
+Signature with key '81D468446C04334F7095A3333A78BB6665292847' requested:
+ signfile buildinfo /home/buildd/build/shim_15.8-1~deb12u1_amd64-buildd.buildinfo 81D468446C04334F7095A3333A78BB6665292847
 
- fixup_changes buildinfo /home/buildd/build/shim_15.8-1_amd64-buildd.buildinfo /home/buildd/build/shim_15.8-1_amd64-buildd.changes
- signfile changes /home/buildd/build/shim_15.8-1_amd64-buildd.changes BF2E9DEB934D60F6CBE88408110D67A282BF2004
+ fixup_changes buildinfo /home/buildd/build/shim_15.8-1~deb12u1_amd64-buildd.buildinfo /home/buildd/build/shim_15.8-1~deb12u1_amd64-buildd.changes
+ signfile changes /home/buildd/build/shim_15.8-1~deb12u1_amd64-buildd.changes 81D468446C04334F7095A3333A78BB6665292847
 
 Successfully signed buildinfo, changes files
