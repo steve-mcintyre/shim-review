@@ -27,7 +27,7 @@ Debian
 *******************************************************************************
 ### What product or service is this for?
 *******************************************************************************
-Debian GNU/Linux 12 (Bookworm)
+Debian GNU/Linux 11 (Bullseye)
 
 *******************************************************************************
 ### What's the justification that this really does need to be signed for the whole world to be able to boot it?
@@ -98,14 +98,22 @@ Hint: If you attach all the patches and modifications that are being used to you
 
 You can also point to your custom git servers, where the code is hosted.
 *******************************************************************************
-https://salsa.debian.org/efi-team/shim/-/tree/debian/15.8-1_deb12u1
+https://salsa.debian.org/efi-team/shim/-/tree/debian/15.8-1_deb11u1
 
 *******************************************************************************
 ### What patches are being applied and why:
 Mention all the external patches and build process modifications, which are used during your building process, that make your shim binary be the exact one that you posted as part of this application.
 *******************************************************************************
-Two patches (see the patches dir here, or in the debian/patches dir
+Four patches (see the patches dir here, or in the debian/patches dir
 in the shim repo):
+
+- aarch64-gnuefi-old.patch
+- aarch64-shim-old.patch
+  These undo the arm64 build system changes so we can still build using
+  older toolchains on arm64. We are *not* looking to get the arm64
+  shim signed (these patches are a no-op for the x86 builds), but we
+  still need to build the unsigned binaries for stable updates in
+  Debian Bullseye.
 
 - 0001-sbat-Add-grub.peimage-2-to-latest-CVE-2024-2312.patch
   Patch straight from upstream to add a SBAT revocation for grub.peimage
@@ -114,7 +122,7 @@ in the shim repo):
   Patch straight from upstream to bump SBAT for grub
 
 In our shim build, we set `SBAT_AUTOMATIC_DATE=2024010900` to revoke
-older grub builds by default, using these new definitions.
+older grub builds by default, using the new definitions above.
 
 *******************************************************************************
 ### Do you have the NX bit set in your shim? If so, is your entire boot stack NX-compatible and what testing have you done to ensure such compatibility?
@@ -127,7 +135,7 @@ No, we do not have the NX bit set. Our complete boot stack is not ready yet.
 ### What exact implementation of Secure Boot in GRUB2 do you have? (Either Upstream GRUB2 shim_lock verifier or Downstream RHEL/Fedora/Debian/Canonical-like implementation)
 Skip this, if you're not using GRUB2.
 *******************************************************************************
-We have our own downstream implementation in bookworm.
+We have our own downstream implementation in bullseye.
 
 *******************************************************************************
 ### Do you have fixes for all the following GRUB2 CVEs applied?
@@ -244,10 +252,11 @@ relevant here.
 ### If not, please describe how you ensure that one kernel build does not load modules built for another kernel.
 *******************************************************************************
 In our current development cycle (Debian 13) we have switched to using
-ephemeral build-time keys. But in bookworm and other older releases we
-are not doing this yet. As already mentioned, we will switch to using
-a new signing certificate soon and this will allow us to revoke older
-configurations.
+ephemeral build-time keys.
+
+But in bullseye and other older releases we are not doing this yet. As
+already mentioned, we will switch to using a new signing certificate
+soon and this will allow us to revoke older configurations.
 
 *******************************************************************************
 ### If you use vendor_db functionality of providing multiple certificates and/or hashes please briefly describe your certificate setup.
@@ -277,7 +286,7 @@ We recommend reproducing the binary by way of using the supplied Dockerfile:
 
 `docker build .`
 
-The binaries build reproducibly on Debian "bookworm" as of 2024-05-11.
+The binaries build reproducibly on Debian "bullseye" as of 2024-05-11.
 
 Versions used can be found in the build logs.
 
@@ -285,9 +294,8 @@ Versions used can be found in the build logs.
 ### Which files in this repo are the logs for your build?
 This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 *******************************************************************************
-* ```shim_15.8-1~deb12u1_amd64.log```
-* ```shim_15.8-1~deb12u1_arm64.log```
-* ```shim_15.8-1~deb12u1_i386.log```
+* ```shim_15.8-1~deb11u1_amd64.log```
+* ```shim_15.8-1~deb11u1_i386.log```
 
 *******************************************************************************
 ### What changes were made in the distro's secure boot chain since your SHIM was last signed?
@@ -309,9 +317,8 @@ More generally:
 ### What is the SHA256 hash of your final shim binary?
 *******************************************************************************
 ```
-aacb06df9a9e76cf5c921dcd0833f580d960f6b558d12810b5e97931904866a9  shimaa64.efi
-ae5fc6ff75bd454082666c0e0e75ba1a48190c9184c48ac7b7fadf951bc0e466  shimia32.efi
-00c236495d21ed36e12da292e58e3163b8b058d8050559d57ecfd93ce8dafe2a  shimx64.efi
+1a0ccc0027b7a837b4d5832798e11d3f5ea28c2879d0fe3e5d4b2f8957e2cc16  shimia32.efi
+bb87128d3a07a08993ac491d4fa256a83fed4ab9899ead7255912435ad455190  shimx64.efi
 ```
 
 *******************************************************************************
@@ -346,14 +353,14 @@ grub:
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,4,Free Software Foundation,grub,2.06,https://www.gnu.org/software/grub/
-grub.debian,4,Debian,grub2,2.06-13+deb12u1,https://tracker.debian.org/pkg/grub2
+grub.debian,4,Debian,grub2,2.06-3~deb11u6,https://tracker.debian.org/pkg/grub2
 ```
 
-fwupd-efi:
+fwupd:
 ```
 sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-fwupd-efi,1,Firmware update daemon,fwupd-efi,1.4,https://github.com/fwupd/fwupd-efi
-fwupd-efi.debian,1,Debian,fwupd,1:1.4-1,https://tracker.debian.org/pkg/fwupd
+fwupd,1,Firmware update daemon,fwupd,1.5.7,https://github.com/fwupd/fwupd
+fwupd.debian,1,Debian,fwupd,1.5.7-4,https://tracker.debian.org/pkg/fwupd
 ```
 
 shim:
@@ -376,13 +383,13 @@ efifwsetup efinet ext2 f2fs fat font gcry_arcfour gcry_blowfish
 gcry_camellia gcry_cast5 gcry_crc gcry_des gcry_dsa gcry_idea gcry_md4
 gcry_md5 gcry_rfc2268 gcry_rijndael gcry_rmd160 gcry_rsa gcry_seed
 gcry_serpent gcry_sha1 gcry_sha256 gcry_sha512 gcry_tiger gcry_twofish
-gcry_whirlpool gettext gfxmenu gfxterm gfxterm_background gzio halt
-help hfsplus iso9660 jfs jpeg keystatus linux linuxefi loadenv
-loopback ls lsefi lsefimmap lsefisystab lssal luks luks2 lvm mdraid09
-mdraid1x memdisk minicmd normal ntfs part_apple part_gpt part_msdos
-password_pbkdf2 play png probe raid5rec raid6rec reboot regexp search
-search_fs_file search_fs_uuid search_label serial sleep smbios squash4
-test tftp tpm true video xfs zfs zfscrypt zfsinfo
+gcry_whirlpool gettext gfxmenu gfxterm gfxterm_background gzio halt help
+hfsplus iso9660 jfs jpeg keystatus linux linuxefi loadenv loopback ls
+lsefi lsefimmap lsefisystab lssal luks lvm mdraid09 mdraid1x memdisk
+minicmd normal ntfs part_apple part_gpt part_msdos password_pbkdf2
+play png probe raid5rec raid6rec reboot regexp search search_fs_file
+search_fs_uuid search_label sleep squash4 test tftp tpm true video xfs
+zfs zfscrypt zfsinfo
 ```
 
 *******************************************************************************
@@ -393,8 +400,8 @@ N/A.
 *******************************************************************************
 ### What is the origin and full version number of your bootloader (GRUB2 or systemd-boot or other)?
 *******************************************************************************
-GRUB2: https://salsa.debian.org/grub-team/grub.git, branch `bookworm` is the
-current version (2.06-13+deb12u1) in Debian Bookworm. It is derived from the
+GRUB2: https://salsa.debian.org/grub-team/grub.git, branch `bullseye` is the
+current version (2.06-13+deb11u6) in Debian Bullseye. It is derived from the
 upstream 2.06 release with a number of patches applied - see
 debian/patches there.
 
@@ -429,9 +436,9 @@ No.
 ### What kernel are you using? Which patches and configuration does it include to enforce Secure Boot?
 *******************************************************************************
 
-Bookworm is using Linux 6.1.90. It has the usual lockdown patches
+Bullseye is using Linux 5.10.216. It has the usual lockdown patches
 applied - see
-https://salsa.debian.org/kernel-team/linux/-/tree/bookworm/debian/patches/features/all/lockdown
+https://salsa.debian.org/kernel-team/linux/-/tree/bullseye/debian/patches/features/all/lockdown
 for the current list
 
 *******************************************************************************
