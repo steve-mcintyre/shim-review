@@ -1,4 +1,4 @@
-FROM debian:bookworm
+FROM debian:bullseye
 RUN apt-get update -y
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends ca-certificates
 
@@ -6,7 +6,7 @@ RUN apt-get update -y
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends build-essential wget git
 RUN git clone https://github.com/steve-mcintyre/shim-review.git
 WORKDIR /shim-review
-RUN git checkout debian-shim-15.8-debian-12
+RUN git checkout debian-shim-15.8-debian-11
 WORKDIR /
 
 # Download and verify the upstream source tarball for shim
@@ -18,7 +18,7 @@ RUN sha256sum -c < SHA256SUM
 RUN mv shim-15.8.tar.bz2 shim_15.8.orig.tar.bz2
 RUN git clone https://salsa.debian.org/efi-team/shim.git
 WORKDIR /shim
-RUN git checkout debian/15.8-1_deb12u1
+RUN git checkout debian/15.8-1_deb11u1
 RUN apt-get build-dep -y .
 RUN dpkg-buildpackage -us -uc
 WORKDIR /
