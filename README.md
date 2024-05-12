@@ -27,7 +27,7 @@ Debian
 *******************************************************************************
 ### What product or service is this for?
 *******************************************************************************
-Debian GNU/Linux 11 (Bullseye)
+Debian GNU/Linux 10 LTS (Buster)
 
 *******************************************************************************
 ### What's the justification that this really does need to be signed for the whole world to be able to boot it?
@@ -98,7 +98,7 @@ Hint: If you attach all the patches and modifications that are being used to you
 
 You can also point to your custom git servers, where the code is hosted.
 *******************************************************************************
-https://salsa.debian.org/efi-team/shim/-/tree/debian/15.8-1_deb11u1
+https://salsa.debian.org/efi-team/shim/-/tree/debian/15.8-1_deb10u1
 
 *******************************************************************************
 ### What patches are being applied and why:
@@ -113,7 +113,7 @@ in the shim repo):
   older toolchains on arm64. We are *not* looking to get the arm64
   shim signed (these patches are a no-op for the x86 builds), but we
   still need to build the unsigned binaries for stable updates in
-  Debian Bullseye.
+  Debian Buster.
 
 - 0001-sbat-Add-grub.peimage-2-to-latest-CVE-2024-2312.patch
   Patch straight from upstream to add a SBAT revocation for grub.peimage
@@ -135,7 +135,7 @@ No, we do not have the NX bit set. Our complete boot stack is not ready yet.
 ### What exact implementation of Secure Boot in GRUB2 do you have? (Either Upstream GRUB2 shim_lock verifier or Downstream RHEL/Fedora/Debian/Canonical-like implementation)
 Skip this, if you're not using GRUB2.
 *******************************************************************************
-We have our own downstream implementation in bullseye.
+We have our own downstream implementation in buster.
 
 *******************************************************************************
 ### Do you have fixes for all the following GRUB2 CVEs applied?
@@ -254,7 +254,7 @@ relevant here.
 In our current development cycle (Debian 13) we have switched to using
 ephemeral build-time keys.
 
-But in bullseye and other older releases we are not doing this yet. As
+But in buster and other older releases we are not doing this yet. As
 already mentioned, we will switch to using a new signing certificate
 soon and this will allow us to revoke older configurations.
 
@@ -286,7 +286,7 @@ We recommend reproducing the binary by way of using the supplied Dockerfile:
 
 `docker build .`
 
-The binaries build reproducibly on Debian "bullseye" as of 2024-05-11.
+The binaries build reproducibly on Debian "buster" as of 2024-05-11.
 
 Versions used can be found in the build logs.
 
@@ -294,8 +294,8 @@ Versions used can be found in the build logs.
 ### Which files in this repo are the logs for your build?
 This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 *******************************************************************************
-* ```shim_15.8-1~deb11u1_amd64.log```
-* ```shim_15.8-1~deb11u1_i386.log```
+* ```shim_15.8-1~deb10u1_amd64.log```
+* ```shim_15.8-1~deb10u1_i386.log```
 
 *******************************************************************************
 ### What changes were made in the distro's secure boot chain since your SHIM was last signed?
@@ -317,8 +317,8 @@ More generally:
 ### What is the SHA256 hash of your final shim binary?
 *******************************************************************************
 ```
-1a0ccc0027b7a837b4d5832798e11d3f5ea28c2879d0fe3e5d4b2f8957e2cc16  shimia32.efi
-bb87128d3a07a08993ac491d4fa256a83fed4ab9899ead7255912435ad455190  shimx64.efi
+f54982beab2158ec8440112297ca60a2c430151b9530a6b098d54f10ba0b2fa4  shimia32.efi
+8df1d5590c44541a31248bade1fa02a6b953248c1f48eba582115e42a623f2ba  shimx64.efi
 ```
 
 *******************************************************************************
@@ -352,15 +352,15 @@ Current entries are:
 grub:
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-grub,4,Free Software Foundation,grub,2.06,https://www.gnu.org/software/grub/
-grub.debian,4,Debian,grub2,2.06-3~deb11u6,https://tracker.debian.org/pkg/grub2
+grub,2,Free Software Foundation,grub,2.06,https://www.gnu.org/software/grub/
+grub.debian,1,Debian,grub2,2.06-3~deb10u4,https://tracker.debian.org/pkg/grub2
 ```
 
 fwupd:
 ```
 sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-fwupd,1,Firmware update daemon,fwupd,1.5.7,https://github.com/fwupd/fwupd
-fwupd.debian,1,Debian,fwupd,1.5.7-4,https://tracker.debian.org/pkg/fwupd
+fwupd,1,Firmware update daemon,fwupd,1.2.14,https://github.com/fwupd/fwupd
+fwupd.debian,1,Debian,fwupd,1.2.14-1~deb10u1,https://tracker.debian.org/pkg/fwupd
 ```
 
 shim:
@@ -400,8 +400,8 @@ N/A.
 *******************************************************************************
 ### What is the origin and full version number of your bootloader (GRUB2 or systemd-boot or other)?
 *******************************************************************************
-GRUB2: https://salsa.debian.org/grub-team/grub.git, branch `bullseye` is the
-current version (2.06-13+deb11u1) in Debian Bullseye. It is derived from the
+GRUB2: https://salsa.debian.org/grub-team/grub.git, branch `buster` is the
+current version (2.06-3~deb10u4) in Debian Buster. It is derived from the
 upstream 2.06 release with a number of patches applied - see
 debian/patches there.
 
@@ -409,7 +409,7 @@ debian/patches there.
 ### If your shim launches any other components apart from your bootloader, please provide further details on what is launched.
 Hint: The most common case here will be a firmware updater like fwupd.
 *******************************************************************************
-It will load fwupd-efi as already mentioned above.
+It will load fwupd as already mentioned above.
 
 *******************************************************************************
 ### If your GRUB2 or systemd-boot launches any other binaries that are not the Linux kernel in SecureBoot mode, please provide further details on what is launched and how it enforces Secureboot lockdown.
@@ -436,9 +436,9 @@ No.
 ### What kernel are you using? Which patches and configuration does it include to enforce Secure Boot?
 *******************************************************************************
 
-Bullseye is using Linux 5.10.216. It has the usual lockdown patches
+Buster is using Linux 4.19.249. It has the usual lockdown patches
 applied - see
-https://salsa.debian.org/kernel-team/linux/-/tree/bullseye/debian/patches/features/all/lockdown
+https://salsa.debian.org/kernel-team/linux/-/tree/buster/debian/patches/features/all/lockdown
 for the current list
 
 *******************************************************************************
