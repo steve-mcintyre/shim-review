@@ -352,8 +352,8 @@ Current entries are:
 grub:
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-grub,2,Free Software Foundation,grub,2.06,https://www.gnu.org/software/grub/
-grub.debian,1,Debian,grub2,2.06-3~deb10u4,https://tracker.debian.org/pkg/grub2
+grub,4,Free Software Foundation,grub,2.06,https://www.gnu.org/software/grub/
+grub.debian,4,Debian,grub2,2.06-3~deb10u4,https://tracker.debian.org/pkg/grub2
 ```
 
 fwupd:
