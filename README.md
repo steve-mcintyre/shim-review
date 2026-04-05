@@ -64,7 +64,7 @@ Subject: C=US, ST=New York, L=Albany, O=Software In The Public Interest, Inc., s
 *******************************************************************************
 ### What product or service is this for?
 *******************************************************************************
-Debian GNU/Linux 14 (Forky)
+Debian GNU/Linux 13 (Trixie)
 
 *******************************************************************************
 ### What's the justification that this really does need to be signed for the whole world to be able to boot it?
@@ -148,26 +148,24 @@ Hint: If you attach all the patches and modifications that are being used to you
 
 You can also point to your custom git servers, where the code is hosted.
 *******************************************************************************
-https://salsa.debian.org/efi-team/shim/-/tree/debian/16.1-2
+https://salsa.debian.org/efi-team/shim/-/tree/debian/16.1-2_deb13u1
 
 *******************************************************************************
 ### What patches are being applied and why:
 Mention all the external patches and build process modifications, which are used during your building process, that make your shim binary be the exact one that you posted as part of this application.
 *******************************************************************************
 
-One patch (see the patches dir here, or in the debian/patches dir in
-the shim repo):
+No patches applied.
 
-- 0001-Fix-build-with-binutils-2.46.patch
-  Patch straight from upstream to fix building with a new binutils
+We set SBAT_AUTOMATIC_DATE=2025021800 at build time to block running
+older GRUB binaries.
 
 *******************************************************************************
 ### Do you have the NX bit set in your shim? If so, is your entire boot stack NX-compatible and what testing have you done to ensure such compatibility?
 
 See https://techcommunity.microsoft.com/t5/hardware-dev-center/nx-exception-for-shim-community/ba-p/3976522 for more details on the signing of shim without NX bit.
 *******************************************************************************
-Yes, and yes in Forky. **Older** releases of Debian will not support
-NX, but the complete stack is tested and works with in NX here.
+No. We don't have an NX-capable boot chain in Trixie.
 
 *******************************************************************************
 ### What exact implementation of Secure Boot in GRUB2 do you have? (Either Upstream GRUB2 shim_lock verifier or Downstream RHEL/Fedora/Debian/Canonical-like implementation)
@@ -321,7 +319,7 @@ Hint: Prefer using *frozen* packages for your toolchain, since an update to GCC,
 If your shim binaries can't be reproduced using the provided Dockerfile, please explain why that's the case, what the differences would be and what build environment (OS and toolchain) is being used to reproduce this build? In this case please write a detailed guide, how to setup this build environment from scratch.
 *******************************************************************************
 
-The binaries build reproducibly on Debian "unstable" as of 2026-04-03.
+The binaries build reproducibly on Debian "trixie" as of 2026-04-03.
 
 `docker build .`
 
@@ -331,8 +329,9 @@ Versions used can be found in the build logs.
 ### Which files in this repo are the logs for your build?
 This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 *******************************************************************************
-* `shim_16.1-2_amd64.log`
-* `shim_16.1-2_arm64.log`
+
+* `shim_16.1-2~deb13u1_amd64.log`
+* `shim_16.1-2~deb13u1_arm64.log`
 
 *******************************************************************************
 ### What changes were made in the distro's secure boot chain since your SHIM was last signed?
@@ -343,8 +342,8 @@ Skip this, if this is your first application for having shim signed.
 
 In shim terms:
 - We've moved forwards from 15.8 to 16.1 and dropped all the patches
-  we used to need as they're upstream. Then added the 1 patch listed
-  above and the build-time change to update revocations.
+  we used to need as they're upstream. We've made the build-time
+  change to update revocations.
 
 More generally:
 - We also include a signed version of systemd-boot for amd64, as an
@@ -354,8 +353,8 @@ More generally:
 ### What is the SHA256 hash of your final shim binary?
 *******************************************************************************
 ```
-9b77a46776fd4cde9adc2364bebb81cb6da955470856fe0708e6a871fd1f4929  shimx64.efi
-10dfb0de87e3bfbe33fcfaf0de3b1a317b35111a84b89bc5a5a9673b208ff090  shimaa64.efi
+d08da8871399e3754fc565419c1ab9200e1f71f3e58274fd158bf4bd62dfd600  shimx64.efi
+63e7bb0b4f1c2650b4906e8017bd3b3b2936d75c9538b63a2f90bbb831ce06b0  shimaa64.efi
 ```
 
 *******************************************************************************
@@ -396,17 +395,17 @@ Hint: run `objcopy --dump-section .sbat=/dev/stdout YOUR_EFI_BINARY` to get thes
 fwupd-efi:
 ```
 sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-fwupd-efi,1,Firmware update daemon,fwupd-efi,1.8,https://github.com/fwupd/fwupd-efi
-fwupd-efi.debian,1,Debian,fwupd,1:1.8-4,https://tracker.debian.org/pkg/fwupd
+fwupd-efi,1,Firmware update daemon,fwupd-efi,1.7,https://github.com/fwupd/fwupd-efi
+fwupd-efi.debian,1,Debian,fwupd,1:1.7-1,https://tracker.debian.org/pkg/fwupd
 ```
 
 grub:
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-grub,5,Free Software Foundation,grub,2.14,https://www.gnu.org/software/grub/
-grub.debian,5,Debian,grub2,2.14-2,https://tracker.debian.org/pkg/grub2
-grub.debian14,1,Debian,grub2,2.14-2,https://tracker.debian.org/pkg/grub2
-grub.peimage,2,Canonical,grub2,2.14-2,https://salsa.debian.org/grub-team/grub/-/blob/master/debian/patches/secure-boot/efi-peimage.patch
+grub,5,Free Software Foundation,grub,2.12,https://www.gnu.org/software/grub/
+grub.debian,5,Debian,grub2,2.12-9+deb13u1,https://tracker.debian.org/pkg/grub2
+grub.debian13,1,Debian,grub2,2.12-9+deb13u1,https://tracker.debian.org/pkg/grub2
+grub.peimage,2,Canonical,grub2,2.12-9+deb13u1,https://salsa.debian.org/grub-team/grub/-/blob/master/debian/patches/secure-boot/efi-use-peimage-shim.patch
 ```
 
 shim:
@@ -419,8 +418,8 @@ shim.debian,1,Debian,shim,16.1,https://tracker.debian.org/pkg/shim
 systemd-boot:
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-systemd-boot,1,The systemd Developers,systemd,260,https://systemd.io/
-systemd-boot.debian,1,Debian GNU/Linux,systemd,260.1-1,https://tracker.debian.org/pkg/systemd
+systemd-boot,1,The systemd Developers,systemd,257,https://systemd.io/
+systemd-boot.debian,1,Debian GNU/Linux,systemd,257.9-1~deb13u1,https://tracker.debian.org/pkg/systemd
 ```
 
 *******************************************************************************
@@ -430,21 +429,24 @@ Skip this, if you're not using GRUB2.
 Hint: this is about those modules that are in the binary itself, not the `.mod` files in your filesystem.
 *******************************************************************************
 ```
-bli boot btrfs cat chain configfile cpuid cryptodisk echo
-efi_gop efifwsetup efinet ext2 f2fs fat font gcry_arcfour
-gcry_blowfish gcry_camellia gcry_cast5 gcry_crc gcry_des
-gcry_dsa gcry_idea gcry_md4 gcry_md5 gcry_rfc2268 gcry_rijndael
-gcry_rmd160 gcry_rsa gcry_seed gcry_serpent gcry_sha1
-gcry_sha256 gcry_sha512 gcry_tiger gcry_twofish gcry_whirlpool
-gettext gfxmenu gfxterm gfxterm_background gzio halt help
-hfsplus http iso9660 jpeg keystatus linux loadenv loopback
-ls lsefi lsefimmap lsefisystab lssal luks luks2 lvm mdraid09
-mdraid1x memdisk minicmd normal part_apple part_gpt part_msdos
-password_pbkdf2 peimage play png probe raid5rec raid6rec reboot
-regexp search search_fs_file search_fs_uuid search_label serial
-sleep smbios squash4 test tftp tpm true video xfs zfs zfscrypt
-zfsinfo
+all_video boot btrfs cat chain configfile cpuid cryptodisk
+echo efifwsetup efinet ext2 f2fs fat font gcry_arcfour gcry_blowfish
+gcry_camellia gcry_cast5 gcry_crc gcry_des gcry_dsa gcry_idea gcry_md4
+gcry_md5 gcry_rfc2268 gcry_rijndael gcry_rmd160 gcry_rsa gcry_seed
+gcry_serpent gcry_sha1 gcry_sha256 gcry_sha512 gcry_tiger gcry_twofish
+gcry_whirlpool gettext gfxmenu gfxterm gfxterm_background gzio
+halt help hfsplus http iso9660 jfs jpeg keystatus linux loadenv
+loopback ls lsefi lsefimmap lsefisystab lssal luks luks2 lvm mdraid09
+mdraid1x memdisk minicmd normal ntfs part_apple part_gpt part_msdos
+password_pbkdf2 peimage play png probe raid5rec raid6rec reboot regexp
+search search_fs_file search_fs_uuid search_label serial sleep smbios
+squash4 test tftp tpm true video xfs zfs zfscrypt zfsinfo
 ```
+
+*Note*: yes, the jfs and ntfs filesystems are built in here but we
+include the upstream patch
+`debian/patches/cve-2025-jan/fs-Disable-many-filesystems-under-lockdown.patch`
+which disallows using either when booting with Secure Boot.
 
 *******************************************************************************
 ### If you are using systemd-boot on arm64 or riscv, is the fix for [unverified Devicetree Blob loading](https://github.com/systemd/systemd/security/advisories/GHSA-6m6p-rjcq-334c) included?
@@ -454,15 +456,15 @@ Yes
 *******************************************************************************
 ### What is the origin and full version number of your bootloader (GRUB2 or systemd-boot or other)?
 *******************************************************************************
-GRUB2: https://salsa.debian.org/grub-team/grub.git, branch `master` is the
-current version (2.14-2) in Debian unstable. It is derived from the
-upstream 2.14 release with a number of patches applied - see
+GRUB2: https://salsa.debian.org/grub-team/grub.git, branch `trixie` is the
+current version (2.12-9+deb13u1) in Debian trixie. It is derived from the
+upstream 2.12 release with a number of patches applied - see
 debian/patches there.
 
 systemd-boot: https://salsa.debian.org/systemd-team/systemd.git,
-branch `debian/master` is the current version (260.1-1) in Debian
-Forky/unstable. It is derived from the upstream 260.1 release with a
-small number of patches applied - see debian/patches there.
+branch `debian/trixie` is the current version (257.9-1~deb13u1) in
+Debian trixie. It is derived from the upstream 257.9 release
+with a small number of patches applied - see debian/patches there.
 
 *******************************************************************************
 ### If your shim launches any other components apart from your bootloader, please provide further details on what is launched.
@@ -496,9 +498,9 @@ No
 *******************************************************************************
 ### What kernel are you using? Which patches and configuration does it include to enforce Secure Boot?
 *******************************************************************************
-Forky is using Linux 6.19.10. It has the usual lockdown patches
+Trixie is using Linux 6.12.74. It has the usual lockdown patches
 applied - see
-https://salsa.debian.org/kernel-team/linux/-/tree/sid/debian/patches/features/all/lockdown
+https://salsa.debian.org/kernel-team/linux/-/tree/debian/6.12/trixie/debian/patches/features/all/lockdown
 for the current list
 
 *******************************************************************************
