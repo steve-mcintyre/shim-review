@@ -455,10 +455,17 @@ Yes
 *******************************************************************************
 ### What is the origin and full version number of your bootloader (GRUB2 or systemd-boot or other)?
 *******************************************************************************
-GRUB2: https://salsa.debian.org/grub-team/grub.git, branch `master` is the
-current version (2.14-2) in Debian unstable. It is derived from the
-upstream 2.14 release with a number of patches applied - see
-debian/patches there.
+GRUB2: https://salsa.debian.org/grub-team/grub.git, branch `bookworm`
+contains the grub code in Debian bookworm.
+
+We currently have **2.06-13+deb12u1** in bookworm right now, with
+**2.06-13+deb12u2** prepared for the next point release due in a few
+weeks. Normally this wouldn't be worth mentioning, but as already
+noted above we're updating here to include the latest grub CVE fixes
+for `grub,5`.
+
+The code here is derived from the upstream 2.06 release with a number
+of patches applied - see debian/patches there.
 
 *******************************************************************************
 ### If your shim launches any other components apart from your bootloader, please provide further details on what is launched.
