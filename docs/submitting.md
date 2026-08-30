@@ -60,6 +60,12 @@ submitting it. This may seem long-winded, but the better you make your
 submission the easier it will be for reviewers to mark your build as
 accepted.
 
+**NOTE:** If you're building and supporting a Secure Boot chain for multiple
+architectures (e.g. x86-66 **and** aarch64), then make life easier for
+everybody by submitting a **single** shim review. Submitting multiple
+reviews for basically identical software across all the architectures
+just wastes time and affort for everybody.
+
 ### 3.1 SBAT data
 
 **SBAT** is ``Secure Boot Advanced Targeting``. It's a method to
